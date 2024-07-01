@@ -1,0 +1,10 @@
+h1{
+    text-align: center;
+    /* this is the external css. */
+    border: 2px solid red;
+    /* for border */
+    padding: 30px;
+    /* for padding size large of border. */
+    margin: 10%
+    /* for margin (space)outside the border. */
+}
