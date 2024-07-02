@@ -15,21 +15,35 @@
           /* with the help of this we use remove double border to single border only. */
           border-radius: 10%;
           /* borders gets rounded corners */
-
-
+          border-spacing: 20px;
+          /* the space between two cells is called border-spacing */
         }
         th,td{
             border-style: dotted;
             /* we use border-style to make border dotted and put others styles also */
-            background-color: yellow;
+            /* background-color: yellow; */
             /* we use background color both <td> and <th> and we use single <td> or <th> */
                 border-color:brown;
                 /* we use this elements to use colur of border */
+                padding: 50px;
+                /* cell pedding is the space between cell edges and the cell content. */
+                /* we use padding property like padding-top,padding-bottom,padding-left,padding-right */
         }
         td{
             text-align: left;
             /* it is use for left side text so we use right and center like this. */
         }
+        tr:hover{
+            background-color: solid blue;
+            border-bottom:1px solid blue;
+            
+        }
+        
+        /* th:nth-child(even),td:nth-child(odd)
+        {
+            background-color: blue;
+            even and odd number column and row change in blue background
+        } */
         
     </style>
 </head>
@@ -42,7 +56,7 @@
         <tr>
             <th style="width: 40%">s.no</th>
             <!-- <th> tag use style and make table column any sizes.-->
-            <th colspan="2">student name</th><br>
+            <th colspan="2" style="background-color: red;">student name</th><br>
             <!-- we use colspan combine two column into one column -->
             <!-- <th>student subject</th><br> -->
             <th>stuent country</th><br>
@@ -84,8 +98,67 @@
             <td>nepal</td>
             <td>india</td>
         </tr>
-    </table>
-    <!-- we use vertical table header. -->
+    </table><br><br>
+    <table class="Third table" style="width: 70%;">
+        <tr>
+            <th>sr.no</th>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <th>student name</th>
+            <td>sunil</td>
+            <!--  -->
+            <td>amit</td>
+        </tr>
+        <tr>
+            <th>student subject</th>
+            <td>computer</td>
+            <td>science</td>
+        </tr>
+        <tr>
+            <th>student address</th>
+            <td>nepal</td>
+            <td>india</td>
+        </tr>
+    </table><br><br>
+    <!-- we above use vertical table header. -->
+        <table> 
+            <tr>
+            <th>name</th>
+            <th colspan="2">adress</th>
+            <!-- we use colspan marge more than one coloumn very easily -->
+            <!-- <th>country</th> -->
+        </tr>
+        <tr>
+            <td>sunil</td>
+            <td>farsatikar</td>
+            <td>nepal</td>
+        </tr>
+    </table><br><br>
+    <table> 
+        <colgroup>
+            <col span="2" style="background-color:pink;">
+            <!-- this col span add more than one column are colored -->
+             <!-- we can use more property like width,visibility,border also  -->
+        </colgroup>
+        <tr>
+        <th rowspan="2">name</th>
+        <!-- we use rowspan merge more than one row very easily -->
+        <th>adress</th>
+        <th>country</th>
+    </tr>
+    <tr>
+        <td>sunil</td>
+        <!-- <td>farsatikar</td> -->
+        <td>nepal</td>
+    </tr>
+</table>
+       
+
+
+    
+
    
     
 </body>

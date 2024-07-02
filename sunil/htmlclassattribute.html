@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+            background-color: blue;
+            border: 3px color(green);
+        }
+        .city{
+            background-color: red;
+            border:2px solid(blue);
+            color: black;
+            padding: 10px;
+        }
+        .main{
+            text-align: center;
+        }
+        .same{
+            color: blue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>html class attribute</h1>
+    <div class="first">
+        <h2>first div heading</h2>
+        <p>first div paragraph</p>
+    </div>
+    <div class="first">
+        <h2>second div heading</h2>
+        <p>second div paragraph</p>
+    </div>
+    <div class="first">
+        <h2>third div heading</h2>
+        <p>third div paragraph</p>
+    </div>
+    <!-- we use diferent <div> but class name is same and style same other <div>.  -->
+        <!-- syntex of class is dot(.) and write class name in <head> section in between <style> -->
+      <div><h2 class="city main">london</h2>
+      <h2 class="city">england</h2>
+      <h2 class="city">france</h2></div>
+      <!-- we use three class same name city and add main also so we call city and 
+        all three class changes and after that call main class then changes main class only not to  changes to other class -->
+        <div><p class="same">different elements can share same class.</p>
+        <h2 class="same">different elements can share same class.</h2>
+    </div>
+</body>
+</html>
