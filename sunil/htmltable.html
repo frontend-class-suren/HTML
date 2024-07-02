@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border:3px solid blue;
+            /* border: none; */
+            /* remove border from the table. */
+            text-align: center;
+          /* we use css property to add border on table,th,td all three in one command */
+          border-collapse:collapse;
+          /* with the help of this we use remove double border to single border only. */
+          border-radius: 10%;
+          /* borders gets rounded corners */
+
+
+        }
+        th,td{
+            border-style: dotted;
+            /* we use border-style to make border dotted and put others styles also */
+            background-color: yellow;
+            /* we use background color both <td> and <th> and we use single <td> or <th> */
+                border-color:brown;
+                /* we use this elements to use colur of border */
+        }
+        td{
+            text-align: left;
+            /* it is use for left side text so we use right and center like this. */
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 style="color: brown;">my first table.</h1>
+    <table style="width: 70%">
+        <caption>my first table.</caption>
+        <!-- caption use for heading of table but write in between <table.></table. -->
+        <!-- we use style to make any sizes of width -->
+        <tr>
+            <th style="width: 40%">s.no</th>
+            <!-- <th> tag use style and make table column any sizes.-->
+            <th colspan="2">student name</th><br>
+            <!-- we use colspan combine two column into one column -->
+            <!-- <th>student subject</th><br> -->
+            <th>stuent country</th><br>
+        </tr>
+        <tr style="height: 70px">
+            <!-- set the height of 70px of first row.-->
+            <td>1</td>
+            <td>sunil</td>
+            <td>computer</td>
+            <td>nepal</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>amit</td>
+            <td>science</td>
+            <td>india</td>
+        </tr>
+    </table><br><br><br> 
+    <!-- every <table> start with the <tr> and end with </tr>and enter the data in cell using <td></td> -->
+    <table style="width: 70%;">
+        <tr>
+            <th>sr.no</th>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <th>student name</th>
+            <td>sunil</td>
+            <!--  -->
+            <td>amit</td>
+        </tr>
+        <tr>
+            <th>student subject</th>
+            <td>computer</td>
+            <td>science</td>
+        </tr>
+        <tr>
+            <th>student address</th>
+            <td>nepal</td>
+            <td>india</td>
+        </tr>
+    </table>
+    <!-- we use vertical table header. -->
+   
+    
+</body>
+</html>

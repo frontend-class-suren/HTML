@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 700px;
+            height: 800px;
+
+        }
+        p{
+            height: 600;
+            width: 500;
+        }
+        body{
+            background-image:url('https://st.depositphotos.com/2001755/3622/i/450/depositphotos_36220949-stock-photo-beautiful-landscape.jpg');
+            /* we using backgroud image complete page or body. */
+            background-repeat: no-repeat;
+            /* avoid background image to repeat itself */
+        }
+        /*we use img in style tag so prevent changes picture of all urls.  */
+    </style>
+</head>
+<body>
+     <h1>welcome to html images</h1>
+    <img src="https://st.depositphotos.com/2001755/3622/i/450/depositphotos_36220949-stock-photo-beautiful-landscape.jpg"
+    alt="nature image" >
+<!-- if we use img src attribute so we write picture address and write alternate text becos if browser not show then show alt="nature image" -->
+<h2>add hight and width</h2>
+<img src="https://cdn.pixabay.com/photo/2023/05/23/10/45/girl-8012460_1280.jpg" alt=" cute girl image" height="400px" width="300";>
+<!-- we use hight and width also -->
+<h3>we using internal css style in images</h3>
+<!-- <img src="https://cdn.pixabay.com/photo/2023/05/23/10/45/girl-8012460_1280.jpg" alt=" cute girl image" style="height:600; width:400;"> -->
+<!-- we use style -->
+ <h4>we using image map</h4>
+ <img src="https://cdn.pixabay.com/photo/2023/05/23/10/45/girl-8012460_1280.jpg" alt="cute girl" usemap="#workmap">
+ <map name="workmap"><area shape="rect" coords="34,44,270,350" alt="girl" href="https://www.google.com/">
+    <map name="workmap"><area shape="circle" coords="78,65,160,250" alt="girl" href="https://www.google.com/">
+        <map name="workmap"><area shape="poly" coords="34,44,270,350" alt="girl" href="https://www.google.com/">
+            <map name="workmap"><area shape="default" coords="34,44,270,350" alt="girl" href="https://www.google.com/">
+</map>
+<h5>backgroung image on a html elements</h5>
+<p style="background-image:url('https://st.depositphotos.com/2001755/3622/i/450/depositphotos_36220949-stock-photo-beautiful-landscape.jpg');">Studying is a key skill used not only in education, but also in day-to-day life. 
+    It builds knowledge and understanding of a subject area which helps prepares you for your future. <br><br>
+
+    Whether that involves advancing in your education or embarking on a new job or apprenticeship.<br><br> 
+
+    Generally, developing good study skills is great for your personal growth and your future endeavors.<br><br>
+
+    These are only a few reasons why is it important to study, let’s delve into more</p>
+    <!-- we use background image of paragaph text. -->
+     <h6>the picture elements</h6>
+
+
+</body>
+</html>
