@@ -1,0 +1,180 @@
+
+.navigation{
+    display: flex;
+    width: 100%;
+    height:77px;
+    background:#eaf4f6;
+}
+.container{
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 540px;
+    position: relative;
+    word-wrap: break-word;
+
+}
+.container2{
+    .anchor{
+        line-height: inherit;
+    font-weight: normal;
+    color: #4ea2e3;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-size: calc( 0.965rem + (0.9 - 0.965) * ((100vw - 20rem) / (48 - 20)));
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+    
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    padding: 0;
+    transition: all .3s;
+    z-index: 1;
+}
+.container3{
+    display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-height: 100vh;
+        background: #eaf4f6;
+        padding: 1rem 2rem 1rem 2rem;
+        z-index: 1;
+    flex-basis: 100%;
+}
+.container5{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.images{
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+.container7{
+    padding-right: 0;
+        padding-left: 0;
+        display: flex;
+        flex: 0 0 100%;
+        max-width: 100%;
+        color: #000000;
+
+}
+.container8{
+    width: 100%;
+    display: flex;
+    background-color: #cbe6ea;
+    padding: 40px 20px;
+}
+.paragraph1{
+    font-size: calc( 0.965rem + (0.9 - 0.965) * ((100vw - 20rem) / (48 - 20)));
+        line-height: calc( 1.4 * (0.965rem + (0.9 - 0.965) * ((100vw - 20rem) / (48 - 20))));
+        font-family: 'Didact Gothic', sans-serif;
+        text-align: center;
+        font-size:medium;
+        word-break: break-word;
+    word-wrap: break-word;
+}
+.container9{
+    margin-left: -.25rem;
+    margin-right: -.25rem;
+    font-size: 0;
+    text-align: center;
+}
+.anchor2{
+    margin: .667em 1em;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc( 0.965rem + (0.9 - 0.965) * ((100vw - 20rem) / (48 - 20)));
+        line-height: calc( 1.4 * (0.965rem + (0.9 - 0.965) * ((100vw - 20rem) / (48 - 20))));
+        color: #4ea2e3;
+        font-family: 'Didact Gothic', sans-serif;
+
+}
+.anchor3
+{
+    background: none;
+    border-color: #1c6faf;
+    color: #1c6faf;
+    padding: 15px 20px;
+    border-radius: 0px;
+    font-weight: 400;
+    border-width: 2px;
+    border-style: solid;
+    font-style: normal;
+    margin: 0.8rem;
+    white-space: normal;
+    transition: all .3s ease-in-out, box-shadow 2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+}
+.navigate3.container10
+{ background-image: url"https://mobirise.com/extensions/resumeamp/webDesigner/assets/images/aboutme-1-2000x1333.jpg";
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #eaf4f6;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    padding: 60px;
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    color: #000000;
+}
+.navigate3.container10.container11{
+    background: #eadcd1;
+    opacity: 0.3;
+}
+.container11{
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+.navigate3.classes2{
+    position: relative;
+    margin-bottom: 70px;
+    color: #000000;
+}
+.classes2{
+    position: relative;
+    margin-bottom: 70px;
+    color: #000000;
+    fon
+    t-weight: 300;
+}
+.container14{
+    display: flex ;
+}
+.navigate4.container14{
+    display:flex;
+    height: 300;
+    width: 200;
+    color:red;
+    visibility: visible;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+.footer{
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    height: 300%;
+    width: 900%;
+
+  }
