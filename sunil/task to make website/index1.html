@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet5" href="link rel="stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+
+        .first_block {
+            /* display: inline-flex; */
+            width: 100%;
+            background-color: solid white;
+            border: 2px solid black;
+            /* align-items: right; */
+            /* text-align: center; */
+
+        }
+
+        .navigation {
+            justify-content:space-between;
+            display: flex;
+            /* align-items: right; */
+            margin-right: 10%;
+            margin-left: auto;
+            height: 30px;
+            font-size: medium;
+            text-decoration: none;
+        }
+
+        .logo {
+
+            font-size: 20px;
+        }
+
+        .second_block img {
+            width: 100%;
+            height: 40vh;
+        }
+
+        .third_block {
+            display: flex;
+        }
+
+        .column {
+            width: 50%;
+            padding: 10px;
+        }
+
+        .column::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column .column_child {
+            max-width: 600px;
+            color: white;
+            height: 30px;
+            border: 1px solid #cacfc2;
+        }
+
+        .column .another_child {
+            max-width: 550px;
+            background-color: rgb(24, 153, 204);
+            height:25px;
+            text-align: center;
+        }
+
+        .column .another_child p {
+            font-size: 30px;
+            color: white;
+            text-align: center;
+        }
+
+        .forth_block p {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .fifth_block img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 50px;
+            width: 50px;
+        }
+
+        .sixth_block {
+            
+            display:inline-block;
+        }
+
+        .sixth_block .child7{
+            /* width: 130%; */
+            float:inline-start;
+            width: 48%;
+            padding:5px;
+            /* justify-content: center; */
+            height:30px;
+            text-align: justify;
+        }
+        .sixth_block .child8 img {
+            height:250px;
+            float: inline-end;
+            /* width: 100%; */
+            width: 50%;
+            padding: 5px;
+        }
+        .seveth_block{
+            display: inline-block;
+            width: 100%;
+            justify-content: center;
+        }
+        .eight_block{
+            display:inline-block;
+            background-color: white color;
+            justify-content: center;
+        }
+        .eight_block .child9{
+            width:45%;
+            float: inline-start;
+            padding:5px;
+            /* justify-content: center; */
+            height:40px;
+            float: left;
+            text-align: justify;
+        
+        }
+        .eight_block .child10 img{
+            height:250px;
+            float:inline-end;
+            width: 50%;
+            /* width: 60%; */
+            padding: 5px;
+            float:right;
+            
+        }
+        .nine_block{
+            display:flex;
+            margin-left: auto;
+            margin-right: auto;
+            height: 50px;
+            width: 50px;
+            object-fit:cover;
+              }
+              .foot{
+                height: 25vh;
+                width: 100%;
+                padding: 20px;
+              }
+.foot .fa {
+  padding: px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.foot .fa:hover {
+    opacity: 0.7;
+}
+
+.foot .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+ 
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="first_block">
+            <nav class="navigation">
+                <div class="logo" style="text-align: center;">Consulting Logo</div>
+                <a href=""> Home</a>
+                <a href=""> Menu</a>
+                <a href=""> Resume</a>
+                <a href=""> contact</a>
+                <a href=""> About us</a>
+            </nav>
+        </div>
+        <div class="second_block">
+            <img src="https://image.cnbcfm.com/api/v1/image/106724963-1601542574841-gettyimages-
+                      1248900510-262a5684.jpeg?v=1631893427&w=1920&h=1080" alt="jcdjsbc">
+        </div>
+
+        <div class="third_block">
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies,
+                    eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat,
+                    purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
+                    tortor sed accumsan convallis.</p>
+                    <div class="another_child">
+                        <p style=" color: white; background-color:  rgb(24, 153, 204); font-size: larger;
+                        width: 100%;  text-align: center;">Learn How You Can achive</p>
+                    </div>
+            </div>
+            <div class="column">
+                <div class="column_child"></div><br>
+                <div class="column_child"></div><br>
+                <div class="column_child"></div>
+            </div>
+        </div>
+        <br>
+        <div class="forth_block">
+            <p>{*Business topics for presentations and research papers range from traditional ideas,
+                such as business management and economics, to more modern topics, such as digital
+                transformation and e-commerce. In any case, a good research paper and presentation
+                topic will be meaningful, timely, and interesting to an audience.
+                A research paper is a good measure of a student’s understanding of the topic.
+                It allows them to apply what they learned by tackling certain subjects relevant to their course.
+                <b>By developing their ability to communicate through oral and written exercises,
+                    research papers shape the accuracy and integrity of your thoughts.
+                    Let us help you find the right research topic about business!*}</b>
+            </p>
+        </div>
+        <div class="fifth_block">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU9-dxlLEMm64RJgb8mdf8g2VvDPQEWQLL6A&s"
+                alt="office_images">
+
+        </div>
+        <div class="sixth_block">
+            <div class="child7">
+                <p>Business topics for presentations and research papers range from traditional ideas,
+                    such as business management and economics, to more modern topics, such as digital
+                    transformation and e-commerce. In any case, a good research paper and presentation
+                    topic will be meaningful, timely, and interesting to an audience.
+                    A research paper is a good measure of a student’s understanding of the topic.
+                    It allows them to apply what they learned by tackling certain subjects relevant to their course.
+                    <b>By developing their ability to communicate through oral and written exercises,
+                        research papers shape the accuracy and integrity of your thoughts.
+                        Let us help you find the right research topic about business!
+                </p>
+                <div class="child_small">
+                    <p style=" color: white; background-color:  rgb(24, 153, 204);width: 80%; 
+                    font-size: larger; text-align: center;">Learn How You Can achive</p>
+                </div>
+            </div>
+            <div class="child8">
+                <img src="https://www.yarooms.com/hs-fs/hubfs/open%20plan%20office.jpg?width=1904&height=1062&name=open%20plan%20office.jpg"
+                    alt="images">
+                </div></div>
+                <div class="seveth_block">
+                    <p>Business topics for presentations and research papers range from traditional ideas,
+                        such as business management and economics, to more modern topics, such as digital
+                        transformation and e-commerce. In any case, a good research paper and presentation
+                        topic will be meaningful, timely, and interesting to an audience.
+                        A research paper is a good measure of a student’s understanding of the topic.
+                        It allows them to apply what they learned by tackling certain subjects relevant to their course.
+                        <b>By developing their ability to communicate through oral and written exercises,
+                            research papers shape the accuracy and integrity of your thoughts.
+                            Let us help you find the right research topic about business!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="nine_block">
+                <img src="https://img.freepik.com/premium-photo/headshot-young-happy-successful-male-office-worker-businessman-wearing-suit-smiling-camera-with-positive-face-expression-while-posing-against-grey-studio-background-business-people-concept_95891-6895.jpg"
+                    alt="office_images">
+    
+            </div>
+            <div class="eight_block">
+                <div class="child9">
+                    <p>Business topics for presentations and research papers range from traditional ideas,
+                        such as business management and economics, to more modern topics, such as digital
+                        transformation and e-commerce. In any case, a good research paper and presentation
+                        topic will be meaningful, timely, and interesting to an audience.
+                        A research paper is a good measure of a student’s understanding of the topic.
+                        It allows them to apply what they learned by tackling certain subjects relevant to their course.
+                        <b>By developing their ability to communicate through oral and written exercises,
+                            research papers shape the accuracy and integrity of your thoughts.
+                            Let us help you find the right research topic about business!
+                    </p>
+                    <div class="child_small1">
+                        <p style=" color: white; background-color:  rgb(24, 153, 204);width: 90%; 
+                        font-size: larger; text-align: center;">Learn How You Can achive</p>
+                    </div>
+                </div>
+                <div class="child10">
+                    <img src="https://image.cnbcfm.com/api/v1/image/106724963-1601542574841-gettyimages-
+                    1248900510-262a5684.jpeg?v=1631893427&w=1920&h=1080" alt="office">
+                    </div></div>
+
+                    <footer class="foot">
+                        
+                     <hr>
+                     <!-- <a href="&#https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_960_720.png"></a> -->
+                     <i href="#" class="fa-facebook"></i>
+                      <i href="#" class="fa-twitter"></i> 
+                      <i href="#" class="fa-linkedin"></i>  
+                      <i href="#" class="fa-youtube"></i>  
+                    <p style="text-align: center;" >© 2024 Your Website. All rights reserved.</p>
+                    </footer>
+    </section>
+    
+</body>
+
+</html>
