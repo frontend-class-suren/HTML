@@ -193,7 +193,7 @@
 
 <p>The datalist element specifies a list of pre-defined options for an input element.</p>
 
-<form action="/action_page.php" style="height:200px;">
+<form action="htmlformsumbitresult.html" style="height:200px;">
   <input list="browsers" name="browser">
   <datalist id="browsers">
     <option value="Edge">
@@ -205,6 +205,20 @@
   <input type="submit">
 </form>
 
+<h2>The output Element</h2>
+<p>The output element represents the result of a calculation.</p>
+
+<form action="htmlformsumbitresult.html"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
 
 </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: blue;
+        }
+        h2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multimedia comes in many different formats. 
+        It can be almost anything you can hear or see, like images, music, sound, videos, records, 
+        films, animations, and more.</h1>
+        <h2>we discusse audio,video,plug-in,youtube one by one.</h2>
+        <video hight="250" width="300"  controls>
+            <source src="/sunil/htmlmp3&mp4file.html/movie.mp4">
+            <!-- we can put video in our browser and have to write control elements in <video> element
+                becos control attribute  give us control like to play,sound and pause the video and
+                we have to write hight and width size also.-->
+        </video>
+        <!-- <video height="400" width="500" autoplay>
+            <source src="/sunil/htmlmp3&mp4file.html/movie.mp4">
+        </video> -->
+        <!-- we can put autoplay with this attribute to play video automatic when we open webpage
+             vedio start automaticly without start the video -->
+        <!-- <video hight="300" width="300" autoplay muted>
+<source src="/sunil/htmlmp3&mp4file.html/movie.mp4">
+        </video> -->
+        <!-- we can put autoplay muted bceos of this attribute video play automaticaly but sound muted. -->
+        <div>
+            <button onclick="playpause1()">play/pause</button>
+            <button onclick="small1()">small</button>
+            <button onclick="big1()">big</button>
+            <button onclick="normal1()">normal</button><br><br>
+            <video id="video1" width="300">
+             <source src="/sunil/htmlmp3&mp4file.html/movie.mp4">
+            </video>
+        </div>
+        <script>
+            var video=document.getElementById('video1')
+            function playpause1()
+            {
+                if(video.pause)
+                video.play();
+            else
+            video.pause();
+            }
+        function small1()
+        {
+        video.width=250;
+        }
+        function big1()
+        {
+            video.width=600;
+        }
+        function normal1()
+        {
+            video.width=400;
+        }
+        </script>
+        <!-- we can use button also -->
+         <!-- same we write code for audio also. -->
+          <h2>we have two elements to embed plug-in(like Java applets, PDF readers, and Flash 
+            Player) in html.</h2><br>
+          <ol>
+            <li>
+                <b>object </b>elements.
+            </li>
+            <li>
+                <b>embed </b>element.
+            </li>
+          </ol>
+          <h2>HTML YouTube Videos </h2>
+
+          <p><h3>YouTube Video Id</h3>
+            YouTube will display an id (like tgbNymZ7vqY), when you save (or play) a video.
+            
+            You can use this id, and refer to your video in the HTML code.we always put in <b>iframe.</b>
+            </p>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <!-- format to youtube video put in html page. -->
+             <h3>YouTube Autoplay + Mute</h3>
+             <!-- <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+            </iframe> -->
+            <h3>start with ? then Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).</h3>
+        <h2>YouTube Loop<br>
+            Add loop=1 to let your video loop forever.<br>
+            
+            Value 0 (default): The video will play only once.<br>
+            
+            Value 1: The video will loop (forever).</h2>
+            <iframe width="420" height="315" 
+            src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+             </iframe>
+<!-- start with the ? and then youtube id and then &loop=1(forever never stop video)  -->
+ <h2>YouTube Controls<br>
+    Add controls=0 to not display controls in the video player.<br>
+    
+    Value 0: Player controls does not display.<br>
+    
+    Value 1 (default): Player controls display.</h2>
+    <iframe width="420" height="315" 
+            src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+             </iframe>
+             <!-- control=0 display control not show-->
+             <iframe width="420" height="315" 
+            src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1">
+             </iframe>
+             <!-- control=1 display control show-->
+</body>
+</html>
