@@ -48,6 +48,29 @@
               border-style: solid;
               border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
             }
+            p.one {
+  border-style: solid;
+  border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+}
+
+p.two {
+  border-style: solid;
+  border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */
+}
+
+p.three {
+  border-style: solid;
+  border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+}
+p {
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+}
+h3{
+  background-color: goldenrod;
+}
         </style>
 </head>
 <body>
@@ -76,7 +99,50 @@
             <p class="one">Some text.</p>
             <p class="two">Some text.</p>
             <p class="three">Some text.</p>
-            
-        
+            <h1>Specific Side Widths</h1>
+<p>The border-width property can have from one to four values 
+  (for the top border, right border, bottom border, and the left border):</p>
+  <!-- always we put value clock wise(top,right,bottom,left) -->
+  <h1>CSS Border Color</h1>
+  <h3>The border-color property is used to set the color of the four borders.
+  
+  The color can be set by:</h3>
+  
+  name - specify a color name, like "red"<br>
+  HEX - specify a HEX value, like "#ff0000"<br>
+  RGB - specify a RGB value, like "rgb(255,0,0)"<br>
+  HSL - specify a HSL value, like "hsl(0, 100%, 50%)"<br>
+  transparent
+  <h4><b>Note: If border-color is not set, it inherits the color of the element.</b></h4>
+  <h2>CSS Border - Individual Sides</h2>
+<p>From the examples on the previous pages, you have seen that it is possible to specify a different border for each side.<br>
+
+In CSS, there are also properties for specifying each of the borders (top, right, bottom, and left):</p>
+<h2>Individual Border Sides
+  border-style:dotted;
+</h2>
+<h3>If the border-style property has four values:
+  
+border-style: dotted solid double dashed;
+top border is dotted
+right border is solid
+bottom border is double
+left border is dashed</h3>
+
+<h3>If the border-style property has three values:
+
+border-style: dotted solid double;
+top border is dotted
+right and left borders are solid
+bottom border is double</h3>
+
+<h3> the border-style property has two values:
+border-style: dotted solid;
+top and bottom borders are dotted
+right and left borders are solid</h3>
+
+<h3>If the border-style property has one value:
+border-style: dotted;
+all four borders are dotted</h3>
 </body>
 </html>
