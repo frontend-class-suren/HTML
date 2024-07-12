@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  background-image: url("paper.gif");
+}
+
+div.ex1 { 
+  background-color: lightgreen;
+  border: 2px solid black;
+  padding: 15px;
+}
+
+div.ex2 { 
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 15px;
+} 
+div {
+  color: blue;
+  border: 10px solid currentcolor;
+  padding: 15px;  
+}
+div {
+  border: 2px solid red;
+}
+
+span {
+  border: inherit;
+}
+    </style>
+</head>
+<body>
+    <h1>CSS Color Keywords</h1><br>
+<h3>This page will explain the transparent, currentcolor, and inherit keywords.</h3>
+
+<b style="background-color: rgb(89, 16, 235);">The transparent Keyword</b><br>
+<p>1. The transparent keyword is used to make a color transparent.<br><br>
+2. This is often used to make a transparent background color for an element.</p>
+<h2>The transparent Keyword</h2>
+
+<div class="ex1">This div has a light green background.</div>
+<br>
+<div class="ex2">This div has a transparent background.</div>
+
+<h2>The <b style="color: blue;">currentcolor</b> Keyword</h2>
+<p>The currentcolor keyword is like a variable that holds the current value of the color property of an element.<br><br>
+
+This keyword can be useful if you want a specific color to be consistent in an element or a page.</p>
+
+<h2>The currentcolor Keyword</h2>
+
+<p>The currentcolor keyword refers to the current value of the color property of an element.</p>
+
+<div>
+This div element has a blue text color and a blue border.
+</div>
+<h2>The <b style="color: blue;">inherit</b> Keyword</h2>
+The inherit keyword specifies that a property should inherit its value from its parent element.
+
+The inherit keyword can be used for any CSS property, and on any HTML element.
+
+<h2>The inherit Keyword</h2>
+
+<div>Here, the <span>span element's</span> border settings will be inherited from the parent element.</div>
+<br>
+
+<div style="border:2px dotted blue;">Here, the <span>span element's</span> border 
+    settings will also be inherited from the parent element.</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #borderimg {
+  border: 20px solid transparent;
+  padding: 10px;
+  border-image: url(../images/icons8-easy-100.png)40 stretch;
+  width: 200px;
+  height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Border Images</h1>
+        <p>The CSS border-image property, you can set an image to be used as 
+        the border around an element.</p>
+        <h2>CSS border-image Property</h2>
+        <h3>The property has three parts:</h3>
+
+<p>1. The image to use as the border<br>
+2. Where to slice the image<br>
+3. Define whether the middle sections should be repeated or stretched</p>
+<p>Here, the middle sections of the image are stretched to create the border:</p>
+<p id="borderimg">border-image: url(border.png) 30 stretch;</p>
+
+
+</body>
+</html>
