@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>My First java script</h2>
+    <!-- <button type="button" onclick="document.getElementById('demo').innerHTML=Date()">click and show date and time</button> -->
+    <h1 id="demo"></h1>
+    <h2 id="demo1">my name is sunil pangeni</h2>
+    <h3 id="demo2">my clour is blue</h3>
+    <h2 id="demo3">my background is red</h2>
+    <h2 id="demo4">my first picture java script</h2>
+    <!-- it is show data and time on just a click button -->
+    <p id="hello"></p>
+   
+     <script>
+        document.getElementById('demo').innerHTML="sunil first java script with html";
+        // now we call demo and size h1 so what we did write in innerhtml so that show in <> size.
+            document.getElementById('demo1').style.textAlign="center";
+            // it is center the text.
+            document.getElementById('demo2').style.color="blue";
+            // it is for colour of text.
+            document.getElementById('demo3').style.background="red";
+            // my background is show backgtound red.
+            function light(sw){
+                var pic;
+                if(sw==0){
+                    pic= "https://www.w3schools.com/html/pic_bulbon.gif"
+                }else {
+                        pic= "https://www.w3schools.com/html/pic_bulbon.gif"
+                    }
+                    document.getElementById('images').src=pic;
+
+                }
+                document.getElementById('hello').innerHTML="hello java scripts";
+            </script>
+            
+            <img id="images" src=" https://www.w3schools.com/html/pic_bulbon.gif" height="100" width="180">
+            
+            <noscript>sorry,your browser does not support!</noscript>
+            <p><h1>error eonly show</h1></p>
+            <!-- <noscript> only show text only. -->
+            
+            <p>
+                <button type="button" onclick="light(1)">light On</button>
+                <button type="button" onclick="light(0)">light oFF</button>
+                <!-- it is show light on and off fuction -->
+                </p>
+               
+
+                
+</body>
+</html>

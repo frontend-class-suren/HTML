@@ -1,74 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .nav-bar{
-            background-color: black;
-            color: aliceblue;
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            align-items: center;
+        * {
+            box-sizing:border-box ;
         }
-        .head a{
+        .nav-bar {
+            background-color: #daebf5;
+            color: rgb(100, 158, 209);
+            display:flex;
+            justify-content: space-between;
+            padding: 5px;
+            align-items: center;
+            margin-left:auto;
+            margin-right: auto;
+            float: right;
+            
+        }
+
+        .head a {
             margin: 10px;
             justify-content: space-around;
-            color: aliceblue;
-            
+            color:  #398ebe
+
         }
-        .banner{
+
+        .banner {
             display: flex;
-            justify-content: space-around;
-            padding: 20px;
+         }
+
+        .banner .text {
+            float: left;
+            width:30%;
+            height:250px;
+            background-color: #cce1ed;
+            text-align: center;
         }
-        .banner .text{
-            width: 50%;
-            background-color: brown;
-        }
-        .banner .image{
-            width: 50%;
+
+        .banner .image {
+            float: right;
+            width: 70%;
+            height:500px;
             justify-content: center;
-            margin-left: 20px;
             
         }
-        .about{
+
+        .about {
             background-image: url('/images/download\ \(5\).jpeg');
         }
-        .about h1{
+
+        .about h1 {
             text-align: center;
             margin-top: 30px;
         }
-        .about .paragraph p{
-            /* text-align: center; */
+
+        .about .paragraph p {
+            text-align: center;
             justify-content: center;
             width: 50%;
             margin-left: auto;
             margin-right: auto;
         }
-        .banner-heading{
+
+        .banner-heading {
             width: 100%;
             height: auto;
             padding: 30px;
             text-align: center;
-            background-color: aquamarine;
+            background-color: #cce1ed;
             color: #fff;
         }
+
+        .second-banner {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            width: 100%;
+            height:auto;
+            align-items: center;
+        }
+
+        .second-banner .Education {
+            width: 47%;
+            text-align: center;
+            padding: 20px;
+            background-color: skyblue;
+            height: 20rem;;
+        }
+
+        .second-banner .Experience {
+            width: 47%;
+            text-align: center;
+            padding: 20px;
+            background-color: skyblue;
+            height: 20rem;
+        }
+        .resume{
+            /* display: flex; */
+            text-align:center;
+            width:100%;
+            height:25rem;
+            justify-content: space-between;
+            background-color:skyblue ;
+            color: black;
+            text-align: justify;
+        }
+        .font{
+            text-align: center;
+            margin: 5px;
+            padding: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+             font-size: 2.6rem;
+        }        
+        .heading6{
+            text-align:center;
+            /* display: flex; */
+            /* justify-content:space-around; */
+        }
+        .prices h6{
+            display: flex;
+            /* text-align:justify; */
+            padding: 20px;
+            text-align: center;
+            margin: top 2px;
+            margin:auto;
+        
+
+        }
+        .prices{
+            display: flex;
+        }
+        .services{
+            width: 100%;
+            background-color: skyblue;
+            height: 10rem;
+        }
+        
+
     </style>
 </head>
+
 <body>
-    <div>
+    <div style="background-color:  #daebf5;">
         <nav class="nav-bar">
             <div class="logo">
-                <h3>Company Name</h3>
+                <h3>Web Designer</h3>
             </div>
             <div class="head">
-                <a href="">Home</a>
-                <a href="">About us</a>
-                <a href="">Product</a>
-                <a href="">Shop</a>
+                <a href="">About ME </a>
+                <a href="">Resume</a>
+                <a href="">Pricing</a>
+                <a href="">My Services</a>
+                <a href="">Recents Works</a>
+                <a href="">contact Me</a>
+                <a href="">Back To Main</a>
             </div>
             <div class="contact">
                 <button>Contact</button>
@@ -76,28 +165,111 @@
         </nav>
         <div class="banner">
             <div class="text">
-                <h4>Here is a heading or  title</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In aut atque numquam aperiam, distinctio aspernatur incidunt natus reiciendis aliquam rem.</p>
+                <h4>Mary D Davis</h4>
+                <p>Web Designer
+                    </p>
                 <div class="button">
                     <button>about</button>
                     <button>contact</button>
                 </div>
             </div>
             <div class="image">
-                <img src="/images/download (5).jpeg" alt="">
+                <img src="https://mobirise.com/extensions/resumeamp/webDesigner/assets/images/header1-1706x1137.jpg" 
+                alt="" width="100%" height="50%" co>
             </div>
             <!-- this is a about section start -->
             <h1>About Us!</h1>
         </div>
         <div class="about">
+<<<<<<< HEAD
             <div class="paragraph">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae minima doloremque obcaecati dolorem nam quis quidem vitae cumque eius a delectus reiciendis accusamus nihil harum, omnis iste nulla esse porro?</p>  
+=======
+            <h1>About Me</h1>
+            <div class="paragraph">
+                <p>I am Mary D. Davis, web designer from USA, California. I have rich experience in web site design and building and customization, also I am good at wordpress and using Resume Designer Theme. I love to talk with you about our unique and Resume Designer Template.
+
+                    AGE . . . . . 27
+                    
+                    RESIDENCE . . . . . USA
+                    
+                    FREELANCE . . . . . Available
+                    
+                    ADDRESS . . . . . California, USA</p>
+>>>>>>> 4ae268c38c63f2ec4a82b04ede01dd0372ec2b55
             </div>
              <!-- this is a about section end -->
         </div>
         <div class="banner-heading">
             <h1>Bootstrap Layouts</h1>
         </div>
+        <div class="second-banner">
+            <div class="Education">
+                <h3>Education</h3>
+                <p style="text-align: justify;"><b>2007 - 2009 PROGRAMMING COURSE (PARIS)</b>
+                    Coursework - Git, WordPress, Javascript, iOS, Android, Resume Designer Theme<br><br>
+
+                    <b>2005 - 2007 WEB DESIGN COURSE (LONDON)</b>
+                    Converted Photoshop layouts to web pages using HTML, CSS, and JavaScript<br><br>
+
+                    <b>2004 - 2005 ART UNIVERSITY (NEW YORK)</b>
+                    Bachelor's Degree in Computer Science ABC Technical Institute, Jefferson, Missouri</p>
+            </div>
+
+            <div class="Experience">
+                <h3>Experience</h3>
+                <p style="text-align:justify;">
+                    <b>2017 - PRESENT</b> ART DIRECTOR (FACEBOOK INC.)
+                    Collaborate with creative and development teams on the execution of ideas.<br><br>
+
+                    <b>2014-2017 SENIOR DEVELOPER</b>(GOOGLE INC.)
+                    Optimize website performance using latest technology.<br><br>
+
+                    <b>2010-2014</b> FRONT-END DEVELOPER (ABC INC.)
+                    Monitored technical aspects of the front-end delivery for several projects. Using the Resume
+                    Designer Template
+                </p>
+            </div>
+        </div>
+        <div class="resume">
+            <h4 class="font">Pricing<hr size="3px" color="black"></h4>
+     
+        <div class="prices">
+            <h6 class="heading6">22$</h6>
+            <p>
+                Web Development<br><br>
+                Advetising            
+                    <a class="anchor" href="https:/www.google.com/" style="bottom: auto;">
+                        <h6>$ BUY</h6>
+                    </a>       
+                </p>
+                </a>
+                <h6 class="heading7" style="text-align: center;" >35$</h6>
+                <p> 
+                    Web Development<br><br>
+                    Advetising<br><br>
+                    Game Development    
+                    <a class="anchor" href="https:/www.google.com/" style="bottom: auto;">
+                        <h6 style="margin-bottom: auto;">$ BUY</h6>
+                    </a></p>
+                   
+                    <h6 class="heading7">50$</h6>
+                    <p> 
+                        Web Development<br><br>
+                        Advetising<br><br>
+                        Game Development<br><br>
+                        Music Writing<br><br>
+                        Photography<br><br>
+                        <a class="anchor" href="https:/www.google.com/">
+                            <h6>$ BUY</h6>
+                        </a>
+                    </p>      
+            </div>
+        </div>
+        <div class="services">
+            <h1 style="text-align: center;">My Services</h1>
+        </div>
     </div>
 </body>
+
 </html>

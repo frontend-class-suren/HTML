@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            background-color:blue;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            /* style for the header section */
+        }
+        nav{
+            float:left;
+               width: 30%;
+               height: 300px;
+               background:rgb(219, 191, 191);
+               padding: 20px;
+               /* for menu frame */
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+            /* for menu list */
+        }
+        article{
+            float:left;
+            padding: 20px;
+            width: 70%;
+            background-color: blueviolet;
+            height: 300px;
+            /* for article only */
+        }
+        section::after{
+            content:"";
+            display: table;
+            clear: both;
+        }
+        /* clear flots after the table */
+        footer{
+            background-color:orange;
+            padding: 10px;
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>we have two more layout also first CSS Flexbox Layout and CSS Grid Layout</h1>
+    <h3 style="color:red;">Websites often display content in multiple columns (like a magazine or a newspaper).
+        <h2>CSS Layout Float</h2>
+        <p>In this example, we have created a header, two columns/boxes and a footer. 
+        On smaller screens, the columns will stack on top of each other.</p>
+        <p>Resize the browser window to see the responsive effect 
+        </p>
+    </h3>
+    <header><h3>our Shoes brands</h3></header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Gold_Star</a></li>
+                <li><a href="#">Black_horse</a></li>
+                <li><a href="#">Royal</a></li>
+                <li><a href="#">caliber</a></li>
+            </ul>
+        </nav>
+
+        <article>Nepal, nestled in the heart of the Himalayas, boasts a rich tapestry of culture, 
+            tradition, and craftsmanship that is reflected even in its footwear industry. 
+            While not widely known on the global stage compared to fashion capitals like Milan or Paris, 
+            Nepal has a burgeoning niche market for shoes that blend traditional techniques with 
+            contemporary styles. This essay explores some of the prominent shoe brands from Nepal, 
+            highlighting their unique attributes and the cultural backdrop that shapes 
+            their identity.</article>
+    </section>
+    <footer>
+        <h3>FOOTER</h3>
+    </footer>
+</body>
+</html>
