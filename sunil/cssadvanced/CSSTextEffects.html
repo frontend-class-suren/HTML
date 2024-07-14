@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.test1 {
+  white-space: nowrap; 
+  width: 200px; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+p.test2 {
+  white-space: nowrap; 
+  width: 200px; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+div.test {
+  white-space: nowrap; 
+  width: 200px; 
+  overflow: hidden; 
+  border: 1px solid #000000;
+}
+
+div.test:hover {
+  overflow: visible;
+}
+p.test {
+  width: 11em; 
+  border: 1px solid #000000;
+  word-wrap: break-word;
+}
+p.test1 {
+  width: 440px; 
+  border: 1px solid #000000;
+  word-break: keep-all;
+}
+p.test2 {
+  width: 450px; 
+  border: 1px solid #000000;
+  word-break: break-all;
+}
+p.test1 {
+  writing-mode: horizontal-tb; 
+}
+
+span.test2 {
+  writing-mode: vertical-rl; 
+}
+
+p.test2 {
+  writing-mode: vertical-rl; 
+}
+
+    </style>
+</head>
+<body>
+    <h1>CSS Text Effects</h1>
+    <h2>CSS Text Overflow</h2>
+    <p>The CSS text-overflow property specifies how overflowed content 
+        that is not displayed should be signaled to the user.</p>
+        <h1>The text-overflow Property</h1>
+<p>The following two paragraphs contains a long text that will not fit in the box.</p>
+
+<h2>text-overflow: clip:</h2>
+<p class="test1">This is some long text that will not fit in the box</p>
+
+<h2>text-overflow: ellipsis:</h2>
+<p class="test2">This is some long text that will not fit in the box</p>
+<p>Hover over the two divs below, to see the entire text.</p>
+<div class="test" style="text-overflow:ellipsis;">This is some long text that will not fit in the box</div>
+<br>
+<div class="test" style="text-overflow:clip;">This is some long text that will not fit in the box</div>
+<h2>CSS Word Wrapping</h2>
+The CSS word-wrap property allows long words to be able to be broken and wrap onto the next line. <br>
+
+If a word is too long to fit within an area, it expands outside:
+<h1>The word-wrap Property</h1>
+
+<p class="test">This paragraph contains a very long word: this is averyveryveryveryveryverylongword. 
+    The long word will break and wrap to the next line.</p>
+    <h3>CSS Word Breaking</h3>
+
+    <h1>The word-break Property</h1>
+
+<p class="test1">This paragraph contains some text. 
+    This line will-break-at-hyphens.</p>
+
+<p class="test2">This paragraph contains some text. 
+    The lines will break at any character.</p>
+    <h2>CSS Writing ModeCSS</h2>
+The CSS writing-mode property specifies whether lines of text are laid out horizontally or vertically.
+<h1>The writing-mode Property</h1>
+
+<p class="test1">Some text with default writing-mode.</p>
+
+<p>Some text with a span element with a <span class="test2">vertical-rl</span> writing-mode.</p>
+
+<p class="test2">Some text with writing-mode: vertical-rl.</p>
+
+<h1>The @font-face Rule</h1>
+
+<div>
+With CSS, websites can use <b>fonts other than the pre-selected "web-safe" fonts</b>.
+</div>
+<h1>The @font-face Rule</h1>
+
+<div>
+With CSS, websites can use <b>fonts other than the pre-selected "web-safe" fonts</b>.
+</div>
+
+</body>
+</html>

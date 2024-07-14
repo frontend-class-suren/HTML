@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+  text-shadow: 2px 2px;
+}
+
+.b {
+  text-shadow: 2px 2px red;
+}
+
+.c {
+  text-shadow: 2px 2px 5px red;
+}
+.d {
+  text-shadow: 2px 2px 5px red,2px 2px 5px red,2px 2px 5px red,2px 2px 5px red;
+}
+.box1 {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: coral;
+  box-shadow: 10px 10px;
+  margin: 15%;
+}
+.box2 {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: coral;
+  box-shadow: 10px 10px 5px;
+  margin: 15%;
+}
+.box3 {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: coral;
+  box-shadow: 10px 10px 5px 12px;
+  margin: 15%;
+}
+.box4 {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: coral;
+  box-shadow: 10px 10px 5px 12px inset;
+  margin: 15%;
+}
+.box5 {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: coral;
+  box-shadow: 10px 10px 5px 12px rgb(55, 0, 255),10px 15px 10px blue;
+  margin: 15%;
+}
+
+    </style>
+</head>
+<body>
+    <h1>CSS Shadow Effects</h1>
+
+    <p>With CSS you can add shadow to text and to elements.<br>
+
+In these chapters you will learn about the following properties:<br><br>
+
+1. text-shadow<br>
+2. box-shadow</p>
+
+<h4>CSS Text Shadow<br>
+1. The CSS text-shadow property applies shadow to text.<br><br> 
+
+2. In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):</h4>
+
+<h1 class="a">Text-shadow effect!</h1>
+<h1 class="b">Text-shadow effect!</h1>
+<h1 class="c">Text-shadow effect!</h1>
+<h1 class="d">Text-shadow effect!</h1>
+<h3>we give color text also.</h3>
+<h3>we give color text color also.</h3>
+<h3>we give text shadow effect also</h3>
+<h3>we give multiple shadow effect also</h3>
+
+<h2>CSS box-shadow Property</h2><br>
+<p>The CSS box-shadow property is used to apply one or more shadows to an element.<br>
+
+Specify a Horizontal and a Vertical Shadow
+In its simplest use, you only specify a horizontal and a vertical shadow. <br>
+The default color of the shadow is the current text-color.</p>
+<h1>The box-shadow Property</h1>
+
+<div class="box1">This is a div element with a box-shadow</div>
+<div class="box2">This is a div element with a box-shadow</div>
+<h2>we can use shadow also.</h2>
+<h2>we can use Set the Spread Radius of the Shadow also.</h2>
+<div class="box3">spread radius box</div>
+<h3>Set the inset Parameter<br>
+    The inset parameter changes the shadow from an outer shadow (outset) to an inner shadow.</h3>
+    <div class="box4">inset Parameter</div>
+    <h2>Add Multiple Shadows</h2>
+    <div class="box5">Add Multiple Shadows</div>
+    
+</body>
+</html>

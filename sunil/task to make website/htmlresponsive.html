@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0%;
+            background-color: rgb(225, 224, 220);
+            padding: 10px;
+            font-family: arial;
+        }
+
+        .header {
+            background-color: white;
+            text-align: center;
+            height: 30%;
+            padding: 30px;
+        }
+
+        .header img {
+            width: 100%;
+            height: 250px;
+        }
+
+        .header h1 {
+            font-size: 50px;
+        }
+
+        .navigation {
+            background-color: black;
+            overflow: hidden;
+            position: sticky;
+            top: 0px;
+            /* height: 70px; */
+        }
+
+        .navigation a {
+            float: left;
+            text-decoration: none;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            /* margin: 10px; */
+        }
+
+        .navigation a:hover {
+            background-color: rgb(194, 187, 187);
+            color: gray;
+        }
+
+        .navigation a.active {
+            background-color: blue;
+            color: white;
+        }
+
+        .leftcolumn {
+            float: left;
+            width: 75%;
+            /* background-color:white; */
+        }
+
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: rgb(216, 214, 214);
+            padding-left: 20px;
+        }
+
+        .Image {
+            background-color: gray;
+            width: 100%;
+            padding: 20px;
+            text-decoration: none;
+
+            /* margin: 20px; */
+        }
+
+        .Image a:hover {
+            background-color: rgb(28, 27, 27);
+        }
+
+        .box {
+            background-color: rgb(241, 238, 238);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(236, 233, 233);
+            margin-top: 20px;
+        }
+
+        /* @media screen and (max-width:700px){
+            .leftcolumn.rightcolumn{
+                width: 100%;
+                padding: 0;
+            }
+        }
+          */
+        @media screen and (max-width:500) {
+            .navigation a {
+                background-color: black;
+                overflow: hidden;
+                /* position:sticky; */
+                /* top: 0%; */
+            }
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .sticky+.content {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="https://images.pexels.com/photos/245240/pexels-photo-245240.jpeg?cs=srgb&dl=pexels-atbo-66986-245240.jpg&fm=jpg"
+            alt="images">
+    </div>
+    <div class="navigation">
+        <a class="active" href="javacript">Home</a>
+        <a href="javascript:void(0)">Services</a>
+        <a href="javascript:void(0)">About us</a>
+        <a href="javascript:void(0)" style="float: right;">Back Home</a>
+    </div>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="box">
+                <h2>TTITLE HEADING</h2>
+                <h5>DATE 2081-03-25</h5>
+                <div class="Image" style="height: 200px;">
+                    <a href="" style="color: white; text-decoration: none;">Image1</a>
+                </div>
+                <p>some text...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+                    Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula,
+                    risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+                    Praesent scelerisque tortor sed accumsan convallis.</p>
+            </div>
+            <div class="box">
+                <h2>TITLE HEADING</h2>
+                <h5>DATE 2081-04-26</h5>
+                <div class="Image" style="height: 200px;">
+                    <a href="" style="text-decoration: none; color: white;">Image2</a>
+                </div>
+                <p>some text...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+                    Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula,
+                    risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+                    Praesent scelerisque tortor sed accumsan convallis.</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="box">
+                <h2>About Me</h2>
+                <div class="Image" style="height: 100px;">
+                    <a href="" style="text-decoration: none; color: white;">Image3</a>
+                </div>
+                <p>Some Text About Me</p>
+            </div>
+            <div class="box">
+                <h3>Popular Post</h3>
+                <div class="Image"><a href="" style="text-decoration: none; color: white;">Image4</a></div>
+                <div class="Image"><a href="" style="text-decoration: none; color:white;">Image5</a></div>
+                <div class="Image"><a href="" style="text-decoration: none; color: white;">Image6</a></div>
+            </div>
+            <div class="box">
+                <h3>Follow Me</h3>
+                <p>Some text...</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navigation = document.getElementById("navigation");
+        var sticky = navigation.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navigation.classList.add("sticky")
+            } else {
+                navigation.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

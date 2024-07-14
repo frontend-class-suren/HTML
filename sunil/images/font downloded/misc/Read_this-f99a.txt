@@ -1,0 +1,13 @@
+
+This is experimental font in two formats:
+Open­Type SVG color font (SVG-​in-​OT) and COLRv1 fonts for­mat.
+To be able to use the color fonts you need to have 
+installed Adobe Photoshop CC2017, Adobe Illustrator CC2018, InDesign CC2019,
+Mozilla Fire­fox, Chrome, Opera or Microsoft Edge.
+
+This font is FREE for PERSONAL USE and REDISTRIBUTION
+For commercial use contact me an email on gluk@glukfonts.pl
+
+Enjoy!
+Grzegorz (gluk)
+www.glukfonts.pl

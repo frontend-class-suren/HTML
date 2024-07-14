@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          #background{
+            border-radius: 30px;
+            background-color: blue;
+            padding: 25px;
+            width: 200px;
+            height: 150px;
+           }
+           #border{
+            border-radius: 30px;
+            border: 3px solid blue;
+            padding:25px;
+            height: 150px;
+            width: 200px;
+           }
+           #image{
+            border-radius: 50px;
+            background:url(https://cdn.iconscout.com/icon/premium/png-512-thumb/bunny-5397031-4515850.png?f=webp&w=256);
+           width: 200px;
+           height: 150px;
+           padding:20px;
+           background-position: left right;
+           background-repeat: no-repeat;
+        }
+        #rcorners1 {
+  border-radius: 15px 50px 30px 5px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners2 {
+  border-radius: 15px 50px 30px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners3 {
+  border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+} 
+
+#rcorners4 {
+  border-radius: 15px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+} 
+#rcorners1 {
+  border-radius: 50px / 15px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners2 {
+  border-radius: 15px / 50px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners3 {
+  border-radius: 50%;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;
+} 
+    </style>
+</head>
+<body>
+    <h1>CSS Rounded Corners</h1>
+    <p style="color: blue;">With the CSS <b>border-radius</b> property, you can give any element "rounded corners".</p>
+     <h2>CSS border-radius Property.</h2>
+        <p>1. Rounded corners for an element with a specified background color:<br>
+         2. Rounded corners for an element with a border:<br>
+         3.Rounded corners for an element with a background image:</p>
+     </h2>
+
+<p id="background">background color</p>
+<p id="border">color in borders.</p>
+<p id="image">background images</p>
+<h1>CSS border-radius - Specify Each Corner</h1>
+<p><b>The border-radius property can have from one to four values. Here are the rules:</b><br><br>
+
+    1. Four values - border-radius: 15px 50px 30px 5px; (first value applies to top-left corner,<br>
+    second value applies to top-right corner, third value applies to bottom-right corner,<br>
+    and fourth value applies to bottom-left corner): <br><br>
+    2. Three values - border-radius: 15px 50px 30px; (first value applies<br>
+    to top-left corner, second value applies to top-right and bottom-left corners,<br>
+     and third value applies to bottom-right corner):<br><br>
+    3. Two values - border-radius: 15px 50px; (first value<br> applies to top-left 
+    and bottom-right corners, and the second value <br>
+    applies to top-right and bottom-left corners):
+    4. One value - border-radius: 15px; the value applies to all four corners, which are rounded equally:</p>
+    <h1>The border-radius Property</h1>
+
+<p>Four values - border-radius: 15px 50px 30px 5px:</p>
+<p id="rcorners1"></p>
+
+<p>Three values - border-radius: 15px 50px 30px:</p>
+<p id="rcorners2"></p>
+
+<p>Two values - border-radius: 15px 50px:</p>
+<p id="rcorners3"></p>
+
+<p>One value - border-radius: 15px:</p>
+<p id="rcorners4"></p>
+<h1>You could also create elliptical corners:</h1>
+<h1>The border-radius Property</h1>
+
+<p>Elliptical border - border-radius: 50px / 15px:</p>
+<p id="rcorners1"></p>
+
+<p>Elliptical border - border-radius: 15px / 50px:</p>
+<p id="rcorners2"></p>
+
+<p>Ellipse border - border-radius: 50%:</p>
+<p id="rcorners3"></p>
+
+</body>
+</html>
+
+</body>
+</html>

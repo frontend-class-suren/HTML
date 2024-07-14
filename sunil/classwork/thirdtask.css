@@ -1,0 +1,405 @@
+ * {
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            padding: 0%;
+        }
+nav{
+background-color:white;
+padding: 10px;
+position: sticky;
+top: 0%;
+}
+nav .navbar{
+display:flex;
+padding:10px;
+}
+nav .navbar .first{
+padding-left: 30px;
+padding-right: 30px;
+}
+nav .navbar .first a{
+padding: 20px;
+text-decoration: none;
+color: gray;
+}
+nav .navbar .second{
+padding-left:60px;
+padding-right:60px;
+text-align: center;
+}
+nav .navbar .second h1{
+text-align:center;
+
+}
+.second .third{
+/* text-align: center; */
+font-size: 11px;
+padding-left:80px;
+color: gray;
+}
+
+nav .navbar .fourth{
+padding-left:20px;
+padding-right:20px;
+}
+nav .navbar .fourth a{
+padding:20px;
+text-decoration: none;
+color: gray;
+}
+nav .navbar .fifth{
+padding-left:50px;
+padding-right:50px;
+}
+nav .navbar .fifth a{
+padding: 20px;
+background-color: transparent;
+}
+.first-b{
+display:flex;
+}
+.first-b .image-left
+{
+width:50%;
+width: 45rem
+}
+.first-b .image-left img{
+
+height:35rem;
+width:50rem;
+}
+.first-b .text-right{
+text-align: center;
+justify-items: center;
+padding-top:150px;
+padding-bottom: 150px;
+padding-left: 200px;
+padding-right: 150px;
+}
+.first-b .text-right h2{
+
+text-align: center;
+padding: 10px;
+font-family:'Times New Roman';
+color: gray;
+font-style:normal;
+
+}
+.first-b .text-right h1{
+text-align: center;
+font-family:'Courier New', Courier, monospace;
+padding: 10px;
+color: grey;
+}
+.first-b .text-right p{
+text-align: center;
+padding: 15px;
+font-family:'Times New Roman', Times, serif;
+font-style: normal;
+font-size: medium;
+color:gray
+}
+.first-b .text-right button{
+padding:10px;
+text-align: center;
+background-color:black;
+color: white;
+border-radius: 60px;
+height: 40px;
+}
+.second-b {
+text-align: center;
+width: 100%;
+background-color: rgb(229, 244, 249);
+height:15rem;
+/* padding: 20px; */
+padding-bottom: 50px;
+padding-top: 50px;
+padding-left: 50px;
+padding-right:50px ;
+}
+.second-b h2{
+text-align: center;
+padding: 10px;
+color: gray;
+}
+.second-b p{
+text-align:justify;
+text-align: center;
+padding: 10px;
+font-family:'Times New Roman', Times, serif;
+color: gray;
+}
+.second-b button{
+text-align: center;
+padding: 10px;
+background-color: black;
+color: white;
+border-radius: 50px;
+}
+.third-b{
+display: flex;
+}
+.third-b .text-left
+{
+background-color: #f9f9f9fb;
+width: 50%;
+padding-top: 100px;
+padding-bottom: 100px;
+padding-left: 100px;
+padding-right: 100px;
+}
+.third-b .text-left h3{
+text-align: center;
+padding: 15px;
+color: gray;
+}
+.third-b .text-left h5{
+text-align: center;
+padding: 20px;
+color:gray
+}
+.third-b .text-left p{
+text-align: center;
+text-align: justify;
+color: grey;
+padding: 20px;
+}
+.third-b .text-left button{
+color: white;
+background-color: black;
+border-radius:60px;
+padding: 10px;
+margin-left:40vh;
+}
+.third-b .image-right img{
+width: 120%;
+height: 75vh;
+}
+.fourth-b{
+display:inline-block;
+background-color: #fffffff9;
+/* width: 33.333%; */
+}
+.fourth-b .left{
+float: left;
+padding-left: 170px;
+padding-right: 50px;
+/* padding:5vh; */
+}
+.fourth-b .middle{
+float: inline-start;
+padding-right: 90px;
+padding-left:100px;
+
+/* padding-right: 200px; */ 
+/* padding-right: 30vh; */
+}
+.fourth-b .right{
+padding-right: 100px; 
+padding-left: 100px;
+float: right;
+}
+.fourth-b .text{
+/* text-align: center; */
+font-style: italic;
+padding: 20px;
+/* float: left; */
+text-align: justify;
+/* text-align: center; */
+color: grey;
+}
+.fourth-b .text p{
+padding-left: 150px;
+text-align: justify;
+}
+.fourth-b .text h1{
+padding: 20px;
+text-align: justify;
+padding-left: 150px;
+}
+.fifth-b{
+background-color: hwb(27 8% 0% / 0.993);
+text-align: center;
+color: white;
+padding: 30px;
+width: 100%;
+height: 40vh;
+}
+.fifth-b h2{
+padding: 20px;
+}
+.fifth-b h5{
+padding:20px
+}
+.fifth-b p{
+padding: 20px;
+}
+.fifth-b button{
+border-radius: 50px;
+padding: 8px;
+background-color: black;
+font-size: small;
+color: white;
+}
+.sixth-b{
+display:flex;
+padding: 31px;
+}
+.sixth-b .image-left
+{
+width:50%;
+width: 45rem
+}
+.sixth-b .image-left img{
+
+height: 30rem;
+width:50rem;
+padding-right: 100vh;
+}
+.sixth-b .text-right{
+text-align: center;
+padding-top:50px;
+padding-bottom: 200px;
+padding-left: 200px;
+padding-right: 150px;
+}
+.sixth-b .text-right h2{
+/* padding-bottom: 30vh;
+padding-top: 50vh; */
+text-align: center;
+padding: 10px;
+font-family:'Times New Roman';
+color: gray;
+font-style:normal;
+
+}
+.sixth-b .text-right h1{
+text-align: center;
+font-family:'Courier New', Courier, monospace;
+padding: 10px;
+color: grey;
+}
+.sixth-b .text-right p{
+text-align: center;
+padding: 15px;
+font-family:'Times New Roman', Times, serif;
+font-style: normal;
+font-size: medium;
+color:gray
+}
+.sixth-b .text-right button{
+padding:10px;
+text-align: center;
+background-color:black;
+color: white;
+border-radius: 60px;
+height: 40px;
+}
+
+
+.seventh-b{
+display: flex;
+}
+.seventh-b .text-left
+{
+background-color: #f9f9f9fb;
+width: 50%;
+padding-top: 100px;
+padding-bottom: 100px;
+padding-left: 100px;
+padding-right: 100px;
+}
+.seventh-b .text-left h1{
+text-align: center;
+padding: 15px;
+color:black;
+}
+.seventh-b .text-left h5{
+text-align: center;
+padding: 15px;
+color:gray
+
+}
+.seventh-b .text-left p{
+text-align: center;
+color: grey;
+font-size: larger;
+
+}
+.seventh-b .text-left button{
+color: white;
+background-color: black;
+border-radius:60px;
+padding: 15px;
+font-size: medium;
+text-align: center;
+}
+.seventh-b .image-right{
+width:50%;
+height: 50vh;
+padding-right:5px;
+padding-left: 5vh;
+}
+.seventh-b .image-right2{
+width: 50%;
+height: 50vh;
+}
+.eight-b{
+width: 100%;
+}
+.eight-b img{
+width: 100%;
+height: 500px;
+}
+.ninth-b{
+display:flex;
+width:120%
+}
+.ninth-b .text-left
+{
+background-color: #cd5d07fb;
+/* width: 50%;
+padding-top: 100px;
+padding-bottom: 100px;
+padding-left: 100px;
+padding-right: 100px; */
+}
+.ninth-b .text-left a{
+padding: 10px;
+text-decoration: none;
+display: inline-flex;
+color: white;
+}
+.ninth-b .text-left h3{
+text-align: center;
+padding: 15px;
+color: gray;
+}
+.ninth-b .text-left h5{
+text-align: center;
+padding: 20px;
+color:gray
+}
+.ninth-b .text-left p{
+text-align: center;
+text-align: justify;
+color: grey;
+padding: 20px;
+}
+.ninth-b .text-left button{
+color: white;
+background-color: black;
+border-radius:60px;
+padding: 10px;
+margin-left:40vh;
+}
+.ninth-b .image-right img{
+width: 90%;
+height: 50vh;
+}
+@media screen and {
+    
+}

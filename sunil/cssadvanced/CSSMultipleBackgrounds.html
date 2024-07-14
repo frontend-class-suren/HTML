@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #example1 {
+  background-image: url(../images/icons8-easy-100.png), url(../images/images.jpeg);
+  background-position: top bottom,  top bottom;
+  background-repeat: repeat, no-repeat;
+  padding: 25px;
+  text-align: center;
+        }
+  #example1 {
+  border: 1px solid black;
+  background: url(../images/icons8-easy-100.png);
+  background-size: 200px 100px;
+  background-repeat: no-repeat;
+  padding: 15px;
+}
+
+#example2 {
+  border: 1px solid black;
+  background: url(../images/icons8-easy-100.png);
+  background-repeat: no-repeat;
+  padding: 15px;
+}
+.div1 {
+  border: 1px solid black;
+  height: 120px;
+  width: 150px;
+  background: url(img_flwr.gif../images/icons8-easy-100.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.div2 {
+  border: 1px solid black;
+  height: 120px;
+  width: 150px;
+  background: url(../images/icons8-easy-100.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.div3 {
+  border: 1px solid black;
+  height: 120px;
+  width: 150px;
+  background: url(../images/icons8-easy-100.png);
+  background-repeat: no-repeat;
+}
+#example1 {
+  background: url(../images/icons8-easy-100.png) left top no-repeat, url(../images/images.jpeg) right bottom no-repeat, url(../images/download.jpeg ) left top repeat;
+  padding: 15px;
+  background-size: 50px, 130px, auto;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background: url(../images/icons8-easy-100.png) no-repeat center; 
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+#example1 {
+  border: 10px solid rgb(233, 193, 193);
+  padding: 35px;
+  background: url(../images/icons8-easy-100.png);
+  background-repeat: no-repeat;
+}
+
+#example2 {
+  border: 10px solid rgb(122, 117, 117);
+  padding: 35px;
+  background: url(../images/icons8-easy-100.png);
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+
+#example3 {
+  border: 10px solid rgb(224, 13, 13);
+  padding: 35px;
+  background: url(../images/icons8-easy-100.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+#example1 {
+  border: 10px dotted black;
+  padding: 35px;
+  background: yellow;
+}
+
+#example2 {
+  border: 10px dotted black;
+  padding: 35px;
+  background: yellow;
+  background-clip: padding-box;
+}
+
+#example3 {
+  border: 10px dotted black;
+  padding: 35px;
+  background: yellow;
+  background-clip: content-box;
+}
+    </style>
+</head>
+<body>
+    <h1>CSS Multiple Backgrounds</h1>
+    <p>You will also learn about the following properties:</p>
+
+1.background-size<br>
+2.background-origin<br>
+3.background-clip
+
+<h1>Multiple Backgrounds</h1>
+<p>The following div element has two background images:</p>
+
+<div id="example1">
+  <h1>Lorem Ipsum Dolor</h1>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+<h2> background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+  padding: 15px;</h2>
+  <!-- we use this in a single line instead of multiline lines for above property. -->
+  <h1>CSS Background Size</h1> <br>
+The CSS background-size property allows you to specify the size of background images.<br>
+
+The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.<br>
+
+The following example resizes a background image to much smaller than the original image (using pixels):<br>
+<h1>The background-size Property</h1>
+
+<p>Resized background-image:</p>
+<div id="example1">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<p>Original size of the background-image:</p>
+<div id="example2">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+<!-- both are the different and first one size bigger then the orignal picture. -->
+The two other possible values for background-size are <b style="color: red;">contain and cover</b>.
+
+<p>The contain keyword scales the background image to be as large as possible .
+(but both its width and its height must fit inside the content area). 
+As such, depending on the proportions of the background image and the background positioning area, there may
+ be some areas of the background which are not covered by the background image.</p><br>
+
+<p>The cover keyword scales the background image so that the content area is completely 
+covered by the background image (both its width and height are equal to or exceed 
+the content area). As such, some parts of the background image may not be visible 
+in the background positioning area.</p>
+
+<h1>The background-size Property</h1>
+
+<h2>background-size: contain:</h2>
+<div class="div1">
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<h2>background-size: cover:</h2>
+<div class="div2">
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<h2>No background-size defined:</h2>
+<div class="div3">
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<p>Original image:</p>
+<img src="../images/icons8-easy-100.png" alt="Flowers" width="224" height="162">
+<!-- cover attribute cover full photo but contain only howmuch they capacity and other it is cropped -->
+<h1>Define Sizes of Multiple Background Images</h1>
+<p>The background-size property also accepts multiple values for background size <br>
+(using a comma-separated list), when working with multiple backgrounds.</p>
+<div id="example1">
+  <h1>Lorem Ipsum Dolor</h1>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+<h3>Hero Image</h3>
+You could also use different background properties on a 
+<div> to create a hero image (a large image with text), and place it where you want.
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:50px">I am John Doe</h1>
+      <h3>And I'm a Photographer</h3>
+      <button>Hire me</button>
+    </div>
+  </div>
+  
+  <p>Page content..</p>
+  <p>Note that this technique will also make the image responsive: 
+    Resize the browser window to see the effect.</p>
+    <h3>CSS background-origin Property</h3><br>
+The CSS background-origin property specifies where the background image is positioned.<br>
+
+The property takes three different values:<br>
+
+<p>1. border-box - the background image starts from the upper left corner of the border<br>
+2. padding-box - (default) the background image starts from the upper left corner of the padding edge<br>
+3. content-box - the background image starts from the upper left corner of the content</p>
+<h1>The background-origin Property</h1>
+
+<p>No background-origin (padding-box is default):</p>
+<div id="example1">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<p>background-origin: border-box:</p>
+<div id="example2">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<p>background-origin: content-box:</p>
+<div id="example3">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+<h3>CSS background-clip Property</h3>
+The CSS background-clip property specifies the painting area of the background.
+
+The property takes three different values:
+
+1. border-box - (default) the background is painted to the outside edge of the border<br>
+2. padding-box - the background is painted to the outside edge of the padding<br>
+3. content-box - the background is painted within the content box<br>
+<h1>The background-clip Property</h1>
+
+<p>No background-clip (border-box is default):</p>
+<div id="example1">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+
+<p>background-clip: padding-box:</p>
+<div id="example2">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+
+<p>background-clip: content-box:</p>
+<div id="example3">
+  <h2>Lorem Ipsum Dolor</h2>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+</div>
+
+</body>
+</html>

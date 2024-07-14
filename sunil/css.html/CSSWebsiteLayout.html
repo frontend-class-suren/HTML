@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            margin: 0%;
+        }
+        .header{
+            background-color:gray;
+            padding: 20px;
+            text-align: center;
+        }
+        .navigation {
+            overflow:hidden;
+            background-color: black;
+        }
+        .navigation a {
+            float:right;
+            display: block;
+            color: white;
+            padding:12px 14px;
+            text-align: center;
+            text-decoration: none;
+        }
+       .navigation a:hover{
+        background-color: blue;
+        color: black;
+       }
+       .column {
+        float:left;
+        padding: 10px;
+       }
+       .column.left {
+         width: 25%;
+         text-align: justify;
+       }
+       .column.middle {
+        width: 50%;
+        text-align: justify;
+       }
+       .column.right {
+        width: 25%;
+        text-align: justify;
+       }
+       .footer{
+        background-color: gray;
+        padding: 20px;
+        text-align: center;
+       }
+       .row{
+        content: "";
+        display:table;
+        clear: both;
+       }
+       @media screen and (max-width:700px) {
+        .column.left,.column.middle,.column.right{
+            width: 100px;
+        }
+       }
+        
+       
+
+
+    </style>
+</head>
+<body>
+    
+    <h>CSS Website Layout</h>
+    <div class="header">
+        <h1>Header part</h1>
+        <!-- it is header part <div>class -->
+    </div>
+    <div class="navigation">
+        <h3 style="color: white;">navigation part</h3>
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+        <!-- it is navigation part <div>class -->
+    </div>
+    <div class="row">
+        <div class="column left">
+        <h2>Left</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, 
+            eget elementum magna tristique. Quisque vehicula, 
+            risus eget aliquam placerat, purus leo tincidunt eros,</p>
+        </div>
+        <div class="column middle">
+            <h2>Main</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. 
+                Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula,
+                 risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. 
+                 Praesent scelerisque tortor sed accumsan convallis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. 
+                Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula,
+                 risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. 
+                 Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+        <div class="column right">
+        <h2>Right</h2>
+        <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, 
+            eget elementum magna tristique. Quisque vehicula, 
+            risus eget aliquam placerat, purus leo tincidunt eros,</p></p>
+        </div></div>
+        <div class="footer">
+            <h2>footer part</h2>
+        </div>
+        <h1>blue print of simple website</h1>
+    
+</body>
+</html>
