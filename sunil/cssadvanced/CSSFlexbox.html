@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+                font-family: arial;
+                margin: 0%;
+                /* background-color:wheat; */
+        }
+        .header{
+            background-color: blue;
+            text-align: center;
+            color: white;
+            padding: 60px;
+        }
+        .navbar{
+            position:sticky;
+            top: 0%;
+            display: flex;
+            flex-direction: row;
+            background-color: blueviolet;
+        }
+        .navbar a{
+            text-align: center;
+            color: white;
+            /* background-color: yellow; */
+            text-decoration: none;
+            padding: 20px 30px  ;
+        }
+        .navbar a:hover{
+            background-color:green;
+            color:red;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left{
+            flex:40%;
+            /* background-color: rgb(222, 216, 216); */
+            padding: 20px;
+        }
+        .row p{
+            padding: 20px;
+        }
+        .row .left h2{
+            padding:20px;
+        }
+        .image {
+            background-color: rgb(241, 237, 233);
+        
+            padding:10px;
+        }
+        .right {
+            flex: 70%;
+            background-color: rgb(211, 207, 207);
+            padding: 10px;
+        }
+       
+        .footer{
+            padding: 50px;
+            background-color:rgb(222, 218, 218);
+            text-align: center;
+        }
+        @media screen and (max-width: 500px) {
+            .row, .navbar{
+                flex-direction: column;
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div style="background-color: red;padding:5px;">
+        <h4 style="text-align: center;">Resize the browser window to see the responsive effect.</h4>
+    </div>
+    <!-- information about website -->
+     <div class="header">My website
+        <p>with a <b>flexible</b>flexible layout</p>
+        <!-- header section. -->
+     </div>
+     <div class="navbar">
+        <a href="">Home</a>
+        <a href="">About-us</a>
+        <a href="">Contact</a>
+        <a href="">Blog</a>
+        <!-- it is a navigation bar -->
+     </div>
+     <section class="row">
+     <class="left">
+        <h2>About me</h2>
+        <h4>photo of me;</h4>
+        <div class="image" style="height:300;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR132TBAD0-GhGhN8_2Xr-3obkFd4NzFbk6Hg&s" alt=""></div>
+          <p>Image of Beautiful Nature...</p>
+          <h3>More text</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ipsum!</p>
+          <div class="image" style="height: 220px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR132TBAD0-GhGhN8_2Xr-3obkFd4NzFbk6Hg&s" alt=""></div><br>
+          <div class="image" style="height: 220px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR132TBAD0-GhGhN8_2Xr-3obkFd4NzFbk6Hg&s" alt=""></div><br>
+          <div class="image" style="height: 220px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR132TBAD0-GhGhN8_2Xr-3obkFd4NzFbk6Hg&s" alt="">
+          </div>
+          <div class="right">
+             <h2>TITLE HEADING</h2>
+             <h5>title discription,dec 7,2017</h5>
+                <div class="image" style="height:220px;">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR132TBAD0-GhGhN8_2Xr-3obkFd4NzFbk6Hg&s" alt=""></div>
+          </div>
+          <p>some text...</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quos? 
+            Voluptatibus blanditiis nostrum nulla inventore voluptas aperiam, amet accusantium 
+            facere dolorum doloremque voluptatum atque quaerat, sapiente iste tempore soluta hic?
+             ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eos?</p><br>
+
+            <h2>TITLE HEADING</h2>
+            <h5>title discription,dec 7,2017</h5>
+               <div class="image" style="height:220px;">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR132TBAD0-GhGhN8_2Xr-3obkFd4NzFbk6Hg&s" alt=""></div>
+         </div>
+         <p>some text...</p>
+         <p style="padding: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quos? 
+            Voluptatibus blanditiis nostrum nulla inventore voluptas aperiam, amet accusantium 
+            facere dolorum doloremque voluptatum atque quaerat, sapiente iste tempore soluta hic?
+             ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eos?</p><br>
+         </div>
+        </section>
+        <section class="footer">Footer</section>
+</body>
+</html>
