@@ -4,8 +4,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+       div{
+        width:300px;
+        height: 100px;
+        background-color: orange;
+        transform: translate(100px,20px) ;
+        border: 2px solid rgb(146, 143, 138);
+       }
+    div{
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#myDiv {
+  transform: rotate(20deg);
+}
+.scale-method {
+  margin: 150px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: scale(2,3);
+}
+.without {
+  margin: 150px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+.scale-x{
+  margin: 150px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: scaleX(2);
+}
+.half-value{
+  margin: 150px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: scaleX(0.5);
+}
+.scale-y{
+  margin: 150px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: scaleY(3);
+}
+div {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#myDiv1 {
+  transform: skewX(20deg);
+}
+div{
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#myDiv {
+  transform: skew(20deg,10deg);
+}
+div {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#myDiv1 {
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+
+div#myDiv2 {
+  transform: matrix(1, 0, 0.5, 1, 150, 0);
+}
+    </style>
 </head>
 <body>
+    <h1>CSS 2D Transforms</h1>
+    <h1>CSS 2D Transforms Methods</h1>
+<h2>The CSS transform property you can use the following 2D transformation methods:</h2>
+<ul>
+    <li>translate()</li>
+<li>rotate()</li>
+<li>scaleY()</li>
+<li>skewX()</li>
+<li>skewY()</li>
+<li>skew()</li>
+<li>matrix()</li></ul>
+<h1>The translate() method moves an element from its current position 
+(according to the parameters given for the X-axis and the Y-axis).</h1>
+<h2>The translate() Method</h2>
+<p><b>The translate() method moves an element from its current position:</b></p>
+<div>
+This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+</div>
+<h2>The rotate() method rotates an element clockwise or counter-clockwise according to a given degree.</h2>
+<h1>The rotate() Method</h1>
+
+<p>The rotate() method rotates an element clockwise or counter-clockwise.</p>
+
+<div>
+This a normal div element.
+</div>
+
+<div id="myDiv">
+This div element is rotated clockwise 20 degrees.<br>
+Using negative values will rotate opposite direction(anti-clockwise) like write -20 instead of only 20.
+</div>
+<h2>The scale() Method</h2>
+<h3>The scale() method increases or decreases the size of an element 
+(according to the parameters given for the width and height).</h3>
+<h4>we write code without scale() method or with scale() method</h4>
+<h1>The scale() Method</h1><br>
+<h2>Without scale()method</h2>
+
+<p>The scale() method increases or decreases the size of an element.</p>
+
+<div class="scale-method">
+This div element is two times of its original width, and three times of its original height.
+</div>
+
+<div class="without">
+This div element oringnal size.
+</div>
+<h1>The scaleX() Method</h1>
+<h2>The scaleX() method increases or decreases the width of an element.</h2>
+
+<p>The following example increases the element to be two times of its original width: </p>
+
+<div class="scale-x">
+    This div element is two times of its original width.
+    </div>
+<div class="half-value">The following example decreases the element to be half of its original width: </div>
+
+<h1>The scaleY() method increases or decreases the height of an element.</h1>
+<div class="scale-y">
+    This div element is three times of its original height.
+    </div>
+    <h2>decreases the Half of its original height:</h2><br>
+        <code style="font-size: large;">div {<br>
+            transform: scaleY(0.5);<br>
+          }
+          </code>
+          <h1>The skewX() Method</h1>
+<h2>The skewX() method skews an element along the X-axis by the given angle.</h2>
+
+<h4>The following example skews the <di> element 20 degrees along the X-axis:</h4>
+    <div>
+        This a normal div element.
+        </div>
+        
+        <div id="myDiv1">
+        This div element is skewed 20 degrees along the X-axis.
+        </div>
+        <h1>The skewY() Method</h1>
+        The following example skews the element 20 degrees along the Y-axis:<br>
+       <code>div {<br>
+            transform: skewY(20deg);<br>
+          }
+        </code> 
+        <h1>The skew() Method</h1>
+        <h2>The skew() method skews an element along the X and Y-axis by the given angles.</h2>
+        
+        <h4>The following example skews the <br>
+            element 20 degrees along the X-axis, and 10 degrees along the Y-axis: </h4>
+            <div>
+                This a normal div element.
+                </div>
+                
+                <div id="myDiv">
+                This div element is skewed 20 degrees along the X-axis, and 10 degrees along the Y-axis.
+                </div>
+
+                <h3>If the second parameter is not specified, it has a zero value. So, 
+                the following example skews the element 20 degrees along the X-axis:<br>
+                <code>
+                    div {<br>
+                        transform: skew(20deg);<br>
+                      }
+                </code></h3>
+
+                <h1>The matrix() Method</h1>
+<h2>The matrix() method combines all the 2D transform methods into one.</h2>
+
+<h3>The matrix() method take six parameters, containing mathematic functions, <br>which allows you to rotate, scale, move (translate), and skew elements.
+
+The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())</h3>
+<div>
+    This a normal div element.
+    </div>
     
+    <div id="myDiv1">
+    Using the matrix() method.
+    </div>
+    
+    <div id="myDiv2">
+    Another use of the matrix() method.
+    </div>
+                
 </body>
 </html>

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flexbox;
+            background-color: rgb(2, 2, 46);
+            /* background-color: red; */
+        }
+
+        /* for top part */
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top .text {
+            /* padding-left: 80px; */
+            color: white;
+            /* padding-right: 20vh; */
+
+        }
+
+        .top .icons a {
+            align-items: center;
+            /* font-size: medium; */
+            color: white;
+            padding: 4px;
+        }
+
+        /* for banner part */
+
+        .banner {
+            /* width: 100%;
+            position: sticky;
+            top: 0%; */
+
+            /* height: auto; */
+        }
+
+        .banner .navigation {
+            width: 70%;
+            position: absolute;
+            top: 5%;
+            background-color: #fff;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            padding: 5px;
+
+        }
+
+        .banner .navigation .nav a {
+            padding: 8px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            font-size: large;
+
+        }
+
+        .banner .navigation .nav-text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .banner img {
+            width: 100%;
+            position: relative;
+            height: 74vh;
+        }
+
+        .banner .b-text {
+            top: 10%;
+            left: 25%;
+            transform: translate(-50%, 50%);
+            color: white;
+            position: absolute;
+
+        }
+
+        .banner .b-text p {
+            color: blue;
+            text-align: justify;
+        }
+
+        .banner .b-text h1 {
+            color: blue;
+        }
+
+        .banner .b-text button {
+            font-size: xx-small;
+            color: white;
+            background-color: blue;
+            padding: 15px;
+        }
+
+        .banner .box-container {
+            position: absolute;
+            transform: translate(-50%, 50%);
+            top: 47%;
+            left: 80%;
+            display: flex;
+
+
+        }
+
+        .banner .box-container .box1 {
+            padding: 40px;
+            /* border: 1px solid white; */
+            color: white;
+            justify-content: center;
+            background-color: blue;
+            /* align-self: center; */
+
+        }
+
+        .banner .box-container .box1 a {
+            color: white;
+            font-size: medium;
+        }
+
+        /* first block */
+        .first-b .text-b {
+            background-color: white;
+            height: 25vh;
+        }
+
+        .first-b .text-b h1 {
+            text-align: center;
+            color: black;
+            padding: 30px;
+        }
+
+        .first-b .text-b p {
+            text-align: center
+        }
+
+        /* second part of first-b */
+        .first-b .image-b {
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+        }
+
+        .first-b .image-b .left h1 {
+            color: black;
+            text-align: center;
+        }
+
+        .first-b .image-b .left p {
+            text-align: center;
+        }
+
+        .first-b .image-b .left a {
+
+            font-size: 40px;
+            padding-left: 45%;
+        }
+
+        /* right side */
+        .first-b .image-b .right a {
+            font-size: 40px;
+            padding-left: 45%;
+        }
+
+        .first-b .image-b .right p {
+            text-align: center;
+        }
+
+        .first-b .image-b .right h1 {
+            color: black;
+            text-align: center;
+        }
+
+        /* second block  */
+        .second-b {
+            display: flex;
+            width: 100%;
+        }
+
+        .second-b .left-side {
+            width: 100%
+        }
+
+        .second-b .left-side img {
+            width: 100%;
+            /* justify-content: space-between; */
+            margin-bottom: -4px;
+        }
+
+        /* right side here */
+        .second-b .right-side {
+            width: 100%;
+            background-color: blue;
+        }
+
+        .second-b .right-side h1 {
+            color: white;
+            padding: 20px;
+            font-size: xx-large;
+        }
+
+        .second-b .right-side p {
+            color: white;
+            padding: 20px;
+            /* text-align: justify; */
+        }
+
+        /* third block here */
+        .third-b {
+            /* display: flex; */
+            width: 100%;
+            height: 30%;
+            background-color: white;
+        }
+
+        .third-b .text H1 {
+            font-size: xx-large;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* block side */
+        .third-b .main-box {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .third-b .main-box .box1 {
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            /* border:1px solid blue; */
+            /* justify-content:space-between; */
+            background-color: blue;
+            /* align-items: center; */
+        }
+
+        .third-b .main-box .box1 h1 {
+
+            text-align: center;
+            color: white;
+        }
+
+        .third-b .main-box .box1 a {
+            font-size: xx-large;
+            padding-left: 14vh;
+            color: white;
+        }
+
+        .third-b .main-box .box1 p {
+            text-align: center;
+            /* align-items: center; */
+            /* text-align: justify; */
+            color: white;
+            padding: 20px;
+
+        }
+
+        /* fourth block is here */
+        .fourth-b .text {
+            background-color: white;
+        }
+
+        .fourth-b .text h1 {
+            text-align: center;
+            padding: 20px;
+            font-size: xx-large;
+        }
+
+        /* fourth block picture side */
+
+        .fourth-b .picure {
+            display: flex;
+            width: 100% !important;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+
+        .fourth-b .picure .pic1 {
+            background-color: white;
+        }
+
+        .fourth-b .picure .pic1 h1 {
+            text-align: center;
+            color: blue
+        }
+
+        .fourth-b .picure .pic1 p {
+            text-align: center;
+            color: blue;
+        }
+
+        /* fifth block here */
+        .fifth-b {
+            width: 100%;
+            display: flex;
+
+        }
+
+        .fifth-b .left-text {
+            background-color: rgb(130, 39, 39);
+            padding: 10px;
+            width: 49.999%;
+            /* height: 50%; */
+
+        }
+
+        .fifth-b .left-text h1 {
+            font-size: xx-large;
+        }
+
+        .fifth-b .left-text button {
+            padding: 15px;
+            border-radius: 20px;
+            text-align: justify;
+            width: 70%;
+
+
+        }
+
+        .fifth-b .left-text .order {
+            padding: 10px;
+
+        }
+
+        .fifth-b .left-text {
+            background-color: white;
+        }
+
+        .fifth-b {
+            background-color: white;
+            /* border:1px solid coral; */
+            /* width: 49.999; */
+        }
+
+        .right-image {
+            /* width: 49.999%; */
+        }
+
+        .fifth-b .image-inside {
+            display: flex;
+            justify-content: space-between;
+        }
+        .fifth-b .image-inside img{
+        
+        }
+
+        .fifth-b .right-image img {
+            /* width: 125%; */
+        }
+
+        /* sixth block here */
+        .sixth-b {
+            /* display: flex; */
+            background-color: gray;
+
+        }
+
+        .sixth-b h1 {
+            width: 100%;
+            color: white;
+            /* background-color: gray; */
+            height: 5vh;
+            text-align: center;
+            font-size: xx-large;
+            padding: 20px;
+
+        }
+
+        .sixth-b .down-image {
+            display: flex;
+            width: 33.333%;
+
+        }
+
+        .sixth-b .down-image img {
+            padding: 10px;
+        }
+
+        /* seventh block here */
+        .seveth-b {
+            background-color: white;
+        }
+
+        .seveth-b h1 {
+            text-align: center;
+            color: black;
+            font-size: xx-large;
+        }
+
+        .seveth-b .image-7 {
+            display: flex;
+        }
+
+        .seveth-b .image-7 h2 {
+            text-align: center;
+        }
+
+        /* eight block is here */
+        .eight-b {
+            background-color: rgb(186, 184, 184)
+        }
+
+        .eight-b h1 {
+            color: white;
+            padding: 40px;
+            padding-bottom: 5vh;
+            padding-left: 11vh;
+        }
+
+        .eight-b .form {
+            width: 100%;
+            height: 45vh;
+            padding: 60px;
+            text-align: left;
+            padding-bottom: 50vh;
+
+        }
+
+        .eight-b .form input {
+            font-size: 15px;
+            padding: 10px;
+            width: 190px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .eight-b .form select {
+            font-size: 15px;
+            width: 29%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .eight-b .form textarea {
+            font-size: 15px;
+            width: 29%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .eight-b .form button {
+            font-size: 15px;
+            width: 29%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            background-color: blue;
+        }
+
+        /* footer is here */
+        .footer {
+            display: flex;
+            flex-direction: row;
+            /* width: 25%; */
+            height: 50vh;
+            align-items: baseline;
+            /* align-items: center; */
+            justify-content: space-between;
+            justify-content: space-around;
+        }
+
+        .footer .first-p {
+            /* text-align: center; */
+        }
+
+        .footer .first-p h4 {
+            color: white;
+            /* text-align: center; */
+            padding-left: 10px;
+        }
+
+        .footer .first-p p {
+            color: white;
+            text-align: justify;
+            /* text-align: center; */
+            padding: 10px;
+        }
+
+        .footer .first-p a i {
+            color: white;
+            font-size: larger;
+            padding: 10px;
+        }
+
+        .footer .second-p {}
+
+        .footer .second-p h4 {
+            color: white;
+            text-align: center;
+        }
+
+        .footer .second-p ul {
+            color: white;
+            /* text-align: center; */
+            list-style-type: none;
+            /* width: 10px; */
+        }
+
+        .footer .third-p {}
+
+        .footer .third-p h4 {
+            color: white;
+            /* text-align: center; */
+        }
+
+        .footer .third-p ul {
+            color: white;
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        .footer .fourth-p {
+            display: flexbox
+        }
+
+        .footer .fourth-p h4 {
+            color: white;
+            /* text-align: center; */
+            /* padding-left:30px */
+        }
+
+        .footer .fourth-p .icons a {
+            color: white;
+            bottom: 0%;
+        }
+
+        .footer .fourth-p .address p {
+            color: white;
+            justify-content: center;
+        }
+
+        .footer .fourth-p .address h5 {
+            color: white;
+        }
+
+        .footer .fourth-p .end-line h6 {
+            position: absolute;
+            /* text-align : center; */
+            left: 40%;
+
+        }
+
+        @media screen and (max-width: 480px) {
+            .banner .navigation
+            {
+                display: none; 
+                 width: 100%;
+
+            }
+
+        }
+        
+    </style>
+<html>
+<body>
+    <div class="top">
+        <div class="text">
+            <h5>phone-no:+00-1234-567&nbsp; or &nbsp;
+                email us:emailsample@email.com</h5>
+        </div>
+        <div class="icons">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-solid fa-globe"></i></a>
+        </div>
+    </div>
+    <section class="banner">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            height="380px" width="500" alt="">
+        <div class="navigation">
+            <div class="nav-text">
+                <h1 style="text-align: center;"><span style="color:rgb(10, 10, 144);">IT</span>solution</h1>
+                <div class="nav">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Services</a>
+                    <a href="">Case study</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                    <a href="" style="background-color: blue;">Free Consultation</a>
+                </div>
+            </div>
+        </div>
+        <div class="b-text">
+            <p>A small river named Duden flows by<br> their place and supplies</p>
+            <h1>Experience for <br> Every Kinds of ITSolution.</h1>
+            <button>Read more</button>
+        </div>
+        <div class="box-container">
+            <div class="box1">Information Tecnology Consultation
+                <a href=""><i class="fa-solid fa-bolt"></i></a>
+            </div>
+            <div class="box1">product design strategy
+                <a href=""><i class="fa-solid fa-lightbulb"></i></a>
+            </div>
+            <div class="box1">cyber security& web development.
+                <a href=""><i class="fa-solid fa-robot"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="first-b">
+        <div class="text-b">
+            <h1>More Than 35+ years we provide <br> IT Solution</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing <br> elit. Dolore, odit? </p>
+        </div>
+        <div class="image-b">
+            <div class="left">
+                <a href=""><i class="fa-regular fa-window-maximize"></i></a>
+                <h1>web development</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Dolorum facere qui veritatis, est error porro.</p>
+            </div>
+            <div class="middle">
+                <img src="/images/Screenshot 2024-07-16 155309.png" alt="">
+            </div>
+            <div class="right"> <a href=""><i class="fa-solid fa-server"></i></a>
+                <h1>server security</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Dolorum facere qui veritatis, est error porro.</p>
+            </div>
+        </div>
+    </section>
+    <section class="second-b">
+        <div class="left-side">
+            <img src="/images/fifth-task/Screenshot 2024-07-16 215104.png" height="300" width="300" alt="">
+        </div>
+        <div class="right-side">
+            <h1>Consult us here in <br><span style="color:orangered;">ITSolution</span> </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                <br> voluptate exercitationem odio, est voluptates perspiciatis.
+            </p>
+        </div>
+    </section>
+    <section class="third-b">
+        <div class="text">
+            <h1>Our Exclusive <span style="color: blue;">IT Solution</span> <br> Services</h1>
+        </div>
+        <div class="main-box">
+            <div class="box1"><a href=""><i class="fa-solid fa-laptop-code"></i></a>
+                <h1>Web Development</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, soluta.</p>
+            </div>
+            <div class="box1"><a href=""><i class="fa-solid fa-chart-simple"></i></a>
+                <h1>Database Analysis</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, soluta.</p>
+            </div>
+            <div class="box1"><a href=""><i class="fa-solid fa-server"></i></a>
+                <h1>server security</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, soluta.</p>
+            </div>
+            <div class="box1"><a href=""><i class="fa-brands fa-slack"></i></a>
+                <h1>ux/ui strategy</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, soluta.</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="fourth-b">
+        <div class="text">
+            <h1>Our Strategic <span style="color: blue;">Work</span></h1>
+        </div>
+        <div class="picure">
+            <div class="pic1"><img src="../images/fifth-task/Screenshot 2024-07-17 002023.png" height="100px"
+                    width="330px" alt="">
+                <h1>Web Development</h1>
+                <p>Best solution for information technology</p>
+            </div>
+            <div class="pic1"><img src="../images/fifth-task/Screenshot 2024-07-17 002038.png" height="100px"
+                    width="330px" alt="">
+                <h1>Web Application</h1>
+                <p>Creative idea Build up</p>
+            </div>
+            <div class="pic1"><img src="../images/fifth-task/Screenshot 2024-07-17 002058.png" height="100px"
+                    width="330px" alt="">
+                <h1>Web Application</h1>
+                <p>Web design concept & Web Analysis</p>
+            </div>
+            <div class="pic1"><img src="../images/fifth-task/Screenshot 2024-07-17 002127.png" height="100px"
+                    width="330px" alt="">
+                <h1>ux/ui strategy</h1>
+                <p>Strategy for Enduring Customer Relationship</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="fifth-b">
+        <div class="left-text">
+            <h1>Frequently Asks <br> Question</h1>
+            <button>How Can We Help Your Buiness</button>
+            <div class="order"><button>
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    </ol>
+                </button></div>
+            <div class="button1"><button>how long does it take to build a website</button> </div>
+            <div class="button1"><button>can i help your IT solution for business?</button></div>
+            <div class="button1"><button>what are those requirment for IT solution</button></div>
+        </div>
+        <div class="right-image">
+            <div class="image">
+                <img src="../images/fifth-task/Screenshot 2024-07-17 002127.png" width="100%" height="500" alt="">
+            </div>
+            <div class="image-inside">
+                <div class="image">
+                    <img src="../images/fifth-task/Screenshot 2024-07-17 002127.png" width="500" height="300" alt="">
+                </div>
+                <div class="image">
+                    <img src="../images/fifth-task/Screenshot 2024-07-17 002127.png" width="500" height="300" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sixth-b">
+        <h1>Our insights & creative ideas</h1>
+        <div class="down-image">
+            <div><img src="../images/fifth-task/Screenshot 2024-07-17 173331.png" height="400" width="500" alt=""></div>
+            <div><img src="../images/fifth-task/Screenshot 2024-07-17 173342.png" height="400" width="500" alt=""></div>
+            <div><img src="../images/fifth-task/Screenshot 2024-07-17 173507.png" height="400" width="450" alt=""></div>
+        </div>
+    </section>
+    <section class="seveth-b">
+        <h1>Read our latest blog</h1>
+        <div class="image-7">
+            <div><img src="/images/fifth-task/Screenshot 2024-07-17 183829.png" height="300" width="500" alt="">
+                <h2>Why Lead Generation is key for <br> Business growth</h2>
+            </div>
+            <div><img src="/images/fifth-task/Screenshot 2024-07-17 183851.png" height="300" width="500" alt="">
+                <h2>Why Lead Generation is key for <br> Business growth</h2>
+            </div>
+            <div><img src="/images/fifth-task/Screenshot 2024-07-17 183908.png" height="300" width="450" alt="">
+                <h2>Why Lead Generation is key for <br> Business growth</h2>
+            </div>
+        </div>
+    </section>
+    <section class="eight-b">
+        <h1>Don't hesitate to contact us</h1>
+        <div class="form">
+            <form>
+                <input type="text" id="fname" name="fname" value="Your Name">
+                <input type="text" id="id" name="id" value="Email"><br><br>
+                <select name="ITsolution" id="ITsolution">
+                    <option value="data security">Data security</option>
+                    <option value="web">web design</option>
+                    <option value="ai">Artifical inteligence</option>
+                </select><br><br>
+                <textarea cols="50" rows="6">message</textarea><br><br>
+                <button>Send message</button><br><br>
+            </form>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="first-p">
+            <h4><span style="color: blue;">IT</span><span style="color: orangered;">solution</span></h4>
+            <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit
+                Cupiditate earum voluptatibus <br> blanditiis ratione sunt</p>
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="second-p">
+            <h4>Explore</h4>
+            <ul>
+                <li>About</li>
+                <li>Contact</li>
+                <li>What We Do</li>
+                <li>Plans & Pricing</li>
+                <li>Refund Policy</li>
+                <li>Call us</li>
+            </ul>
+        </div>
+        <div class="third-p">
+            <h4>Legal</h4>
+            <ul>
+                <li>JoinUs</li>
+                <li>Blog</li>
+                <li>Privacy & Policy</li>
+                <li>Terms & Condition</li>
+                <li>Careers</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="fourth-p">
+            <h4>Have a Questions?</h4>
+            <div class="icons">
+                <a href=""><i class="fa-solid fa-map"></i></i></a>
+                <a href=""><i class="fa-solid fa-phone"></i></i></a>
+                <a href=""><i class="fa-sharp fa-solid fa-paper-plane"></i></a>
+            </div>
+            <div class="address">
+                <p>Lorem, ipsum dolor <br> sit amet
+                    consectetur <br> adipisicing elit. Quaerat, vel?</p>
+                <h5>+23920&nbsp;&nbsp;3939&nbsp;&nbsp;210</h5>
+                <h5>info@yourdomain.com</h5>
+            </div>
+            <div class="end-line">
+                <h6 style="color: white;">Copyright ©2023 All rights reserved|This template is made with ♡ by Colorlib
+                </h6>
+
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
