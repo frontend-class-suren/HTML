@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Operators</h1>
+    <h2>The Assignment (=) Operator</h2>
+    <script>
+        {
+            var a=6;//assign the value of 6 to a.
+            let b=7;//assign the value of 7 to b
+            let c=a+b;//assign the value of a+b to c.
+            document.write("vale of a+b is="+c);
+            //we assign addition value of a+b so multiplication a*b and substraction a-b.
+        }
+    </script>
+    <h1>JavaScript String Comparison</h1>
+    <p id="demo"></p>
+    <script>
+        { 
+            let text="a";
+            let text1="b";
+            let result=text>text1;
+        
+    
+            document.getElementById('demo').innerHTML="Is a is less than b?" +result;
+            //Note that strings are compared alphabetically:
+        
+        }
+    </script>
+    <p id="demo1"></p>
+    <script>
+        {
+            let a1='sunil';
+            let b2='sharma';
+            let c3=a1+' '+b2;
+
+            document.getElementById('demo1').innerHTML='joint two variable is=' +c3;
+        }
+    </script>
+    <h2>The += assignment operator can also be used to add (concatenate) strings:</h2>
+    <p id="demo2"></p>
+    <script>
+        {
+             let str1='my name is ';
+              str1 +='sunil pangeni';
+             document.getElementById('demo2').innerHTML='oprator result is:-'+ str1;
+        }    
+        
+    </script>
+    <h2>Adding Strings and Numbers</h2>
+    <p id="demo2"></p>
+    <script>
+        {
+            let a='sunil';
+            let b=5;
+            let c=a+b
+            document.getElementById('demo2').innerHTML=a+"<br>"+b+"<br>"+c;
+        }
+    </script>
+    
+    </body>
+</body>
+</html>
