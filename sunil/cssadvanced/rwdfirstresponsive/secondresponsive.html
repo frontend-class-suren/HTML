@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .navbar{
+            padding: 10px;
+            overflow: hidden;
+            background-color: black;
+            position: sticky;
+           top:0%;
+        }
+
+        .navbar a{
+            float: left;
+            font-size:larger;
+            color:white;
+            text-align: center;
+            padding: 10px 13px;
+            text-decoration: none;
+        }
+        .drop-down{
+            float: left;
+            overflow:hidden;
+            position: relative;
+        }
+        .drop-down .drop-button{
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color:black;
+            padding: 14px 16px;
+            /* background-color: gray; */
+            margin: 0%;
+
+        }
+        .navbar a:hover, .drop-down:hover .drop-button:hover{
+            background-color: gray;
+            color: black;
+            display: block;
+            
+        }
+        .drop-content{
+            display: none;
+        }
+        .drop-content a:hover{
+            background-color: gray
+
+        }
+        /*if  our text hide behide the picture so we use top:0%; left:0% postition:relative;   */
+        .drop-down:hover .drop-content{
+            display:block;
+            background-color: black;         
+            top: 0%;
+            left: 0%;
+            position: relative
+            
+        }
+        .drop-down:hover .drop-button{
+            background-color: gray;
+        }
+        .icons a{
+            float: right;
+           
+            
+        }
+         .icons a:hover{
+            background-color: red;
+        }
+        .banner{
+            width: 100%;
+            position:relative;
+           
+           
+        }
+        .banner img
+        {
+            position: relative;
+            width:100%;
+            height:70vh ;
+            
+
+            /* border: 2px solid blue; */
+        }
+        .banner .text{
+            position:absolute;
+            top:70%;
+            right:40%;
+            
+        }
+        .banner .text h1{
+           color: white;
+           text-align: center;
+           font-size: xx-large;
+        }
+        .banner .text p
+        {
+color: white;
+text-align: center;
+
+        }
+        /* first block here */
+        .first-b .up-text{
+           width: 100%;
+        }
+        .first-b .up-text h1,h4{
+          text-align: center;
+          color: black;
+          font-size: xx-large;
+        }
+        .first-b .up-text h4
+        {
+            color: gray;
+            font-size: large;
+        }
+        .first-b .up-text p{
+            text-align: justify;
+        }
+        .first-b::after{
+            content: "";
+            display: table;
+            clear:both;
+        }
+        .first-b .images .image1{
+         float: left;
+         width: 33.333%;
+         justify-content: space-around;
+        }
+        .first-b .images .image1 h5{
+            text-align: center;
+            font-size: medium;
+        }
+        /* second block is here */
+
+        .second-b{
+            background-color: black;
+            margin: -24px;
+              margin-left: 1px;  
+              margin-right: 1px; 
+              height: 50rem;  
+              /* line-height: 0 ; */
+              justify-content:space-between;
+              
+            
+        }
+        .second-b h1,p{
+            color: white;
+              text-align:center;
+              justify-content: space-between;
+        }
+        /* .second-b .button{
+            width: 100%;
+            text-align:center;
+            height: 25vh;
+        } */
+          /* .second-b .button button
+          {
+            font-size: larger;
+            padding: 10px;
+            margin-top: 10px;
+            width:50%;  
+            text-align: left;
+          }
+            text-align: justify; */
+          /* }
+          .second-b .button button .nasted{
+            background-color: black;
+            color: white;
+            font-size: larger;
+            padding: 3px;
+            border-radius: 50%;
+          } */
+          .second-b .one{
+            list-style-type: none;
+            border: 1px solid gray;
+            color: black;
+            font-size: large;
+            padding: 10px;
+            width: 50%;
+            text-decoration: none;
+            margin-left: 23%;
+            background-color: white;
+             
+
+          }
+          .second-b .card-box{
+          }
+          .second-b .card-box img{
+            
+          }
+          .second-b .card-box .card-content{
+            /* display:flex;
+            width: 33.333%; */
+            /* justify-content: space-around; */
+          }
+          .second-b .card-box .card-content h1,h2,p{
+            /* text-align: justify; */
+          }
+
+          .second-b .image-part{
+            display:flex;
+            /* width: 100%; */
+            /* height: 100%; */
+            
+           
+          }
+          .second-b .image-part .first-1{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding-right: 40PX;
+            padding-left: 40PX;
+            padding-top: 30PX;
+            padding-bottom: 40PX;
+        
+            
+           
+          }
+          /* third block is here */
+          .Third-b{
+            height: 40vh;
+          }
+          .Third-b h1,h3{
+            text-align: center;
+            padding: 10px;
+          }
+          .Third-b .icon{
+            display : flex;
+          }
+           .icon ul li{
+            list-style-type: none;
+            color: black;
+          }
+          .icon form {
+            text-align:right;
+            color: gray; 
+            /* padding:10px; */
+            padding-left: 75vh;
+            /* align-items: center; */
+          }
+          .icon form #fname{
+            width: 34vh;
+            margin: 4px;
+            padding: 8px;
+            float: left;
+            /* justify-content: center; */
+          }
+            .icon form #send{
+            width: 72vh;
+            padding: 8px;
+            float: left;
+            justify-content: center;
+            margin: 4px;
+          }
+           .icon form #mail{
+             width: 36vh;
+             padding:8px;
+             float:left;
+             margin: 4px;
+             /* justify-content: center; */
+          } 
+           .icon form #button{
+            margin: 4px;
+            background-color: black;
+            color: white;
+            font-size: larger;
+            width: 80px;
+            padding: 6px;
+            margin-bottom: 5px;
+          }
+           /* footer is here */
+           .footer{
+            height: 20vh;
+            margin: 30px;
+           }
+           .footer i{
+            align-items:center;
+            padding-left: 10px;
+            float: inline-end;
+            text-align: justify;
+            flex-direction: column;
+            padding: 10px;
+           }
+           .footer .site{
+            text-align: center;
+           }
+           @media screen and (min:450){
+            .navbar,footer{
+                flex-direction:column;
+            }
+           }
+
+        </style>
+</head>
+<body>
+    <section class="navbar">
+<a href="">Home</a>
+<a href="">Band</a>
+<a href="">Tour</a>
+<a href="">Contact</a>
+<div class="drop-down">
+    <button class="drop-button">More<i class="fa-solid fa-caret-down" style="font-size:small;"></i></button>
+<div class="drop-content">
+    <a href="">Marchandise</a>
+    <a href="">Extras</a>
+    <a href="">Media</a>
+</div>
+</div>
+<div class="icons">
+    <a href=""><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
+</div>
+</section>
+<section class="banner">
+<img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image">
+<div class="text">
+<h1>Los angeles</h1>
+<p>we had the best time playing at venice beach!</p>
+</div>
+</section>
+<section class="first-b">
+    <div class="up-text">
+        <h1>THE BAND</h1>
+        <h4>We love music</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at cum, 
+            perferendis natus error ut autem deserunt est quasi consectetur illum 
+            impedit ab quos dolor dolores distinctio nobis! Ratione sint numquam pariatur, 
+            quasi odio iusto deserunt, consequatur, cupiditate sunt necessitatibus 
+            asperiores at laborum atque eos accusantium? Neque earum aut in.</p>
+
+    </div>
+    <div class="images">
+        <div class="image1"><h5>Eagles</h5 style background-color:white><img src="https://media.istockphoto.com/id/1464613356/photo/singer-closing-his-eyes-while-performing-onstage-with-band.jpg?s=2048x2048&w=is&k=20&c=JNL_aEUL2SXeaC20SCzJCeauQ_7SgKAX53-NaDbBYYM=" width="100%" alt=""></div>
+        <div class="image1"><h5>Nirvana</h5><img src="https://media.istockphoto.com/id/1464613611/photo/energetic-musicians-performing-on-stage.jpg?s=2048x2048&w=is&k=20&c=UNd-0Fs4UB3MOkT1HV_wlX3GCi-HDXDrvjUvTsQ9QoU=" width="100%" alt=""></div>
+        <div class="image1"><h5>Ramones</h5><img src="https://media.istockphoto.com/id/1155893333/photo/rock-concert.jpg?s=2048x2048&w=is&k=20&c=o9nuUhU6nsj-OIc-jgaFSTmuC8UZMjah6UiuA4il_p0=" width="100%" alt=""></div>
+    </div>
+</section>
+<section class="second-b">
+    <h1>TOUR DATES</h1>
+    <P>Remember to book your tickets!</P>
+    <div><ul>
+        <li class="one">September&nbsp; <span style="background-color: red; color: white;">soldout</span></li>
+        <li class="one">October&nbsp; <span style="background-color: red; color: white;">soldout</span></li>
+        <li class="one">November <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;  &nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</span></li>
+    </ul></div>
+
+    <div class="image-part">
+        <div class="first-1">
+        <img src="https://img.andrewprokos.com/EMPIRE-STATE-BUILDING-NYC-CITYSCAPE-FROM-ROCKEFELLER-CENTER-DAY-4931-1000PX-1-500x369@2x.jpg" width="80%" alt="">
+        <h1>New York</h1>
+        <h2>Fri 27Nov 2016</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button>Buy Tickets</button>
+    </div>
+        <div class="first-1"><img src="https://media.istockphoto.com/id/1665716741/photo/aerial-view-of-paris-france-overlooking-the-famous-eiffel-tower-sunrise-in-the-background.jpg?s=2048x2048&w=is&k=20&c=BSqtScYdV99R7olJVnFTmYTuetrx5mCxaBIp79fi6pE=" width="85%" alt="">
+            <h1>Peris</h1>
+            <h2>Sun 27Nov 2016</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button>Buy Tickets</button>   
+        </div>
+        <div class="first-1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/San_Francisco_from_the_Marin_Headlands_in_August_2022.jpg/1280px-San_Francisco_from_the_Marin_Headlands_in_August_2022.jpg" width="92%" alt="">
+            <h1>San Francisco</h1>
+            <h2>Mon 27July 2016</h2 >
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button>Buy Tickets</button>
+        </div>
+    </div>
+
+    <!-- <div class="card-box">
+        <img src="https://img.andrewprokos.com/EMPIRE-STATE-BUILDING-NYC-CITYSCAPE-FROM-ROCKEFELLER-CENTER-DAY-4931-1000PX-1-500x369@2x.jpg" width="100%" alt="">
+        <div class="card-content">
+         <h1>New York</h1>
+         <h2>Fri 27Nov 2016</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         <button>Buy Tickets</button>
+        </div>
+    </div>
+    <div class="card-box">
+        <img src="https://media.istockphoto.com/id/1665716741/photo/aerial-view-of-paris-france-overlooking-the-famous-eiffel-tower-sunrise-in-the-background.jpg?s=2048x2048&w=is&k=20&c=BSqtScYdV99R7olJVnFTmYTuetrx5mCxaBIp79fi6pE=" width="100%" alt="">
+        <div class="card-content">
+         <h1>Peris</h1>
+         <h2>Sun 27Nov 2016</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         <button>Buy Tickets</button>
+        </div>
+    </div>
+    <div class="card-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/San_Francisco_from_the_Marin_Headlands_in_August_2022.jpg/1280px-San_Francisco_from_the_Marin_Headlands_in_August_2022.jpg" width="100%" alt="">
+        <div class="card-content"> -->
+         <!--<h1>San Francisco</h1>
+         <h2>Mon 27July 2016</h2 >
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         <button>Buy Tickets</button>
+        </div> -->
+    <!-- </div> -->
+</section>
+<section class="Third-b">
+<div class="contact"><h1>CONTACT</h1>
+<h3>Fan?Drop a Note!</h3>
+</div>
+<div class="icon">
+    <ul>
+       <li><a href="" style="color: black; font-size: larger;"><i class="fa-solid fa-location-dot"></i></a></li>
+       <li><a href="" style="color: black; font-size: larger;"><i class="fa-solid fa-phone"></i></a></li> 
+       <li><a href="" style="color: black; font-size: larger;"><i class="fa-solid fa-envelope"></i></a></li>
+    </ul>
+    <ul>
+        <li><a href=""  style="color: black; font-size: larger;">Chicago,US</a></li>
+        <li><a href=""  style="color: black; font-size: larger;">Phone:+00 &nbsp;151515</a></li>
+        <li><a href=""  style="color: black; font-size: larger;">Email:mail@mail.com</a></li>
+    </ul> 
+    <form style="color: gray;" >
+        <input type="text" id="fname" name="fname" value="Name">&nbsp;
+        <input type="text" id="mail" name="mail" value="Email"><br>
+         <input type="text" id="send" name="send" value="Message"><br>
+        <button id="button">Send</button>
+    </form>
+</div>
+</section>
+<section class="map-part">
+    <img src="/images/Screenshot 2024-07-20 183251.png" width="100%" alt="">
+</section>
+<section class="footer">
+    <a href="" style="color: black; font-size: larger;"><i class="fa-brands fa-facebook">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;   &nbsp;    &nbsp;    &nbsp; &nbsp; &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+    </i></a>
+    <a href="" style="color: black; font-size: larger;"><i class="fa-brands fa-square-instagram"></i></a>
+    <a href="" style="color: black; font-size: larger;"><i class="fa-brands fa-twitter"></i></a>
+    <a href="" style="color: black; font-size: larger;"><i class="fa-brands fa-square-google-plus"></i></a>
+    <a href="" style="color: black; font-size: larger;"><i class="fa fa-linkedin"></i></a><br><br><br>
+    <div class="site">
+    <a href="https://www.google.com" style="color: black;" >Powered by google.com</a></div>
+</section>
+</body>
+</html>

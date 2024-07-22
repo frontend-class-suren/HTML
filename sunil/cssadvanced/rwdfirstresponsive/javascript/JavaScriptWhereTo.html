@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="externalfile.js">
+</head>
+<body>
+    <h1>JavaScript Where To</h1>
+    <h2>javascript code between=script  /script tag</h2>
+    <h1>java script only write in body section.</h1>
+    <p id="demo"></p>
+    <p>A JavaScript function is a block of JavaScript code, that can be executed when "called" for.
+        For example, a function can be called when an event occurs, like when the user clicks a button.</p>
+    <!-- always start with top to bottom only -->
+    <script>
+        document.getElementById('demo').innerHTML="first program with java script";
+    </script>
+<script>
+    function myfunction(){
+    document.getElementById('demo1').innerHTML="my first fuction call"
+    }
+</script>
+
+<p id="demo1">paragraph</p>
+<button type="button" onclick="myfunction()">Try it</button>
+
+<p id="demo2">paragraph</p>
+<button type="button" onclick="myfunction2()">Try it</button>
+<script src="externalfile.js"></script>
+    
+</body>
+</html>

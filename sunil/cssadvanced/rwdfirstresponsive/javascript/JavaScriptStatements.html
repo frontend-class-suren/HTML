@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Statements</h1>
+    <h1 id="demo"></h1>
+    <script>
+        document.getElementById('demo').innerHTML="hello first statement";
+    </script>
+
+    <h2>When separated by semicolons, multiple statements on one line are allowed:</h2>
+    <code>
+        a = 5;b = 6; c = a + b;
+    </code>
+    <h2 style="color: blue;">JavaScript ignores multiple spaces.<br> 
+        You can add white space to your script to make it more readable.<br>
+
+        The following lines are equivalent:<br>
+        <code>
+        let person = "Hege";<br>
+        let person="Hege";</code><br>
+        A good practice is to put spaces around operators ( = + - * / ):<br>
+        
+        let x = y + z;</h2>
+        <h1 style="color: blueviolet;">JavaScript Line Length and Line Breaks<br>
+            For best readability, programmers often like to avoid code lines longer than 80 characters<br>
+            
+            If a JavaScript statement does not fit on one line, the best place to break it is after an operator:<br>
+            
+            Example<br>
+            document.getElementById("demo").innerHTML =<br>
+            "Hello Dolly!";</h1>
+</body>
+</html>
