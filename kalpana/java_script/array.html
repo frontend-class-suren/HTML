@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS array</title>
+</head>
+<body>
+
+	<div>
+		<h4>List of Even Array Elements</h4>
+		<p id="even"></p>
+		<h4>List of Odd Array Elements</h4>
+		<p id="odd"></p>
+		<h4>Maximum Number among Array Elements</h4>
+		<p id="max"></p>
+		<h4>Minimum Number among Array Elements</h4>
+		<p id="min"></p>
+	</div>
+	
+
+	<script type="text/javascript">
+
+		const arr=[5,4,7,9,8,2,12,56,45];
+		var x=Math.max(...arr);
+		var y=Math.min(...arr);
+
+		document.write("Maximum among Array using max function: "+x+"<br><br>");
+		document.write("Minimum among Array using min function: "+y);
+
+		function evenOdd(arr)
+		{
+			const even_arr=new Array();
+			const odd_arr=new Array();
+			for(let i = 0;i < arr.length;i++)
+			{
+				if(arr[i]%2==0)
+				{
+					even_arr[i]=arr[i];
+					document.getElementById('even').innerHTML+="<br> "+even_arr[i];
+				}
+				else
+				{
+					odd_arr[i]=arr[i];
+					document.getElementById('odd').innerHTML+="<br> "+odd_arr[i];
+				}	
+			}
+		}
+
+		function maxMin(arr)
+		{
+			let max, min;
+			max=arr[0];
+			min=arr[0];
+
+			for(let i = 0;i < arr.length;i++)
+			{
+				if(arr[i] > max)
+				{
+					max=arr[i];
+				}
+
+				else if(min>arr[i])
+				{
+					min=arr[i];
+					
+				}
+			}
+			document.getElementById('max').innerHTML=" "+max;
+			document.getElementById('min').innerHTML=min;
+		}
+
+		evenOdd(arr);
+		maxMin(arr);
+	</script>
+</body>
+</html>
