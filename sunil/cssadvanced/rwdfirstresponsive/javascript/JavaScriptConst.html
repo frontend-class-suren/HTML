@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Const</h1>
+    <ul>
+        <li>Variables defined with const cannot be Redeclared</li>
+        <li>Variables defined with const cannot be Reassigned</li>
+        <li>Variables defined with const have Block Scope </li>
+    </ul>
+    <h3>A variable defined with the const keyword cannot be reassigned:</h3>
+    <pi id="demo"></pi>
+    <script>
+        { 
+            try{
+              const pi=3.148877;
+              pi=3.14;
+              pi=pi+10;
+            }
+            catch(error){
+              document.getElementById('demo').innerHTML=error;
+            }
+        }
+    </script><br>
+    because of this you can NOT:<br>
+
+    Reassign a constant value<br>
+    Reassign a constant array<br>
+    Reassign a constant object<br><br><br>
+    But you CAN:<br>
+    Change the elements of constant array<br>
+    Change the properties of constant object<br>
+    <h3>first array program</h3>
+    <p id="demo1"><br></p>
+<script>
+    const student=["s-name","s-address","s-rollno","marks"] //we can make array like same type of elements.
+    student[1]="s-subject";//we can change elements like this.
+    student.push("s-father");// we can add a elements like this.
+    document.write(student +"");
+    student.pop();
+    document.write(student+"");
+
+document.getElementById('demo1').innerHTML=student+"";
+</script>
+</body>
+</html>

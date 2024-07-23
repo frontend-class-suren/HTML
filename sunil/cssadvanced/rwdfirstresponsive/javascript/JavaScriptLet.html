@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Let</h1>
+    <h3>The let keyword was introduced in ES6 (2015)<br>
+
+        Variables declared with let have Block Scope<br>
+        
+        Variables declared with let must be Declared before use<br>
+        
+        Variables declared with let cannot be Redeclared in the same scope</h3><br>
+
+        <h2>Block Scope
+            Before ES6 (2015), JavaScript did not have Block Scope.<br>
+            
+            JavaScript had Global Scope and Function Scope.<br>
+            
+            ES6 introduced the two new JavaScript keywords: let and const.<br>
+            
+            These two keywords provided Block Scope in JavaScript:<br>
+            <h1>const variable not accessed outside the block.</h1>
+            <p id="demo">value is:-</p>
+            
+            <script>
+               
+                //const a=40; it is also not accessed by const also becos outside the braces({}).
+            {
+            const a=10;    
+            
+                <!-- this is inside the block  -->
+                document.getElementById('demo').innerHTML=a;
+                
+
+        }   
+    </script>
+            <h1>var variable accessed outside the block.</h1>
+            <p id="demo4"></p>
+    <script>
+                    var z=50;//we accessed var outside the braces.becos it it also called global scope declared.
+
+        {
+                var z=30;
+                document.getElementById('demo4').innerHTML=z;
+        }
+    </script>
+                <h1>let variable not accessed outside the block.</h1>
+
+    <p id="demo5"></p>
+    <script>
+              //let x =20; it is not accessed by let. becos outside the braces({}).
+        {
+            let x=5; //this both variable declare inside the block mean inside the braces({}).
+                document.getElementById('demo5').innerHTML=x;
+        }
+    </script>
+    <h3>Global Scope</h3>
+    <p id="demo3"></p>
+    <script>
+        //<p>we can not use this outside the block. so we call this block scope variable.</p>
+            
+                {
+                    var x=10;//<p> we use this variable inside the block so we call this  global variable.</p><br>
+                }
+                var x=20;
+                document.getElementById('demo3').innerHTML=x;
+                </script>
+
+
+                <h2>Redeclared or not?</h2>
+                <p id="demo1"></p>
+                <p id="demo2"></p>
+                
+            <script>
+                {
+                // let x=10; we use declaration of let only one time.
+                let x=12; 
+                    x=30; //we assign value again and ovveride value but we cant declare second time.
+                //let x=20; we cant declare let more then one time.
+                document.getElementById('demo1').innerHTML=x;
+                    var y=10;
+                     y=30;//we override value in var also.
+                    var y=20;//we use declartion of var more than one time.
+                document.getElementById('demo2').innerHTML=y;
+                }
+            </script>
+             <script>
+                {
+                    const x=10;
+                    //let x=10;//redeclare not allwoed but reassign allowd.
+                    //var x=20;not alloed becos confilict problem to choose which value.var have both option to redeclare and reassign value.
+                    //const x=10;never reassign and nor redeclare .
+                    //let x=20; redeclare but we use another block and const also do same.
+                }   
+             </script> 
+                     
+             <h2>let Hoisting:-You can use the variable before it is declared:</h2>
+             <p>you cannot use variable before it is declared</p>
+             <p id="demo10"></p>
+             <script>
+                try{
+                name="sunil";
+               let name="anil";
+                }
+                catch(err){
+                    document.getElementById('demo10').innerHTML=err;
+                }
+             </script>
+             
+
+</body>
+</html>
