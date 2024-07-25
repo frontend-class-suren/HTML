@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Function</title>
+	<style type="text/css">
+		p
+		{
+			font-size: 24px;
+			font-family: cambria;
+			margin-left: 30px;
+		}
+	</style>
+</head>
+<body>
+
+	<p id="gt"></p>
+	<p id="gte"></p>
+	<p id="st"></p>
+	<p id="ste"></p>
+	<p id="ne"></p>
+	<p id="de"></p>
+	<p id="te"></p>
+
+	<script type="text/javascript">
+		let allComparisonOperator = (a,b) =>
+		{
+			if(a>b)
+			{
+				document.getElementById('gt').innerHTML=a+" " +"is greater.";
+			}
+
+			if(a>=b)
+			{
+				document.getElementById('gte').innerHTML=a+" " +"is greater but not equal to."+b;
+			}
+
+			if(b<a)
+			{
+				document.getElementById('st').innerHTML=b+" " +"is smaller.";
+			}
+
+			if(b<=a)
+			{
+				document.getElementById('ste').innerHTML=b+" " +"is smaller but not equal to."+a;
+			}
+
+
+
+			if(a!=b)
+			{
+				document.getElementById('ne').innerHTML=a+" "+"and"+" "+b+" "+"are not equal." ;
+			}
+
+			let c=16=="16"
+			document.getElementById('de').innerHTML=c+" "+",It return true because numeric 16 and string 16 are equal coz data type is not compared." ;
+			
+			let d=16==="16"
+			document.getElementById('te').innerHTML=c+" "+",It return false because numeric 16 and string 16 are not equal in case of data type.";
+
+		}
+
+		allComparisonOperator(20,10)
+		
+	</script>
+	
+
+	
+</body>
+</html>

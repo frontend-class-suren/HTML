@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS array</title>
+</head>
+<body>
+
+	<div>
+		<h4>Maximum Number among Array Elements</h4>
+		<p id="max"></p>
+		<h4>Minimum Number among Array Elements</h4>
+		<p id="min"></p>
+	</div>
+	
+
+	<script type="text/javascript">
+
+		
+		function segreegate()
+		{
+			const arr=[5,4,7,9,8,2,12,56,45];
+			findMin(arr);
+			findMax(arr);
+		}
+
+		function findMax(arr)
+		{
+			let max=arr[0];
+			for(let i = 0;i < arr.length;i++)
+			{
+				if(arr[i] > max)
+				{
+					max=arr[i];
+				}
+			}
+			document.getElementById('max').innerHTML=" "+max;
+			
+		}
+
+		function findMin(arr)
+		{
+			let min=arr[0];
+			for(let i = 0;i < arr.length;i++)
+			{
+				if(min>arr[i])
+				{
+					min=arr[i];
+					
+				}
+			}
+			
+			document.getElementById('min').innerHTML=min;
+		}
+
+		segreegate();
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Variables</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<p id="const"></p>
+
+	<script type="text/javascript">
+		// Scope of variable using var
+		x=5;
+		y=6;
+
+		if(x==5)
+		{
+			let z=2;
+			x=6;	
+		}
+		document.getElementById('demo').innerHTML="value of x outside scope="+x;
+
+		// const variable can't be reassigned
+
+		const a=5;
+		if(a==5)
+		{
+		   //a=6;
+		   document.getElementById('const').innerHTML="Value of a="+a;
+		}
+
+		//let can redeclare in the different scope
+		let surname="Nepal";
+		{
+			let surname="bhattarai";
+			document.write("surname within block="+surname+"<br></br>");
+		}
+		document.write("surname outside block="+surname+"<br></br>");
+		surname="Aryal";
+		document.write("surname reassign outside block="+surname+"<br></br>");
+
+		//Let declaration and assigning a value
+
+		let name;
+		name="kalpana";
+		document.write("My Name is="+name+"<br></br>");
+
+
+		//const declaration and assigning a value
+
+		// const pi; usign this gives syntax error
+		const pi=3.14; // must assign a value when declare
+		document.write("Value of pi="+pi+"<br></br>")
+
+
+
+		//creating constant array
+
+		const s=['kapil','amrita','mahesh'];
+		s.push('manisha'); //adding element
+		document.write(s+"<br><br>");
+
+		s[1]='mansha'; //reassigning value using refference
+		document.write(s+"<br><br>");
+
+
+		//creating constant object
+
+		const sobj={roll:1,name:"kalpana",marks:40};
+		document.write(sobj.roll+" "+sobj.name+" "+sobj.marks+"<br><br>");
+		sobj.marks=50;
+		document.write("Marks is="+sobj.marks+"<br><br>");
+
+		sobj.address="manigram";
+		document.write("Address is="+sobj.address+"<br><br>");
+
+
+		// Operators : increment and decrement
+
+
+		let i=11;
+		document.write(i + i++ + "--Post Increment" +"<br><br>");
+
+		let j=11;
+		document.write(j + ++j +"--Pre Increment" +"<br></br>");
+
+
+		//Exponential operator
+
+		let k = 10 ** 2;
+		document.write("Ten raise to power two="+k+"<br><br>");
+
+		let l=Math.pow(16,2);
+		document.write("Value of L="+l+"<br><br>");
+
+		
+		
+	</script>
+</body>
+</html>

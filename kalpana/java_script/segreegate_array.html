@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS array</title>
+</head>
+<body>
+
+	<div>
+		<h4>List Of Even Array Element</h4>
+		<p id="even"></p>
+		<h4>List Of Odd Array Element</h4>
+		<p id="odd"></p>
+	</div>
+
+	<script type="text/javascript">
+
+		const arr=[5,4,7,9,8,2,12,56,45];
+		
+		function segreegate(arr)
+		{
+			findEven(arr);
+			findOdd(arr);
+		}
+		function findEven(arr)
+		{
+			const even_arr=new Array();
+			for(let i = 0;i < arr.length;i++)
+			{
+				if(arr[i]%2==0)
+				{
+					even_arr[i]=arr[i];
+					document.getElementById('even').innerHTML+="<br> "+even_arr[i];
+				}	
+			}
+		}
+
+		function findOdd(arr)
+		{
+			const odd_arr=new Array();
+			for(let i = 0;i < arr.length;i++)
+			{
+				if(arr[i]%2!=0)
+				{
+					odd_arr[i]=arr[i];
+					document.getElementById('odd').innerHTML+="<br> "+odd_arr[i];
+				}	
+			}
+		}
+
+		
+		segreegate(arr);
+		
+	</script>
+</body>
+</html>

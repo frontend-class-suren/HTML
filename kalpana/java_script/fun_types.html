@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Function</title>
+</head>
+<body>
+
+	<h4 id="sf"></h4>
+	<h4 id="lf"></h4>
+	<h4 id="af"></h4>
+
+	<script type="text/javascript">
+		//simple function
+
+		function simpleInterest(p,r,t)
+		{
+			let si=p*r*t/100;
+			document.getElementById('sf').innerHTML="Calculating simple interest using simple function="+si;
+
+		}
+
+		// function using let 
+		let areaOfRect=function(l,b)
+		{
+			let a=l*b;
+			document.getElementById('lf').innerHTML="Calculating Area of rectangle using Let variable function="+a;
+		}
+
+		// arrow function
+		let volume = (l,b,h) =>
+		{
+			let v=l*b*h;
+			document.getElementById('af').innerHTML="Calculating Volume of room using arrow function="+v;
+		}
+
+		simpleInterest(4000,8,2);
+		areaOfRect(3,6);
+		volume(2,4,5);
+	</script>
+	
+
+	
+</body>
+</html>
