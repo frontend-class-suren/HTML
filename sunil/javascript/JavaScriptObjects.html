@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <h2>Object Properties</h2>
+    <h3>Car objects have the same properties, but the values differ from car to car.</h3>
+    <h2>Object Methods</h2>
+    <h3>Car objects have the same methods, but the methods are performed at different times.</h3>
+    <h2>JavaScript Variables</h2>
+    <h3>JavaScript variables are containers for data values.</h3>
+    <h2>JavaScript Objects</h2>
+    <h3>Objects are variables too. But objects can contain many values.</h3>
+    <p id="demo"></p>
+    <script>
+        {     //create object a.
+            let a={car:"honda",color:"red",model:700};
+
+            document.getElementById('demo').innerHTML="car color is "+a.color;
+        }
+    </script>
+    <h1>JavaScript Object Definition</h1>
+    <ul>
+        <li>Using an Object Literal</li>
+        <li>Using the new Keyword</li>
+        <li>Using an Object Constructor</li>
+    </ul>
+    <h1>JavaScript Object Literal</h1>
+    <h2>An object literal is a list of name:value pairs inside curly braces {}.</h2>
+    <h3>{car:"honda",color:"red",model:700}</h3>
+    <h1>example of object literals </h1>
+    <p id="demo1"></p>
+    <script>
+           let person={name:"sunil",address:"butwal",eye_color:"black"};
+           document.getElementById('demo1').innerHTML="my name is " +
+           person.name +" my address is " +person.address+"and my eye is " +person.eye_color;
+    </script>
+    
+    <h1>This example creates an empty JavaScript object, and then adds 4 properties</h1>
+    <p id="demo2"></p>
+    <script>
+        {
+            let a={};//empty object.
+             a.first_name='sunil';//add property in empty object.
+             a.last_name='pangeni';
+             a.address='butwal';
+             a.eye_color='black';//when i print object then it give us this result=[object,Object]
+              document.getElementById('demo2').innerHTML=a+" my name is "+a.first_name;
+        }
+    </script>
+    <h1>Using the new Keyword</h1>
+    <p id="demo3"></p>
+    <script>
+        {
+            let game=new Object();
+            game.first_name='sunil';
+            game.last_name='pangeni';
+            game.address="butwal"
+            document.getElementById('demo3').innerHTML="name is " +game.first_name+ " address is " +game.address;
+        }
+    </script>
+    <p id="demo4"></p>
+    <script>
+        {   const person=
+            {
+            firstname:'sunil',
+             lastname:'sharma',
+             age:30,
+             fullname:function()
+            {
+                return this.firstname+" "+this.lastname;
+            }
+            
+        }
+        document.getElementById('demo4').innerHTML=person.fullname();
+        }
+    </script>
+    <h1>JavaScript Primitives</h1>
+    <h2>A primitive value is a value that has no properties or methods.</h2>
+    <h3>3.14 is a primitive value<br>
+        A primitive data type is data that has a primitive value.</h3>
+   
+
+    <h1>Immutable</h1>
+    <h3>Primitive values are immutable (they are hardcoded and cannot be changed).<br>
+        if x = 3.14, you can change the value of x, but you cannot change the value of 3.14.</h3>
+        <h1>JavaScript Objects are Mutable</h1>
+        <h2>Objects are mutable: They are addressed by reference, not by value.</h2>
+        <p id="demo5"></p>
+    <script> //create object
+              let value={name:'puneet',age:30,address:"butwal"}
+              //create copy of object
+              let x=value;
+               //upate or change address.
+              x.address="amuwa";
+              document.getElementById('demo5').innerHTML=value.address;
+
+    </script>
+
+
+</body>
+</html>

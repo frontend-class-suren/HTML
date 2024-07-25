@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html; lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <!-- curd mean create,update,read,delete -->
+    <script>//create object
+        let team_member={name:'haris',age:35,occupation:"web_developer"};
+        //update the object property value.
+        team_member.name='sunil';//update value.
+        team_member.address='butwal';//it is add key and value both.
+        document.getElementById('demo').innerHTML=team_member.name//updated haris replace by sunil.
+        //delete the object property and value.
+        delete team_member.age;
+        document.getElementById('demo1').innerHTML="my age is " +team_member.age;
+        //output show age is undefined.it mean age is deleted already.
+        document.getElementById('demo2').innerHTML="my address is "+team_member.address;
+
+        //display ouput is json format.
+        document.getElementById('demo2').innerHTML=JSON.stringify(team_member);
+    </script>
+    <p id="demo3"></p>
+    <script>
+        //we dont add property as a normal way in constractor.
+        //we add property in constractor by prototype.
+        function Person(first,last,age){//create constrator function for person object.
+            this.first_name=first;
+            this.last_name=last;
+            this.age=age;
+        }
+            //create person object.
+            const myfather=new Person('sunil','pangeni',40);
+            //display name
+            document.getElementById('demo3').innerHTML="my name is " +myfather.first_name;
+
+        
+    
+    </script>
+</body>
+</html;

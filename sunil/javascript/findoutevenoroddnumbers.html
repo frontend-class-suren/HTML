@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>findout the number is odd and even</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        {  
+                function findouteven()
+                {
+                    // find even numbers list.
+                let arr=[1,2,3,4,5,6,7,8,9,10];
+                
+                    let even=[];
+                     for(let i=0; i<arr.length; i++)
+                     {
+                           if(arr[i]%2==0)
+                            {
+                               even.push(arr[i]);           
+                            }    
+                }
+                document.getElementById('demo').innerHTML="even numbers list = "+even;
+            }
+            findouteven()
+
+       
+//find odd numbers list.
+                      function findoutodd()
+                      {
+                        let arr=[1,2,3,4,5,6,7,8,9,10];
+                     let odd=[];
+                     for(let j=0; j<arr.length; j++)
+                     {
+                        if(arr[j]%2==1)
+                     {
+                        odd.push(arr[j]);
+                    
+                     }
+                    }
+                     document.getElementById('demo1').innerHTML="odd numbers list = "+odd;
+                    }
+                    findoutodd()
+                }
+                    </script>
+
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+    
+        //if we save our time.then we have shorthand tric also to show even and odd numbers so we do like this.
+let array=[76,79,43,33,99,56,74,73,71]
+let even_numbers=array.filter(number=>number % 2 ===0);
+let odd_numbers=array.filter(number=>number % 2 !==0);
+document.getElementById('demo2').innerHTML="list of even numbers "+even_numbers;
+document.getElementById('demo3').innerHTML="list of odd numbers "+odd_numbers;
+    </script>
+</body>
+</html>
