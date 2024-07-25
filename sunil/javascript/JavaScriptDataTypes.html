@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Data Types</h1>
+    <h2>string data type examples</h2>
+    <!-- javaScript variable can hold any type of data. -->
+     <!-- When adding a number and a string, JavaScript will treat the number as a string -->
+      <p id="demo"></p>
+      <p id="demo1"></p>
+      <p id="demo2"></p>
+      <p id="demo3"></p>
+      <p id="demo4"></p>
+      <script>
+        {
+            let a=12;
+            let b='sunil';
+            let c=a+b;
+            document.getElementById('demo').innerHTML=c;//(12sunil)it is add both as a string.L.h.s(left hand side).
+            let x="16"+"sunil";
+            document.getElementById('demo1').innerHTML=x;// (16sunil)it is add both as a string.
+            let y="sunil"+16;
+            document.getElementById('demo2').innerHTML=y;//(sunil16)it is add as string both side.R.h.s(right hand side).
+            let z=2+5+"sunil";
+            document.getElementById('demo3').innerHTML=z;//(7sunil)if l.h.s number so it is count both numbers first and then add.
+            let d="sunil"+5+6;
+            document.getElementById('demo4').innerHTML=d;//(sunil56)if r.h.s number so it is count both number as a string.
+}
+      </script>
+      <h1>JavaScript Types are Dynamic</h1>
+      <!--  This means that the same variable can be used to hold different data types: -->
+        <p id="demo5"></p>
+      <script>
+        {
+            let x;// x is undefined.
+             x=10;// x is number.
+             x='sunil';//x is string.
+             document.getElementById('demo5').innerHTML=x; //(sunil)becos x last updated value show only.
+    }         //we put x three times but different value.so type are dynamic.
+      </script>
+      <h2>You can use quotes inside a string, as long as they don't match the 
+        quotes surrounding the string:Example</h2>
+        <p id="demo6"></p>
+        <script>
+            {
+                let x="it's a nice weather.";
+                let y='nice a "day."';
+                let z="good morning 'everyone.'";
+                document.getElementById('demo6').innerHTML=x+" "+y+" "+z;
+                // it's a nice weather. nice a "day." good morning 'everyone.' means surrounding quotes main quotes dont effect inside the quotes.
+            }   
+        </script>
+        <p id="demo7"></p>
+        <h2>JavaScript Numbers</h2>
+        <h3>All JavaScript numbers are stored as decimal numbers</h3>
+        <script>
+            {
+                let x=34;
+                let y=34.000
+                let z=3.145;
+                document.getElementById('demo7').innerHTML=x+"<br>"+y+"<br>"+z;//(34,34,3.145)
+                //its mean desimal number when we add some value after dot then show.0 not show.but stored as a desimal.
+            }
+        </script>
+        <h1>Exponential Notation</h1>
+        <h3>Extra large or extra small numbers can be written with scientific (exponential) notation:</h3>
+        <p id="demo8"></p>
+        <script>
+            {
+                let x=856e5;//big value stored.(85600000)
+                let y=856e-5;// small value stored.(0.00856)
+                document.getElementById('demo8').innerHTML=x+"<br>"+y;
+            }
+        </script>
+        <h1>JavaScript BigInt</h1>
+        <p id="demo9"></p>
+        <script>
+            {
+                let x =BigInt("78797798797987987897");//upto 30 digit stored value.
+                document.getElementById('demo9').innerHTML=x;//it cant have decimals.
+            }
+        </script>
+        <h1>JavaScript Booleans</h1>
+        <h3>Booleans can only have two values: true or false. </h3>
+        <p id="demo10"></p>
+        <script>
+            {
+                let x=20;
+                let y=10;
+                let z=20;
+                document.getElementById('demo10').innerHTML=(x==z)+"<br>"+(y==x);//answer:true and false.
+            }
+        </script>
+        <h1>JavaScript Arrays</h1>
+        <p id="demo11"></p>
+        <script>
+            {
+                let bike=["Hero","seplendar","passion","yamaha","bukati"];
+                document.getElementById('demo11').innerHTML=bike;//result-(Hero,seplendar,passion,yamaha,bukati)
+                 //array start with zero index([0]) means first element store in [0] index. 
+            }
+        </script>
+        <h1>JavaScript Objects</h1>
+        <h2>1. JavaScript objects are written with curly braces {}.<br>
+
+            2. Object properties are written as name:value pairs, separated by commas.</h2>
+
+            <p id="demo12"></p>
+            <script>
+                {
+                    let person={name:"binny",field:"computer",age:25,address:"butwal"};
+                    document.getElementById('demo12').innerHTML=person.name +" subject is "+person.field+" and place "+ person.address;
+                }
+            </script>
+               
+            <h1>The typeof Operator</h1>
+            <p id="demo13"></p>
+            <!-- typeof operator find the type of variable. -->
+             <script>
+                {
+                    document.getElementById('demo13').innerHTML=typeof ""+"<br>"+"<br>"+
+                    typeof "sunil"+"<br>"+typeof 56;
+                }
+             </script>
+             <h1>Undefined</h1>
+             <p id="demo14"></p>
+             <script>
+                {
+                    let car;//value is undefined and type is undefined.
+                    let car1="";//type is string bcos double quotes.but value undefined.
+                }
+             </script>
+
+</body>
+</html>

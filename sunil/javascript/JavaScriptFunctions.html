@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Functions</h1>
+    <h3>A JavaScript function is a block of code designed to perform a particular task.<br>
+        A JavaScript function is executed when "something" invokes it (calls it).</h3>
+        <p id="demo"></p>
+        <script> 
+            { 
+                function add_two_number(p1,p2)
+                {
+                    return p1+p2;
+                }
+             
+                let result= add_two_number(56,67);
+                document.getElementById('demo').innerHTML=result;
+            }
+        </script>
+        <h1>Local Variables</h1>
+        <h2>Variables declared within a JavaScript function, become LOCAL to the function.<br>
+            Local variables can only be accessed from within the function.</h2>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+            <script>
+                {
+                     let novalue="outside " + typeof person;
+                    document.getElementById('demo2').innerHTML=novalue;
+
+                    function multiply_two_numbers()
+                    {
+                        let person="sunil";
+                        let value="inside " + typeof person;
+                        document.getElementById('demo1').innerHTML=value;
+                    }
+                    
+                }
+                 multiply_two_numbers();
+            </script>
+</body>
+</html>
