@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Objects</title>
+</head>
+<body>
+
+	<p id="obj_litrals"></p>
+	<h4>Printing Detail Using for in loop</h4>
+	<p id="obj_new"></p>
+	<h4>Printing Detail of constructor Object</h4>
+	<p id="obj_const"></p>
+
+	<h4>Printing Detail of Array Placed within Object</h4>
+	<p id="arr_obj"></p>
+
+	<h4>Calculating total salary of staff</h4>
+	<p id="fun_obj"></p>
+
+	<h4>Accessing Nested Object Value </h4>
+	<p id="obj_obj"></p>
+
+	<h4>Changing the name of a person</h4>
+	<p id="copy_obj"></p>
+
+
+	<script type="text/javascript">
+		//creating an object using object literals Method 1.
+		const team={
+			name: "Kapil",
+			email: "kapil@gmail.com",
+			contact: "9808080808",
+			skill: "C"
+		};
+
+
+		//Creating an object using new keyword Method 2
+
+		const emp=new Object();
+		emp.name="kalpana";
+		emp.post="teacher";
+		emp.exp="2 year";
+
+
+		//Creating an object using object constructor Method 3
+		function Student(rollno,name,marks)
+		{
+			this.rollno=rollno;
+			this.name=name;
+			this.marks=marks;
+		}
+
+		const student1= new Student(1,"kapil",400);
+		const student2= new Student(2,"kamal",380);
+		const student3= new Student(1,"kiran",350);
+		const student4= new Student(1,"kavi",410);
+		for(var i in student2)
+		{
+			document.getElementById('obj_const').innerHTML+=i+" : "+student2[i]+"<br>";
+		}
+
+
+
+		// access element one by one
+
+		document.getElementById('obj_litrals').innerHTML=
+		"<h4>Printing Detail one by one</h4>"+
+		"Team member name :"+team.name+"<br>"+
+		"Email id :"+team.email+"<br>"+
+		"Contact detail :"+team.contact+"<br>"+
+		"skills :"+team.skill;
+
+		//access element using for in loop
+
+		for(var i in emp)
+		{
+			document.getElementById('obj_new').innerHTML+=i+" : "+emp[i]+"<br>";
+		}
+
+		// Creating array within object
+
+		const arr_obj={
+
+			name: "kalpana",
+			post: "teacher",
+			fav_sub: ["web_tech","c lang","networks"],
+			address: "shankarnagar"
+
+		};
+		
+		document.getElementById('arr_obj').innerHTML="Accessing Array Property Favourite subject is :"+
+													  arr_obj.fav_sub[1];
+
+		// Creating function within object
+
+		const staff={
+			name: "kapil",
+			salary: 25000,
+			bonus: 2000,
+			amount: function()
+			{
+				return this.salary+this.bonus;
+			}
+		};
+
+		document.getElementById('fun_obj').innerHTML="Making function within object and calculate total salary :"+ 		                                          staff.amount();
+
+
+
+		//creating nested object
+		const person={
+			name: "kamal",
+			age: 40,
+			address: {
+				city: "butwal",
+				country: "nepal"
+			},
+		};
+		
+		document.getElementById('obj_obj').innerHTML=person.name+" "+"is living in a city : "+person.address.city;
+		
+		//creating copy of object and change the name
+		let x=person
+		x.name="kiran gyanwali";
+		document.getElementById('copy_obj').innerHTML="Name kamal is changed into : "+person.name;
+		
+		
+		//Adding a property to object person
+		person.gender="Male";
+		document.write("<h4>Display information after adding property Gender</h4>");
+		for(var i in person)
+		{
+			document.write(i+":"+person[i]+"<br>");
+		}
+
+		//Updating value of an object
+		person.age=30;
+		document.write("Updated age of person = "+person.age+"<br>");
+
+		//deleting property of an object
+		delete person.name;
+		document.write("Displaying name of the person="+person.name);
+
+	</script>
+</body>
+</html>
