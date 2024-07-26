@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 style="color: blue;">JavaScript Strings:-
+        <ul>
+        <li>Strings are for storing text</li>
+        <li>Strings are written with quotes
+        </li>
+        </ul>
+    </h3>
+    <h3>Strings created with single or double quotes works the same.</h3>
+    <p id="demo"></p>
+    <script>
+        let name='sunil';
+        let name1="sunil";
+        let combine=name+" "+name1;//output-:sunil sunil
+        document.getElementById('demo').innerHTML=combine;//both are same but write them to different way. 
+    </script>
+<h3>Quotes Inside Quotes</h3>
+<p id="demo1"></p>
+<script>
+    {    //we use only one type only single or double.
+        let a="it's a nice day.";
+        let b='He is called "sunil."';
+        document.getElementById('demo1').innerHTML=a+" "+b
+    }
+</script>
+<h1>Template Strings</h1>
+<p id="demo2"></p>
+<script>
+    {
+        //we use both single and double but we use(``) between this template strings.
+        let text=`He's name is "sunil"`;
+        document.getElementById('demo2').innerHTML=text;
+    }
+</script>
+<h1>String Length</h1>
+<p id="demo3"></p>
+<script>
+    {
+        let len="abcdefghijklmnopqrstuvwxyz";//we count alphabate using length property.
+        document.getElementById('demo3').innerHTML=len.length;
+    }
+</script>
+<h1>Escape Characters</h1>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<script>
+    {    //becos of this backsalsh(\)we can use match the quotes surrounding the string:
+        let a="my name is \"sunil\". ";
+        document.getElementById('demo4').innerHTML=a;//output-my name is "sunil".
+        // we use backslash in a string.
+         let b="my name is sunil \\ place butwal.";
+         document.getElementById('demo5').innerHTML=b;
+    }  
+</script>
+<h1>Breaking Long Lines</h1>
+<p id="demo6"></p>
+<h3>A safe way to break up a statement is after an operator:</h3>
+<script>
+    {
+        let a="my name is sunil.";
+        let b="i live in butwal.";
+        document.getElementById('demo6').innerHTML=a+//break after the oprator for readabilty.but output in same line.
+        b;
+    }
+</script>
+<h1>Template Strings</h1>
+<h3>Templates are strings enclosed in backticks (`This is a template string`).</h3>
+<p id="demo7"></p>
+<script>
+    {
+        let b=`my name is "sunil".
+                i live in 'butwal'.
+                my hobby is reading "books".`;
+                document.getElementById('demo7').innerHTML=b;
+    }
+</script>
+<h1>JavaScript Strings as Objects</h1>
+<h2>Normally, JavaScript strings are primitive values, created from literals:</h2>
+<p id="demo8"></p>
+<h3>strings can also created objects with the keyword new:</h3>
+<p id="demo9"></p>
+<h3>When using the == operator, x and y are equal:</h3>
+<p id="demo10"></p>
+<h3>When using the === operator, x and y are not equal:</h3>
+<p id="demo11"></p>
+<script>
+    {
+        let x="sunil";//  object created from literals and we call it also.
+        let y=new String("sunil");
+        document.getElementById('demo8').innerHTML=typeof x+ " sunil";
+        document.getElementById('demo9').innerHTML=typeof y+ " sunil";
+        document.getElementById('demo10').innerHTML= x==y;//true becos both are stored string type value.
+        document.getElementById('demo11').innerHTML= x===y;//false becos both are created object but object are never same .
+        //case of object never be true always give false to any condition.
+    }
+</script>
+</body>
+</html>
