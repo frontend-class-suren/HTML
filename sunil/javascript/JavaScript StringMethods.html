@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1.JavaScript String Methods</h1>
+    <h3>stringlength property to give us length of the string.</h3>
+    <p id="demo"></p>
+    <script>
+        {
+            let x="sunil";
+            document.getElementById('demo').innerHTML=x.length;//output-:16 mean how many alphabate in a double quota.
+        }
+    </script>
+    <h1>2.JavaScript String charAt()</h1>
+    <h3>The charAt() method returns the character at a given position in a string:</h3>
+    <p id="demo1"></p>
+    <script>
+        {
+            let x="sunil";
+            document.getElementById('demo1').innerHTML=x.charAt(3);//postion of i=3 and count form 0.
+        }
+    </script>
+    <h1>3.JavaScript String charCodeAt()</h1>
+    <h3>The method returns a UTF-16 code (an integer between 0 and 65535).</h3>
+    <p id="demo2"></p>
+    <script>
+        {
+            let x="sunil";
+            document.getElementById('demo2').innerHTML=x.charCodeAt(1);//it show the ascii code of u is 117.
+        }
+    </script>
+    <h1>4.JavaScript String at()</h1>
+    <h3>The at() method returns the character at a specified index (position) in a string.</h3>
+    <p id="demo3"></p>
+    <h3>charat() and at() same but one difference that at() gives us negative index also but charat cant do.</h3> 
+<script>
+    {
+        const x="sunil";
+        document.getElementById('demo3').innerHTML=x[2];//output-:(n)give us index position in a string.
+    }
+</script>
+<h1>5.Property Access []</h1>
+<h3>3rd position of sunil</h3>
+<p id="demo4"></p>
+<script>
+    {
+     let x="sunil";
+      document.getElementById('demo4').innerHTML=x[3];//output-:i give us letter whose position is 3.
+    }
+</script>
+<h1>6.JavaScript String slice()</h1>
+<h3>slice() extracts a part of a string and returns the extracted part in a new string.<br>
+     The method takes 2 parameters: start position, and end position (end not included).</h3>
+     <p id="demo5"></p>
+     <p id="demo6"></p>
+     <p id="demo7"></p>
+     <script>
+        {
+            let x="sunilsharma";
+            document.getElementById('demo5').innerHTML=x.slice(4,8);//output-:sha mean start with 5 and end with 8.
+             document.getElementById('demo6').innerHTML=x.slice(8);
+             document.getElementById('demo7').innerHTML=x.slice(-8);
+        }
+     </script>
+     <h1>7.JavaScript String substring()</h1>
+     <h3>The difference is that start and end values less than 0 are treated as 0 in substring().</h3>
+     <p id="demo8"></p>
+<script>
+    {
+        let str="sunilpangeni"
+        document.getElementById('demo8').innerHTML=str.substring(5,12);
+    }
+</script>
+<h1>8.JavaScript String substr()</h1>
+<h3>The difference is that the second parameter specifies the length of the extracted part.</h3>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<script>
+    {
+        let str="sunilpangeni";
+        document.getElementById('demo9').innerHTML=str.substr(5,12);
+        document.getElementById('demo10').innerHTML=str.substr(5);
+    }
+</script>
+<h1>9.Converting to Upper and Lower Case</h1>
+<h3>JavaScript String toUpperCase()</h3>
+<p id="demo11"></p>
+<script>
+    {
+        let str="sunil";
+        document.getElementById('demo11').innerHTML=str.toUpperCase();//display output uppercase=SUNIL.
+    }
+</script>
+<h1>10.JavaScript String toLowerCase()</h1>
+<p id="demo12"></p>
+<script>
+    {
+        let str="SUNIL";
+        document.getElementById('demo12').innerHTML=str.toLowerCase();//display output lowercase=sunil.
+    }
+</script>
+<h1>11.JavaScript String concat()</h1>
+<h3>concat() joins two or more strings:</h3>
+<p id="demo13"></p>
+<script>
+    {
+        let str="sunil";
+        let str1="pangeni";
+        let str2=str.concat(""+str1);
+        document.getElementById('demo13').innerHTML=str2    ;//display output concat=sunilpangeni.
+    }
+</script>
+<h1>12.JavaScript String trim()</h1>
+<h3>The trim() method removes whitespace from both sides of a string:</h3>
+<p id="demo14"></p>
+<script>
+    {
+        let str="  sunil pangeni  ";
+        let str1=str.trim();
+        document.getElementById('demo14').innerHTML=str1 +"<br> " +"length of str="+str.length+"<br>"+
+        " length of str1="+str1.length//display output trim whitespace from both sides=sunil pangeni.
+    }
+</script>
+<h1>13.JavaScript String trimStart()</h1>
+<h3>The trimStart() method works like trim(), but removes whitespace only from the start of a string.</h3>
+<p id="demo15"></p>
+<script>
+    {
+        let str="  sunil pangeni  ";
+        let str1=str.trimStart();
+        document.getElementById('demo15').innerHTML=str1 +"<br> " +"length of str="+str.length+"<br>"+
+        " length of str1="+str1.length//display output trim whitespace from start of a string=  sunil pangeni.
+    }
+</script>
+<h1>14.JavaScript String trimEnd()</h1>
+The trimEnd() method works like trim(), but removes whitespace only from the end of a string.
+<p id="demo16"></p>
+<script>
+    {
+        let str="  sunil pangeni  ";
+        let str1=str.trimEnd();
+        document.getElementById('demo16').innerHTML=str1 +"<br> " +"length of str="+str.length+"<br>"+
+        " length of str1="+str1.length//display output trim whitespace from end of a string=sunil pangeni  .
+    }
+</script>
+<h1>15.JavaScript String Padding</h1>
+<h2>JavaScript String padStart()</h2>
+<h3>The padStart() method pads a string from the start.</h3>
+<p id="demo17"></p>
+<script>
+    {
+        let str="8";
+        document.getElementById('demo17').innerHTML=str.padStart(6,"x");//display output padstart(x) string repeat  untill reach 6. .
+    }
+</script>
+<h1>16.JavaScript String padEnd()</h1>
+<h3>The padEnd() method pads a string from the end.</h3>
+<p id="demo18"></p>
+<script>
+    {
+        let str="8";
+        document.getElementById('demo18').innerHTML=str.padEnd(6,"x");//display output padstart(x) string repeat  untill reach 6. .
+    }
+    </script>
+    <h3>if pad a number so we first convert to string then use padstart and padend:-</h3>
+<p id="demo19"></p>
+<p id="demo20"></p>
+<script>
+    {
+        let str=9;//number.
+        let str1=str.toString();//convert number to string.
+        document.getElementById('demo19').innerHTML=typeof str +"<br>"+typeof str1;
+        document.getElementById('demo20').innerHTML=str1.padStart(6,"*");
+    }
+</script>
+<h1>17.JavaScript String repeat()</h1>
+<h3>The repeat() method returns a string with a number of copies of a string.</h3>
+<p id="demo21"></p>
+<script>
+   {
+    let x="sunilpangeni";
+        document.getElementById('demo21').innerHTML=x.repeat(3);//it is repeat whole string 3 times.
+   }
+</script>
+<h1>18.Replacing String Content</h1>
+By default, the replace() method is case sensitive. Writing PANGENI (with upper-case) will not work:
+<h3>The replace() method replaces a specified value with another value in a string:</h3>
+<p id="demo22"></p>
+<h3>To replace case insensitive, use a regular expression with an /i flag (insensitive):</h3>
+<p id="demo23"></p>
+<script>
+    {
+        let x="my name is sunil pangeni.";
+        let y=x.replace("pangeni","sharma");//i wana change pangeni convert to sharma by using replace method.
+        document.getElementById('demo22').innerHTML=y;//output-:my name is sunil sharma.
+        document.getElementById('demo23').innerHTML=x.replace(/PANGENI/i,"sharma");//output-:my name is sunil sharma.
+    }
+</script>
+<h1>19.JavaScript String ReplaceAll using express(//g)</h1>
+<h3>i want to change specific content using replace if i want write expression(//g) so it will change whole the page specific content..</h3>
+<p id="demo24"></p>
+<script>
+    {
+        let str="my friend  name is sunil.sunil has a house and sunil go to walk daily."
+        document.getElementById('demo24').innerHTML=str.replace(/sunil/g,"anil");
+        //output-:my friend name is anil.anil has a house and anil go to walk daily.
+    }
+</script>
+<h1>20.JavaScript String ReplaceAll()</h1>
+<p id="demo25"></p>
+<script>
+    {
+        let str="my friend  name is sunil.sunil has a house and sunil go to walk daily."
+        str=str.replaceAll("sunil","anil");
+        document.getElementById('demo25').innerHTML=str;
+        //output-:my friend name is anil.anil has a house and anil go to walk daily.
+    }
+</script>
+<h1>JavaScript String split()</h1>
+<p id="demo26"></p>
+<script>
+    {
+        let a='hello';
+        const myarray=a.split("");
+        document.getElementById('demo26').innerHTML=myarray.length;
+    }
+</script>
+
+
+</body>
+</html>
