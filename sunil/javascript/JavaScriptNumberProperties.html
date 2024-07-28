@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Number Properties</h1>
+    <h2>1.JavaScript EPSILON</h2>
+    <h3>Number.EPSILON is the difference between the smallest floating point number greater than 1 and 1.</h3>
+    <p id="demo"></p>
+    <script>
+        {
+            let x=Number.EPSILON;
+            document.getElementById('demo').innerHTML=x;
+        }
+    </script>
+    <h1>JavaScript MAX_VALUE</h1>
+    <h3>Number.MAX_VALUE is a constant representing the largest possible number in JavaScript.</h3>
+    <p id="demo1"></p>
+    <script>
+        {
+            let x=Number.MAX_VALUE;//Number.MAX_VALUE is a constant representing the largest possible number in JavaScript.
+            let y=Number.MIN_VALUE;//Number.MIN_VALUE is a constant representing the lowest possible number in JavaScript.
+            let z=Number.MAX_SAFE_INTEGER;//Number.MAX_SAFE_INTEGER represents the maximum safe integer in JavaScript.
+            let w=Number.MIN_SAFE_INTEGER;//Number.MIN_SAFE_INTEGER represents the minimum safe integer in JavaScript.
+            let p=Number.POSITIVE_INFINITY;//POSITIVE_INFINITY is returned on overflow:
+            let q=Number.NEGATIVE_INFINITY;//NEGATIVE_INFINITY is returned on overflow:
+            let r=Number.NaN;//NaN is a JavaScript reserved word for a number that is not a legal number.
+            document.getElementById('demo1').innerHTML="MAX_VALUE is ="+
+            x+"<br>"+"MIN_VALUE is = "+y+"<br>"+"MAX_SAFE_INTEGER value is = "
+            +z+"<br>"+"MIN_SAFE_INTEGER value is = "+
+            w+"<br>"+"POSITIVE_INFINITY value is = "+p+"<br>"+
+            "NEGATIVE_INFINITY value is ="+q+"<br>"+"NaN value is = "+r;
+        }
+    </script>
+    
+</body>
+</html>

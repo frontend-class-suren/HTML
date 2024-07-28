@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+    <h3>An array is a special variable, which can hold more than one value:</h3>
+    <p id="demo"></p>
+    <script>
+        {
+            let shape=["circle","ovel","rectangular","triangle"];
+            document.getElementById('demo').innerHTML=shape;
+        }
+    </script>
+    <h1>You can also create an array, and then provide the elements:</h1>
+    <p id="demo1"></p>
+    <script>
+        {
+            let shape=[];
+            shape[0]="circle";
+            shape[1]="ovel";
+            shape[2]="rectangular";
+            shape[3]="triangle";
+            document.getElementById('demo1').innerHTML=shape;
+        }
+    </script>
+    <h1>you can create array with using new keyword</h1>
+    <p id="demo2"></p>
+    <script>
+        {
+            const shape=new Array("circle","ovel","rectangular","triangle");
+            document.getElementById('demo2').innerHTML=shape;
+        }
+    </script>
+    <h1>Accessing Array Elements</h1>
+    <h3>You access an array element by referring to the index number:</h3>
+    <p id="demo3"></p>
+    <script>
+        {
+            const shape=new Array("circle","ovel","rectangular","triangle");
+            let a=shape[0];
+            document.getElementById('demo3').innerHTML=shape+"<br>"+"access array element to the index number = "+a;
+        }
+    </script>
+    <h1>Changing an Array Element</h1>
+    <h3>This statement changes the value of the element in shape</h3>
+    <h3>("circle","ovel","rectangular","triangle");</h3>
+    <p id="demo4"></p>
+    <script> 
+        {  
+            const shape=new Array("circle","ovel","rectangular","triangle");
+            shape[3]="hexagonal";
+            document.getElementById('demo4').innerHTML="change the element of the shape array = "+shape;
+        }
+    </script>
+    <h1>Converting an Array to a String</h1>
+    <h3>The JavaScript method toString() converts an array to a string of (comma separated) array values.</h3>
+    <p id="demo5"></p>
+    <script> 
+        {  
+            const shape=new Array("circle","ovel","rectangular.","triangle");
+            document.getElementById('demo5').innerHTML=shape.toString()+"<br>"+
+            "access the full array = "+shape+"<br>"+"array use numbers to access shape[2] elements = "+shape[2];
+
+        }
+    </script>
+    <h1>Array Elements Can Be Objects</h1>
+    <h3>JavaScript variables can be objects. Arrays are special kinds of objects.</h3>
+    <p id="demo6"></p>
+    <script>
+        {
+            const x=[];
+            x[0]="Date";
+            x[1]="myFunction";
+            x[2]="myCars";
+            document.getElementById('demo6').innerHTML="length of the array is = "+x.length+"<br>"+"sort the array is= " +x.sort();
+        }
+    </script>
+<h1>Accessing the Last Array Element</h1>
+<p id="demo7"></p>
+<script>
+    {
+        const shape=["circle","ovel","rectangular","triangle"];
+        let shape1=shape[shape.length-1];
+        document.getElementById('demo7').innerHTML=shape1;
+
+    }
+</script>
+<h1>Looping Array Elements</h1>
+<h3>One way to loop through an array, is using a for loop:</h3>
+<p id="demo8"></p>
+<script>
+    {
+         let shape=["circle","ovel","rectangular","triangle"];
+         let text="<ul>";
+            for (let i = 0; i< shape.length; i++) {
+                text =text + "<li>"+shape[i] +"</li>";
+                
+            }
+            text=text+"</ul>";
+            document.getElementById('demo8').innerHTML=text;
+
+    }
+</script>
+<h1>Adding Array Elements</h1>
+<h3>The easiest way to add a new element to an array is using the push() method:</h3>
+<p id="demo9"></p>
+<script>
+    let shape=["circle","ovel","rectangular","triangle"];
+    {
+        let shape=["circle","ovel","rectangular","triangle"];
+        shape.push("hexagonal");//add element in array.
+        shape[shape.length]="hexagonal"//it is also add the element.
+        document.getElementById('demo9').innerHTML=shape;
+    }
+</script>
+<h1>Nested Arrays and Objects</h1>
+<h3>Values in objects can be arrays, and values in arrays can be objects:</h3>
+<p id="demo10"></p>
+<script>
+    {
+        const x={name:"sunil",age:20,cars:[
+            {name:"bmw",model:["500","400"]},
+   {name:"honda",model:["600"]},{name:"oddi",model:["400u","800t"]}
+     ]};
+     document.getElementById('demo10').innerHTML=x;
+    }
+</script>
+</body>
+</html>

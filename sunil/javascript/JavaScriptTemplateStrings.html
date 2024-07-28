@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Template Strings</h1>
+    <h3>Template Strings use back-ticks (``) rather than the quotes ("") to define a string:</h3>
+    <p id="demo"></p>
+    <script>
+    {
+    let a=`sunil`;
+    document.getElementById('demo').innerHTML=a;//output=sunil.mean without double or single quotes we write word using backtics(``).
+    }
+</script>
+<h1>Quotes Inside Strings</h1>
+<h2>Template Strings allow both single and double quotes inside a string:</h2>
+<p id="demo1"></p>
+<script>
+    {
+    let a=`sunil is'a good "boy"`;
+    document.getElementById('demo1').innerHTML=a;//output=same as string with double and single quotes.mean without double or single quotes but we have to use backtics.
+    }
+    </script>
+    <h1>Multiline Strings</h1>
+    <h3>Template Strings allow multiline strings:</h3>
+    <p id="demo2"></p>
+<script>
+    {
+    let a=`sunil is'a good "boy."
+    and my place is butwal
+    and i like to play cricket.`;
+    document.getElementById('demo2').innerHTML=a;//output=put in one line.for developer to read easy so did like this.
+    }
+</script>
+<h1>Variable Substitutions</h1>
+<h3>Template Strings allow variables in strings:</h3>
+<p id="demo3"></p>
+<script>
+    {
+    let name="sunil";
+    let last_name="pangeni";
+    document.getElementById('demo3').innerHTML=`welcome ${name},${last_name}`;//output=it show name and last_name value.
+    }
+</script>
+<h1>Expression Substitution</h1>
+<h3>Template Strings allow expressions in strings:</h3>
+<p id="demo4"></p>
+<script>
+    {
+    let p=300;
+    let r=10;
+    let t=3;
+    let total=`Total:${p*r*t/100}`;
+    document.getElementById('demo4').innerHTML=total;//output=it show name and last_name value.
+    }
+</script>
+<h3>Automatic replacing of expressions with real values is called string interpolation.</h3>
+<h1>HTML Templates</h1>
+<p id="demo5"></p>
+<script>
+    {
+       let x="sunil";
+       let arr=["sharma","amit","pangeni"]; 
+       let html=`<h1>${x}</h1><ul>`;
+       for(const y of arr)
+       {
+        html+=`<li>${y}</li>`;
+       }
+       html+=`</ul>`;
+       document.getElementById('demo5').innerHTML=html;
+    }
+</script>
+
+</body>
+</html>

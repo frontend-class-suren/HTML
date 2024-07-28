@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Number Methods</h1>
+    <h2>1.The toString() Method</h2>
+    <h3>All number methods can be used on any type of numbers (literals, variables, or expressions):</h3>
+       <p id="demo"></p>
+       <script>
+        {
+            let x=200;
+            document.getElementById('demo').innerHTML=
+             x.toString()+"<br>"+
+            (200).toString()+"<br>"+
+            (100+100).toString()+"<br>"+"Type of x is="+typeof x.toString();
+        }
+       </script>
+       <h1>2.The toExponential() Method</h1>
+       <h3>toExponential() returns a string, with a number rounded and written using exponential notation.</h3>
+       <h4>A parameter defines the number of characters behind the decimal point:</h4>
+       <p id="demo1"></p>
+       <script>
+        {
+            let x=456.789;
+            document.getElementById('demo1').innerHTML=x.toExponential()+
+            "<br>"+ x.toExponential(2)+
+            "<br>"+ x.toExponential(4)+
+            "<br>"+ x.toExponential(6);
+        }
+       </script>
+       <h1>3.The toFixed() Method</h1>
+       <h3>toFixed() returns a string, with the number written with a specified number of decimals:</h3>
+       <p id="demo2"></p>
+       <script>
+        {
+            let x=456.789;
+            document.getElementById('demo2').innerHTML=
+             x.toFixed()+
+            "<br>"+ x.toFixed(2)+
+            "<br>"+ x.toFixed(4)+
+            "<br>"+ x.toFixed(6);
+        }
+        </script>
+        <h1>4.The toPrecision() Method</h1>
+        <h3>toPrecision() returns a string, with a number written with a specified length:</h3>
+        <p id="demo3"></p>
+       <script>
+        {
+            let x=456.789;
+            document.getElementById('demo3').innerHTML=
+             x.toPrecision()+
+            "<br>"+ x.toPrecision(2)+
+            "<br>"+ x.toPrecision(4)+
+            "<br>"+ x.toPrecision(6);
+        }
+        </script>
+        <h1>5.The valueOf() Method</h1>
+        <h3>valueOf() returns a number as a number.</h3>
+        <p id="demo4"></p>
+       <script>
+        {
+            let x=456.789;
+            document.getElementById('demo4').innerHTML=
+             x.valueOf()+
+            "<br>"+(456).valueOf()+
+            "<br>"+ (200+256).valueOf();
+        }
+        </script>
+<h1>Converting Variables to Numbers</h1>
+<h3>There are 3 JavaScript methods that can be used to convert a variable to a number:</h3>
+<h3>1.The Number() Method</h3>
+<h4>The Number() method can be used to convert JavaScript variables to numbers:</h4>
+<p id="demo5"></p>
+<script>
+ {
+     document.getElementById('demo5').innerHTML=
+  Number(true) + "<br>" +
+  Number(false) + "<br>" +
+  Number("10") + "<br>" + 
+  Number("  10") + "<br>" +
+  Number("10  ") + "<br>" +
+  Number(" 10  ") + "<br>" +
+  Number("10.33") + "<br>" + 
+  Number("10,33") + "<br>" +
+  Number("10 33") + "<br>" +
+  Number("John");
+ }
+ </script>
+ <h1>2.The parseInt() Method</h1>
+ <h3>parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:</h3>
+ <p id="demo6"></p>
+ <script>
+  {
+document.getElementById('demo6').innerHTML=
+parseInt("-10")+ "<br>"+
+parseInt("-10.33") + "<br>" +
+  parseInt("10") + "<br>" +
+  parseInt("10.33") + "<br>" +
+  parseInt("10 6") + "<br>" +  
+  parseInt("10 years") + "<br>" +  
+  parseInt("years 10");  
+  }
+  </script>
+  <h1>3.The parseFloat() Method</h1>
+  <h3>parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:</h3>
+  <p id="demo7"></p>
+ <script>
+  {
+document.getElementById('demo7').innerHTML=
+  parseFloat("-10") + "<br>" +
+  parseFloat("-10.33") + "<br>" +
+  parseFloat("10 6") + "<br>" +  
+  parseFloat("10 years") + "<br>" +
+  parseFloat("years 10");      
+  }
+  </script>
+<h1>Number Object Methods</h1>
+<h2>Number object methods belong to the Number object:</h2>
+<h3>1.The Number.isInteger() Method</h3>
+<h4>The Number.isInteger() method returns true if the argument is an integer.</h4>
+<p id="demo8"></p>
+<script>
+ {
+document.getElementById('demo8').innerHTML=Number.isInteger(4)+"<br>"+Number.isInteger(4.34);
+ 
+ }
+ </script>
+ <h1>2.The Number.isSafeInteger() Method</h1>
+ <h3>The Number.isSafeInteger() method returns true if the argument is a safe integer.</h3>
+ <p id="demo9"></p>
+ <script>
+  {
+ document.getElementById('demo9').innerHTML=Number.isSafeInteger(4)+"<br>"+
+ Number.isSafeInteger(4.34)+"<br>"+Number.isSafeInteger(1234512345123451);
+  
+  }
+  </script>
+  <h1>3.The Number.parseFloat() Method</h1>
+  <h3>Number.parseFloat() parses a string and returns a number.</h3>
+  <p id="demo10"></p>
+  <script>
+   {
+  document.getElementById('demo10').innerHTML=
+  Number.parseFloat(4)+
+  "<br>"+Number.parseFloat(4.34)+
+  "<br>"+Number.parseFloat(1234512345123456)+
+  "<br>"+Number.parseFloat('sunil 10')
+   }
+   </script>
+   <h1>4.The Number.parseInt() Method</h1>
+   <h3>Number.parseInt() parses a string and returns a whole number.<br>
+    Spaces are allowed. Only the first number is returned:</h3>
+   <p id="demo11"></p>
+  <script>
+   {
+  document.getElementById('demo11').innerHTML=
+  Number.parseInt(4)+
+  "<br>"+Number.parseInt(4.34)+
+  "<br>"+Number.parseInt(1234512345123456)+
+  "<br>"+Number.parseInt('sunil 10')
+   }
+   </script>
+</body>
+</html> 

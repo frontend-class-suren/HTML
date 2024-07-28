@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript String Search</h1>
+    <h2>JavaScript String indexOf()</h2>
+     <h3>The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:</h3>
+      <p id="demo"></p>
+      <script>
+        {
+            let a="sharmasunil";
+            document.getElementById('demo').innerHTML=a.indexOf("sunil");//outut=6;mean  6 leters after sunil will come.
+        }
+      </script>
+      <h1>JavaScript String lastIndexOf()</h1>
+      <h2>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:</h2>
+      <p id="demo1"></p>
+      <script>
+        {
+            let a="sharmasunilsharma";
+            document.getElementById('demo1').innerHTML=a.lastIndexOf("sharma");//outut=6;mean  6 leters after sunil will come last occurance string.
+        }
+      </script> 
+      <h3>Both indexOf(), and lastIndexOf() return -1 if the text is not found:</h3>
+      <h1>JavaScript String search()</h1>
+      <p id="demo2"></p>
+      <script>
+        {
+            let a="sunilsharma";
+            document.getElementById('demo2').innerHTML=a.search("sharma");//outut=5;mean  5 leters after sharma will come.
+        }
+      </script> 
+      <h1>JavaScript String match()</h1>
+      <h3>The match() method returns an array containing the results of matching a string against a string (or a regular expression).</h3>
+        <p id="demo3"></p>
+        <script>
+          {
+              let a="sharmasunilsharmasunil";
+              document.getElementById('demo3').innerHTML=a.match("sun");//outut=sun;mean  only show sun string.
+          }
+        </script> 
+           <h1>use regular expression</h1>
+           <p id="demo4"></p>
+           <script>
+             {
+                 let a="sharmasunilsharmasunil";
+                 document.getElementById('demo4').innerHTML=a.match(/sun/g);//outut=sun,sun;expect uppercase.
+             }
+           </script> 
+           <h1>case insensitive show  all related string.</h1>
+            <p id="demo5"></p>
+            <script>
+              {
+                let a="sharmasunilsharmasunilSUNIL";
+                  document.getElementById('demo5').innerHTML=a.match(/sun/gi);//outut=sun,sun,SUN;mean all related string included uppercase also.
+                  
+                }
+            </script> 
+            <h1>JavaScript String matchAll()</h1>
+            <h3>The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression).</h3>
+                <p id="demo6"></p>
+                <p id="demo7"></p>
+                <script>
+                  {
+                    let a="sharmasunilsharmasunilSUNIL";
+                    let b=a.matchAll('sunil')
+                      document.getElementById('demo6').innerHTML=Array.from(b);//outut=sunil,sunil mean all related string included without uppercase.
+                     
+                    let c=a.matchAll(/sunil/gi)
+                      document.getElementById('demo7').innerHTML=Array.from(c);//outut=sunil,sunil,SUNIL mean all related string included with uppercase.
+                      
+                    }
+                </script> 
+
+            <h1>JavaScript String includes()</h1>
+            <h2>The includes() method returns true if a string contains a specified value.</h2>
+            <p id='demo8'></p>
+            <p id='demo9'></p>
+           <script> 
+           {
+                let a="sharmasunilsharmasunilSUNIL";
+                let b=a.includes('sunil')
+                  document.getElementById('demo8').innerHTML=b;//string contain spacified value then true otherwise false.
+                  let Z="sharmasharma";
+
+                let c=Z.includes('sunil',12)
+                  document.getElementById('demo9').innerHTML=c; 
+                }
+        </script>
+        <h1>JavaScript String startsWith()</h1>
+<h3>The startsWith() method returns true if a string begins with a specified value.</h3>
+<p id='demo10'></p>
+<script> 
+{
+     let a="sharmasunilsharmasunilSUNIL";
+     let b=a.startsWith('sunil');
+       document.getElementById('demo10').innerHTML=b;//startwith('sunil')mean started words sunil.then true otherwise false.
+
+}
+</script>
+<h1>JavaScript String endsWith()</h1>
+<h3>The endsWith() method returns true if a string ends with a specified value.</h3>
+<p id='demo11'></p>
+<script> 
+{
+     let a="sharmasunilsharmasunil";
+     let b=a.endsWith('sunil    ');
+       document.getElementById('demo11').innerHTML=b;//startwith('sunil')mean started words sunil.then true otherwise false.
+
+}
+</script>
+    </body>
+</html>

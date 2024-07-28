@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript BigInt</h1>
+    <h3>JavaScript BigInt variables are used to store big integer 
+        values that are too big to be represented by a normal JavaScript Number.</h3>
+        <h1>1.JavaScript Integer Accuracy</h1>
+        <h3>JavaScript integers are only accurate up to 15 digits:</h3>
+        <p id="demo"></p>
+        <script>
+            {
+                let x=123456789123456789123;
+                let y=BigInt("123456789012345678901234567890");
+                document.getElementById('demo').innerHTML=typeof x+"<br>"+y+"<br>"+"type of y is="+typeof y;
+            }
+        </script>
+        <h1>BigInt Operators</h1>
+        <h3>Operators that can be used on a JavaScript Number can also be used on a BigInt.</h3>
+        <p id="demo1"></p>
+        <script>
+            {
+                let x=6575687787897999899999n;
+                let y=5456567567575765999999n;
+                let z=x-y+"<br>"+x+y+"<br>"+x*y+"<br>";
+                document.getElementById('demo1').innerHTML=z;
+
+            }
+        </script>
+        <h1>BigInt Decimals</h1>
+        <h3>A BigInt can not have decimals.Bigint cant mix  with another type.</h3>
+        <h3>so we first conversion bigint to integer then do arithmetic opration.</h3>
+        <p id="demo3"></p>
+        <script>
+            {
+                let x=8n;
+                let y=x/4n;//mix with itself only.
+                let z=x/2;//display nothing.
+                document.getElementById('demo3').innerHTML=z;
+
+            }
+        </script>
+        <h1>BigInt Hex, Octal and Binary</h1>
+        <h3>BigInt can also be written in hexadecimal, octal, or binary notation:</h3>
+
+        <h1>Minimum and Maximum Safe Integers</h1>
+        <h3> max and min properties to the Number object:</h3>
+        <h3>MAX_SAFE_INTEGER</h3>
+        <p id="demo4"></p>
+        <script>
+            {
+                let x=Number.MAX_SAFE_INTEGER;
+                let y=Number.MIN_SAFE_INTEGER;
+                
+                document.getElementById('demo4').innerHTML="max integer is="+x+"<br>"+"min integer is="+y;
+
+            }
+        </script>
+        <h1>New Number Methods</h1>
+        <h3>The Number.isInteger() Method</h3>
+        <p id="demo5"></p>
+        <h3>The Number.isSafeInteger() Method</h3>
+        <p id="demo6"></p>
+        <script>
+            {    
+                let x=Number.isInteger(400);
+                let y=Number.isSafeInteger(2001231231231);
+               
+                
+                document.getElementById('demo5').innerHTML=x;
+                 document.getElementById('demo6').innerHTML=y;
+                 
+            }
+            </script>
+        
+</body>
+</html>
