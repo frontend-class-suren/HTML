@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Array Methods</h1>
+    <h2>1.JavaScript Array length</h2>
+    <h3>The length property returns the length (size) of an array:</h3>
+    <p id="demo"></p>
+    <h2>2.JavaScript Array toString()</h2>
+    <p id="demo1"></p>
+    <h2>3.JavaScript Array at()</h2>
+    <p id="demo2"></p>
+    <h2>4.JavaScript Array join()</h2>
+    <h3>The join() method also joins all array elements into a string.</h3>
+    <p id="demo3"></p>
+    <h2>5.Popping and Pushing</h2>
+    <h3>When you work with arrays, it is easy to remove elements and add new elements.</h3>
+    <p id="demo4"></p>
+    <h2>Shifting Elements</h2>
+    <h3>Shifting is equivalent to popping, but working on the first element instead of the last.</h3>
+    <h2>6.JavaScript Array shift()</h2>
+    <h3>The shift() method removes the first array element and "shifts" all other elements to a lower index.</h3>
+    <p id="demo5"></p>
+    <h2>7.JavaScript Array unshift()</h2>
+    <h3>The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:</h3>
+    <p id="demo6"></p>
+    <h2>8.Changing Elements</h2>
+    <h3>third array element change.</h3>
+    <p id="demo7"></p>
+    <h2>9.JavaScript Array length</h2>
+    <h3>The length property provides an easy way to append a new element to an array:</h3>
+    <p id="demo8"></p>
+    <h2>10.JavaScript Array delete()</h2>
+    <h3>Using delete() leaves undefined holes in the array.Use pop() or shift() instead.</h3>
+    <p id="demo9"></p>
+    <h2>11.Merging Arrays (Concatenating)</h2>
+    <h3>Concatenating arrays means joining arrays end-to-end.</h3>
+    <p id="demo10"></p>
+    <h2>12.Array copyWithin()</h2>
+    <h3>The copyWithin() method copies array elements to another position in an array:</h3>
+    <p id="demo11"></p>
+    <h2>13.Flattening an Array</h2>
+    <h3>Flattening is useful when you want to convert a multi-dimensional array into a one-dimensional array.</h3>
+    <h2>The flat() method creates a new array with sub-array elements concatenated to a specified depth.</h2>
+    <p id="demo12"></p>
+    <h2>14.Splicing and Slicing Arrays</h2>
+    <p id="demo13"></p>
+    <h2>15.JavaScript Array toSpliced()</h2>
+    <p id="demo14"></p>
+    <h2>16.Automatic toString()</h2>
+    <h3>JavaScript automatically converts an array to a comma separated string when a primitive value is expected.
+
+    </h3>
+    <script>
+        {
+            let arr=["ahkash",102,"computer","butwal",7678899000]; 
+            let arr1=["sunil",108,"butwal",789787897]
+        
+        document.getElementById('demo').innerHTML="arr full content = "+arr+"<br>"+"length of the arr is = "+arr.length;
+         document.getElementById('demo1').innerHTML="my arr is = "+arr+"<br>"+arr.toString();
+         document.getElementById('demo2').innerHTML="my arr is = "+arr+"<br>"+arr.at(3);//output=butwal mean it is give us string which index number is 3.
+         document.getElementById('demo3').innerHTML="my arr is = "+arr+"<br>"+arr.join("*");//joins all array in a string.
+         document.getElementById('demo4').innerHTML="my arr is = "+arr+"<br>"+"push the element into an array = "+arr.push("farsatikar")+"<br>"+"now my arr is = "+arr+
+         "<br>"+"pop the element an array = "+arr.pop()+"<br>"+"now my arr is = "+arr;
+         document.getElementById('demo5').innerHTML="my arr is = "+arr+"<br>"+"one element remove form arr is = "+arr.shift()+"<br>"+"now my arr is = "+arr;
+         document.getElementById('demo6').innerHTML="my arr is = "+arr+"<br>"+"one element add an array is ="+arr.unshift("rohit")+"<br>"+"now my arr is ="+arr;
+         arr[2]="science";
+         document.getElementById('demo7').innerHTML="change the third element an array is = "+arr;
+         arr[arr.length]="kathmandu";
+         document.getElementById('demo8').innerHTML="add element using javascript array length is ="+arr;
+         //document.getElementById('demo9').innerHTML="my arr is = "+arr+"<br>"+"delete element an array using delete() is = "+delete arr[0]+"<br>"+"now my arr[0] is = "+arr[0]+
+         "<br>"+"now my arr is = "+arr;
+         document.getElementById('demo10').innerHTML="my first arr is = "+arr+"<br>"+"my second arr1 is = "+arr1+"<br>"+"my first arr concat with second arr1 is = "+arr.concat(arr1);
+         document.getElementById('demo11').innerHTML="my first arr is = "+arr+"<br>"+"my updated arr is = "+arr.copyWithin(2,0);
+         let a=[[2,4],[4,5],[7,8]];
+         document.getElementById('demo12').innerHTML="my array is  = "+a+"<br>"+"my flat array is = "+a.flat();
+         //document.getElementById('demo13').innerHTML="my arr is = "+arr+"<br>"+"my splice() arr is = "+arr.splice(2,0,"ahkash","bikram");
+         const splieced=arr.toSpliced(0,1);
+         document.getElementById('demo14').innerHTML="orignal arr ="+arr+"<br>"+splieced;//delete item position in index[0].
+        }
+
+    
+    </script>
+</body>
+</html>

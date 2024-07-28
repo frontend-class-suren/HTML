@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Array Iteration</h1>
+    <h2>JavaScript Array forEach()</h2>
+    <h3>The forEach() method calls a function (a callback function) once for each array element.</h3>
+    <p id="demo"></p>
+    <h2>JavaScript Array map()</h2>
+    <h3>The map() method does not execute the function for array elements without values.</h3>
+    <p id="demo1"></p>
+    <h2>JavaScript Array flatMap()</h2>
+    <h3>The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.</h3>
+    <p id="demo2"></p>
+    <h2>JavaScript Array filter()</h2>
+    <h3>The filter() method creates a new array with array elements that pass a test.</h3>
+    <p id="demo3"></p>
+    <h2>JavaScript Array reduce()</h2>
+    <h3>The reduce() method runs a function on each array element to produce (reduce it to) a single value.</h3>
+    <p id="demo4"></p>
+    <h2>JavaScript Array reduceRight()</h2>
+    <h3>The reduceRight() works from right-to-left in the array.</h3>
+    <p id="demo5"></p>
+    <h2>JavaScript Array every()</h2>
+    <h3>The every() method checks if all array values pass a test.</h3>
+    <p id="demo6"></p>
+    <h2>JavaScript Array some()</h2>
+    <h3>The some() method checks if some array values pass a test.</h3>
+    <p id="demo7"></p>
+    <h2>JavaScript Array.from()</h2>
+    <h3>The Array.from() method returns an Array object from any object with a length property or any iterable object.</h3>
+    <p id="demo8"></p>
+    <h2>JavaScript Array keys()</h2>
+    <h3>The Array.keys() method returns an Array Iterator object with the keys of an array.</h3>
+    <p id="demo9"></p>
+    <h2>JavaScript Array entries()</h2>
+    <h3>Create an Array Iterator, and then iterate over the key/value pairs:</h3>
+    <p id="demo10"></p>
+    <h2>JavaScript Array with() Method</h2>
+    <h3>the Array with() method as a safe way to update elements in an array without altering the original array.</h3>
+    <p id="demo11"></p>
+    <h2>JavaScript Array Spread (...)</h2>
+    <h3>The ... operator expands an iterable (like an array) into more elements:</h3>
+    <p id="demo12"></p>
+    <script>
+         const num=[2,65,87,34,12,10,18,67];
+        {
+           
+            let text="";
+            num.forEach(myFunction);
+            document.getElementById('demo').innerHTML=text;
+            function myFunction(value){
+                text+=value+"<br>";
+            }
+        }
+        //JavaScript Array map()
+        {
+             let newarray=num.map(myFunction);
+             document.getElementById('demo1').innerHTML=newarray;
+             function myFunction(value){
+                return value*2;
+             }
+        }
+        //JavaScript Array flatMap
+        {
+            let newarray=num.flatMap((x)=>x*2)
+            document.getElementById('demo2').innerHTML=newarray;
+        }
+        //JavaScript Array filter()
+        {
+            let newarray=num.filter(myFunction)
+            document.getElementById('demo3').innerHTML=newarray;
+            function myFunction(value){
+                return value>12;
+            }
+        }
+        //JavaScript Array reduce()
+    {
+        let newarray=num.reduce(myFunction);
+        document.getElementById('demo4').innerHTML="sum of the total array elements is = " +newarray;
+        function myFunction(total,value){
+            return total+value;
+        }
+    }
+    //JavaScript Array reduceRight()
+    {
+      let newarray=num.reduceRight(myFunction)
+      document.getElementById('demo5').innerHTML="the total sum of array from right to left is = "+newarray;
+      function myFunction(total,value){
+        return total+value;
+      }
+    }
+    //JavaScript Array every()
+{
+    let newarray=num.every(myFunction);
+    document.getElementById('demo6').innerHTML="all over 18 is = "+newarray;
+    function myFunction(value)
+    {
+        return value>18;
+    }
+}
+//JavaScript Array some()
+{
+let newarray=num.some(myFunction);
+document.getElementById('demo7').innerHTML="some() value is = "+newarray;
+function myFunction(value){
+    return value>35;
+}
+}
+//JavaScript Array.from()
+{
+let newarray=Array.from("sunil");
+document.getElementById('demo8').innerHTML=newarray;
+}
+//JavaScript Array keys()
+{
+   
+let newarray=num.keys();
+let text="";
+for (let x of newarray)
+ {
+    text += x+"<br>";
+}
+document.getElementById('demo9').innerHTML=text;
+}
+//JavaScript Array entries()
+{
+    
+    const f=num.entries();
+    for(let x of f)
+{
+    document.getElementById('demo10').innerHTML+=x+"<br>"
+}
+}
+//JavaScript Array with() Method
+{
+let newarray=num.with(3,105);
+document.getElementById('demo11').innerHTML="my num array is = " +num+"<br>"+"using with() then my num is = " +newarray;
+}
+//JavaScript Array Spread (...)
+{
+const week=["sunday","manday"];
+const week2=["Tuesday","wednesday"];
+const week3=["Thursday","friday"];
+const week4=["Saturday"]
+const week5=[...week,...week2,...week3,...week4];
+document.getElementById('demo12').innerHTML=week5;
+}
+    </script>
+</body>
+</html>

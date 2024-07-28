@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array sort</h1>
+    <h2>Sorting an Array</h2>
+    <h3>The sort() method sorts an array alphabetically:</h3>
+    <p id="demo"></p>
+    <h2>Reversing an Array</h2>
+    <h3>The reverse() method reverses the elements in an array:</h3>
+    <p id="demo1"></p>
+    <h2>JavaScript Array toSorted() Method</h2>
+    <h3>toSorted() method as a safe way to sort an array without altering the original array.</h3>
+    <p id="demo2"></p>
+    <h2>JavaScript Array toReversed() Method</h2>
+    <h3>toReversed() method as a safe way to reverse an array without altering the original array.</h3>
+    <p id="demo3"></p>
+    <h2>Numeric Sort</h2>
+    <h3>By default, the sort() function sorts values as strings.You can fix this by providing a compare function:</h3>
+    <p id="demo4"></p>
+    <h2>Sorting an Array in Random Order</h2>
+    <h3>Using a sort function, like explained above, you can sort an numeric array in random order</h3>
+    <button onclick="myFunction()">use this</button>
+    <p id="demo5"></p>
+    <h2>Find the Lowest Array Value</h2>
+    <h4>After you have sorted an array, you can use the index to obtain lowest values.</h4>
+    <p id="demo6"></p>
+    <h2>Find Max with sort()</h2>
+    <h4>After you have sorted an array, you can use the index to obtain highest values.</h4>
+    <p id="demo7"></p>
+    <h2>Using Math.min() on an Array</h2>
+    <h3>You can use Math.min.apply to find the lowest number in an array:</h3>
+        <p id="demo8"></p> 
+        <h2>Using Math.max() on an Array</h2>
+    <h3>You can use Math.max.apply to find the highest number in an array:</h3>
+        <p id="demo9"></p> 
+        <h2>JavaScript Array Minimum Method</h2>
+        <p id="demo10"></p> 
+        <h2>JavaScript Array Maximum Method</h2>
+        <p id="demo11"></p> 
+        <h2>Sorting Object Arrays</h2>
+        <h3>Even if objects have properties of different data types, the sort() method can be used to sort the array.</h3>
+        <p id="demo12"></p> 
+     <script>
+         let arr=["sunil","bikas","rahul","rohit","binny"];
+         let num=[33,77,99,22,1,11,20];
+         
+        {
+           document.getElementById('demo').innerHTML="sort array is = "+arr.sort();
+           
+        }
+    {
+       document.getElementById('demo1').innerHTML="reverse array is = "+arr.reverse();
+    }
+    {
+        let b=arr.toSorted();
+        document.getElementById('demo2').innerHTML="using tosorted() we create new array is ="+b;
+        
+    }
+    {
+        //let b=arr.toReversed();
+        //document.getElementById('demo3').innerHTML="using toreversed() we create new array is = "+b;
+    }
+    {    
+        num.sort(function(a,b) 
+        {
+            return a-b;
+        });
+        document.getElementById('demo4').innerHTML=num;
+    }
+    {
+        function myFunction(){
+            num.sort(function()
+        {
+            return 0.5-Math.random();
+        })
+        document.getElementById('demo5').innerHTML=num;
+        }
+    }
+    //Find the Lowest number Array Value(sort ascending order)
+    {
+                num.sort(function(a,b)
+            {
+                return a-b
+            })
+            document.getElementById('demo6').innerHTML=num[0];//output=1 mean lowest number got.
+    }
+    //sort(descending order).find the higest number array value.
+    {
+           num.sort(function(a,b)
+        {
+            return b-a;
+        })
+        document.getElementById('demo7').innerHTML=num[0];
+    }
+    //find min value in an array
+    {
+        document.getElementById('demo8').innerHTML=myarray(num);
+        function myarray(arr){
+            return Math.min.apply(null,arr);
+        }
+    }
+    //find max value in an array.
+    {
+        document.getElementById('demo9').innerHTML=myarray(num);
+        function myarray(arr){
+            return Math.max.apply(null,arr);
+        }
+    }
+    //JavaScript Array Minimum Method
+    {
+           document.getElementById('demo10').innerHTML=myarraymin(num);
+           function myarraymin(arr){
+           let len=arr.length;
+           let min=Infinity;
+           while (len--) {
+            if(arr[len]<min){
+                min=arr[len];
+            }
+            
+           }
+           return min;
+        }
+    }
+    ////JavaScript Array Maximum Method
+    {
+           document.getElementById('demo11').innerHTML=myarraymin(num);
+           function myarraymin(arr){
+           let len=arr.length;
+           let min=-Infinity;
+           while (len--) {
+            if(arr[len]>min){
+                min=arr[len];
+            }
+            
+           }
+           return min;
+        }
+    }
+    //Sorting Object Arrays
+    {
+     const record=[{student_name:"sunil",passed_year:2010},
+            {student_name:"amit",passed_year:2015},
+            {student_name:"rahul",passed_year:2016}];
+            displayrecord();
+            record.sort(function(a,b)
+        {
+            return a.year-b.year
+        });
+        displayrecord();
+        function displayrecord()
+        {
+            document.getElementById('demo12').innerHTML=
+            record[0].student_name+" "+record[0].passed_year+"<br>"+
+            record[1].student_name+" "+record[1].passed_year+"<br>"+
+            record[2].student_name+" "+record[2].passed_year;
+        }
+    }
+    </script>
+</body>
+</html>
