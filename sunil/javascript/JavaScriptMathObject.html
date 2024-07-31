@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Math Object</h1>
+    <h2>The Math Object</h2>
+    <h3>All methods and properties can be used without creating a Math object first.</h3>
+    <h2>Number to Integer</h2>
+    <h3>There are 4 common methods to round a number to an integer:</h3>
+    <h2>Math.round()</h2>
+    <h3>Math.round(x) returns the nearest integer:</h3>
+     <p id="demo"></p>
+     <h2>Math.ceil()</h2>
+     <h3>Math.ceil(x) returns the value of x rounded up to its nearest integer:</h3>
+     <p id="demo1"></p>
+     <h2>Math.floor()</h2>
+     <h3>Math.floor(x) returns the value of x rounded down to its nearest integer:</h3>
+        <p id="demo2"></p>
+      <h2>Math.trunc()</h2>
+      <h3>Math.trunc(x) returns the integer part of x:</h3>
+      <p id="demo3"></p>
+      <h2>Math.sign()</h2>
+      <h3>Math.sign(x) returns if x is negative, null or positive:</h3>
+      <p id="demo4"></p>
+      <h2>Math.pow()</h2>
+      <h3>Math.pow(x, y) returns the value of x to the power of y:</h3>
+       <p id="demo5"></p>
+       <h2>Math.sqrt()</h2>
+         <h3>Math.sqrt(x) returns the square root of x:</h3>
+         <p id="demo6"></p>
+         <h2>Math.abs()</h2>
+          <h3>Math.abs(x) returns the absolute (positive) value of x:</h3>
+          <p id="demo7"></p>
+          <h2>Math.sin()</h2>
+          <h3>Math.sin(x) returns the sine (a value between -1 and 1) of the angle x (given in radians).
+            If you want to use degrees instead of radians, you have to convert degrees to radians:
+            Angle in radians = Angle in degrees x PI / 180.</h3>
+            <p id="demo8"></p>
+            <h2>Math.cos()</h2>
+            <h3> Math.cos(x) returns the cosine (a value between -1 and 1) of the angle x (given in radians).
+            if you want to use degrees instead of radians, you have to convert degrees to radians:
+             Angle in radians = Angle in degrees x PI / 180.</h3>
+             <p id="demo9"></p>
+             <h2>Math.min()</h2>
+             <h3>Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments:</h3>
+             <p id="demo10"></p>
+             <h2>Math.max()</h2>
+             <h3>Math.max() can be used to find the highest value in a list of arguments:</h3></h3>
+             <p id="demo11"></p>
+             <h2>Math.random()</h2>
+             <h3>Math.random() returns a random number between 0 (inclusive), and 1 (exclusive):</h3>
+             <p id="demo12"></p>
+
+
+     <script>
+        {
+            document.getElementById('demo').innerHTML=Math.round(4.5)+"<br>"+Math.round(4.7)+"<br>"+
+            Math.round(4.4);//round this and equal to 5.
+            document.getElementById('demo1').innerHTML=Math.ceil(4.1)+"<br>"+Math.ceil(4.7)+"<br>"+
+            Math.ceil(4.4)+"<br>"+Math.ceil(4.2)+"<br>"+Math.ceil(4.9);//return all 5 but we put 4.0 then show 4 otherwise 5.
+            document.getElementById('demo2').innerHTML=Math.floor(4.1)+"<br>"+Math.floor(4.7)+"<br>"+
+            Math.floor(4.4)+"<br>"+Math.floor(4.2)+"<br>"+Math.floor(4.9);//return all 4  and every condition.  
+            document.getElementById('demo3').innerHTML=Math.trunc(4.5)+"<br>"+Math.trunc(4.7)+"<br>"+
+            Math.trunc(4.4)+"<br>"+Math.trunc(4.2)+"<br>"+Math.trunc(4.9);//return only integer part ignore desimal part.
+            document.getElementById('demo4').innerHTML=Math.sign(4)+"<br>"+Math.sign(0)+"<br>"+
+            Math.sign(-4);//its has three value only(-ve,+ve,0).if value statisfy condition then return between these three.
+            document.getElementById('demo5').innerHTML=Math.pow(6,3)+"<br>"+Math.pow(8,2)+"<br>"+
+            Math.pow(5,3);//return(5,3)maen 5 power 3=125,6 power 3=216,8 power 2=64.
+            document.getElementById('demo6').innerHTML=Math.sqrt(16)+"<br>"+Math.sqrt(64)+"<br>"+
+            Math.sqrt(81);//return value of sqrt is 4 , 8 , 9.
+            document.getElementById('demo7').innerHTML=Math.abs(-5.7)+"<br>"+Math.abs(64)+"<br>"+
+            Math.abs(81);//it return only +ve answer.becos it is change neqative and make it positive.
+            document.getElementById('demo8').innerHTML="The sine value of 90 degrees is " + Math.sin(90 * Math.PI / 180);
+            document.getElementById('demo9').innerHTML = 
+             "The cosine value of 0 degrees is " + Math.cos(0 * Math.PI / 180);
+             document.getElementById('demo10').innerHTML=Math.min(45,76,12,32,8,10,38,90,-500,-2);//return min value.
+             document.getElementById('demo11').innerHTML=Math.max(45,76,12,32,8,10,38,90,-500,-2);//return max value.
+             document.getElementById('demo12').innerHTML=Math.random();
+        
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript Set Date Methods</h1>
+    <h2>The setFullYear() Method</h2>
+    <h3>The setFullYear() method sets the year of a date object. In this example to 2020:
+     <p id="demo"></p>
+     <h2>The setMonth() Method</h2>
+     <h3>The setMonth() method sets the month of a date object (0-11):  </h3>
+    <p id="demo1"></p>
+    <h2>The setDate() Method</h2>
+    <h3>The setDate() method sets the day of a date object (1-31):
+        <p id="demo2"></p>
+    <h2>The setDate() method can also be used to add days to a date:</h2>
+    <p id="demo3"></p>
+    <h2>The setHours() Method</h2>
+    <h3>The setHours() method sets the hours of a date object (0-23):</h3>
+    <p id="demo4"></p>
+    <h2>Compare Dates</h2>
+    <p id="demo5"></p>
+
+
+    </h3>
+
+   
+     <script>
+        const set=new Date();
+        {
+            set.setFullYear(2024);//return full date.
+            document.getElementById('demo').innerHTML=set;
+            set.setMonth(6);
+            document.getElementById('demo1').innerHTML=set;
+            set.setDate(24);
+            document.getElementById('demo2').innerHTML=set;
+            set.setDate(set.getDate()+75);
+            document.getElementById('demo3').innerHTML=set;
+            set.setHours(23);
+            document.getElementById('demo4').innerHTML=set;
+        }
+        //Compare Dates
+        {
+              let today=new Date();
+              let future=new Date();
+              future.setFullYear(2200,1,14);
+              if(future>today)
+              {
+                text="today is before feb 14 2100 ";
+              }
+              else{
+                text="today is after feb 14 2100";
+              }
+              document.getElementById('demo5').innerHTML=text;
+
+        }
+     </script>
+    </h3>
+</body>
+</html>

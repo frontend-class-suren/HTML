@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript Booleans</h1>
+    <h2>A JavaScript Boolean represents one of two values: true or false.</h2>
+    <h3>Boolean Values-:<ul><li>YES / NO</li><li>ON / OFF</li><li>TRUE / FALSE</li></ul></h3>
+    <p id="demo"></p>
+    <h2>Comparisons and Conditions</h2>
+    <h3>Display the Boolean value of 0 and 1</h3>
+    <p id="demo1"></p>
+    <h2>JavaScript Booleans as Objects</h2>
+    <h3>Normally JavaScript booleans are primitive values created from literals:</h3>
+    <h4>p==q true or false</h4>
+    <p id="demo2"></p>
+    <h3>type of p and type of q value is.....</h3>
+    <p id="demo3"></p>
+    <h3>p===q true or false</h3>
+    <p id="demo4"></p>
+
+    <script>
+        { 
+            let x;
+            let y=null;
+            let z=false;
+            let a=true;
+            let b=10/"sunil";
+            document.getElementById('demo').innerHTML=Boolean(20>13);//we write without boolean 20>13 return value is true.
+            document.getElementById('demo1').innerHTML="value of 0 is = "+Boolean(0)+ "<br>"+
+            "value of 1 is = "+Boolean(1)+"<br>"+"value of -0 is = " +Boolean(-0)+"<br>"+"emty string is = "+
+            Boolean("")+"<br>"+"value of undefined is = "+Boolean(x)+"<br>"+"value of null is = "+Boolean(y)+
+            "<br>"+"value of false is = " +Boolean(z)+"<br>"+"value of true is = "+Boolean(a)+"<br>"+"value of nan is = "+
+            Boolean(b);
+  }
+        
+        //JavaScript Booleans as Objects
+        {
+            let p=false;//object created with literals.
+            let q=new Boolean(false);//created object with new.
+            
+            document.getElementById('demo2').innerHTML="when using x==y oprator then value is =" +(p==q);
+            document.getElementById('demo3').innerHTML="x type of = "+typeof p+"<br>"+"y type of = "+typeof q;
+            document.getElementById('demo4').innerHTML="when using x===y oprator then value is =" +(p===q);
+
+        }
+    </script>
+</body>
+</html>

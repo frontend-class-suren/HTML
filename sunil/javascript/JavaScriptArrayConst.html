@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Array Const</h1>
+    <p id="demo"></p>
+    <h1>Cannot be Reassigned</h1>
+    <h3>An array declared with const cannot be reassigned:</h3>
+    <p id="demo1"></p>
+    <h1>Arrays are Not Constants</h1>
+    <h3>It does NOT define a constant array. It defines a constant reference to an array.</h3>
+    <h3>its mean we can add elemets,delete elements,update element same as others arrays.</h3>
+   <h2>original array is</h2>
+    <p id="demo2"></p>
+    <h2>update element an array.</h2>
+    <p id="demo3"></p>
+    <h2>add elements</h2>
+    <p id="demo4"></p>
+    <h2>delets element end of the aray.</h2>
+    <p id="demo5"></p>
+    <h2>Assigned when Declared</h2>
+    <h3>Using const without initializing the array is a syntax error:</h3>
+    <p id="demo6"></p>
+    <h2>Const Block Scope</h2>
+    <h3>An array declared with const has Block Scope.</h3>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+
+    
+    <script>
+        //JavaScript Array Const.
+        const friends=["sunil","aman","rahul","binny","rohit"];
+        {
+            document.getElementById('demo').innerHTML="my const array is = "+friends;
+        }
+        //Cannot be Reassigned.
+        { try{
+            friends=["sunil","rahul"];//you cant reassign a const array.it give error= TypeError: Assignment to constant variable.
+        }catch(err)
+        {
+            document.getElementById('demo1').innerHTML="reassign array  is = "+err;
+        }}
+        //Arrays are Not Constants.
+        {
+            document.getElementById('demo2').innerHTML=friends;
+           friends[0]="manoj"//we update the elements at poisition zero.
+           document.getElementById('demo3').innerHTML="updated array at zero position = "+friends;
+           friends.push("ajay");//add elements.
+           document.getElementById('demo4').innerHTML="add elements at last of array = "+friends;
+           friends.pop();
+           document.getElementById('demo5').innerHTML="add elements at last of array = "+friends;
+
+
+        }
+        //Assigned when Declared
+    {
+         fri=["sunil","aman","rahul","binny","rohit"];
+        var fri;//we assigned first and after declare in var data type.
+        document.getElementById("demo6").innerHTML="only var data type we assigned first and then declare = "+fri[4];
+         friends=["sunil","aman","rahul","binny","rohit"];
+         //const friends;//it gives error that cant assigned constant data type.
+
+    }
+    //Const inside block.
+    {
+        const friends=["ramesh","puneet","rahul"];
+       
+}
+      document.getElementById('demo7').innerHTML=friends[0];
+    document.getElementById('demo8').innerHTML=friends.length;;
+   
+    </script>
+</body>
+</html>

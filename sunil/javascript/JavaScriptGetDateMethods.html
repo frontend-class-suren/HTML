@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Get Date Methods</h1>
+    <h2>The new Date() Constructor</h2>
+    <h3>In JavaScript, date objects are created with new Date().</h3>
+    <p id="demo"></p>
+    <h2>The getFullYear() Method</h2>
+    <h3>The getFullYear() method returns the year of a date as a four digit number:</h3>
+    <p id="demo1"></p>
+    <h2>The getMonth() Method</h2>
+    <h3>The getMonth() method returns the month of a date as a number (0-11).</h3>
+    <p id="demo2"></p>
+    <h2>You can use an array of names to return the month as a name:</h2>
+    <p id="demo3"></p>
+    <h2>The getDate() Method</h2>
+    <h3>The getDate() method returns the day of a date as a number (1-31):</h3>
+    <p id="demo4"></p>
+    <h2>The getHours() Method</h2>
+    <h3>The getHours() method returns the hours of a date as a number (0-23): </h3>
+    <p id="demo5"></p>
+    <h2>The getMinutes() Method</h2>
+    <h3>The getMinutes() method returns the minutes of a date as a number (0-59):
+    <p id="demo6"></p>
+    <h2>The getSeconds() Method</h2>
+    <h3>The getSeconds() method returns the seconds of a date as a number (0-59):
+    <p id="demo7"></p>
+    <h2>The getMilliseconds() Method</h2>
+    <h3>The getMilliseconds() method returns the milliseconds of a date as a number (0-999):</h3>
+    <p id="demo8"></p>
+    <h2>The getTime() Method</h2>
+    <h3>The getTime() method returns the number of milliseconds since January 1, 1970:</h3>
+    <p id="demo9"></p>
+    <h2>The Date.now() Method</h2>
+    <h3>Date.now() returns the number of milliseconds since January 1, 1970.</h3>
+    <p id="demo10"></p>
+    <h2>The getTimezoneOffset() Method</h2>
+    <h3>The getTimezoneOffset() method returns the difference (in minutes) between local time and UTC time:</h3>
+    <p id="demo11"></p>
+    <script>
+        const date=new Date(); 
+       
+        {
+            
+            document.getElementById('demo').innerHTML=date;//give us current date and time.
+            document.getElementById('demo1').innerHTML=date.getFullYear();//give  full four digit year.
+            document.getElementById('demo2').innerHTML=date.getMonth();//give month of the date as a number.(0-11)
+            const months=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+            let month_name=months[date.getMonth()];//give name of the month.
+            document.getElementById('demo3').innerHTML=month_name;
+            document.getElementById('demo4').innerHTML=date.getDate();//give day of a date.(1-31)
+            document.getElementById('demo5').innerHTML=date.getHours();//give hours as a number.(0-23)
+            document.getElementById('demo6').innerHTML=date.getMinutes();//give mintues as a number.(0-59)
+            document.getElementById('demo7').innerHTML=date.getSeconds();//give seconds as a number.(0-59)
+            document.getElementById('demo8').innerHTML=date.getMilliseconds();//give milliseconds as a number.(0-999).
+            document.getElementById('demo9').innerHTML=date.getTime();//give time as a number.(since jan 1 1970)
+            const date1=Date.now();
+            document.getElementById('demo10').innerHTML=date1;//gettime and date.now are same function and same result.
+            document.getElementById('demo11').innerHTML=date.getTimezoneOffset();//difference between local time and utc in mintues.
+        }
+        
+    </script>
+</body>
+</html>

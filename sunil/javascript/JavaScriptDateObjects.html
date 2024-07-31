@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Date Objects</h1>
+    <p id="demo"></p>
+    <h2>Creating Date Objects</h2>
+    <h2>new Date(date string)</h2>
+    <p id="demo1"></p>
+    <h1>new Date(year, month, ...)</h1>
+    <h3>7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):</h3>
+    <p id="demo2"></p>
+    <h2>Displaying Dates</h2>
+    <h3>JavaScript will (by default) output dates using the toString() method. </h3>
+    <p id="demo3"></p>
+    <h1>toDateString()</h1>
+    <p id="demo4"></p>
+    <h2>toUTCString() <br>converts a date to a string using the UTC standard:</h2>
+    <h4>converts a date to a string using the UTC standard:</h4>
+    <p id="demo5"></p>
+    <h2>toISOString()</h2>
+    <h4>method converts a date to a string using the ISO standard:</h4>
+    <p id="demo6"></p>
+    <script>
+        //creating with new keyboard.new Date().
+        {
+            const add=new Date();
+            document.getElementById('demo').innerHTML=add;
+        }
+        //new Date(date string)
+        {
+            
+            const add=new Date("Tue Jul 30 2024 00:25:46 GMT+0545 (Nepal Time)");
+            document.getElementById('demo1').innerHTML=add;
+        
+        }
+        //new Date(year, month, ...)
+        {
+            
+            const add=new Date(2024, 11, 24, 10, 33, 30, 0);
+            document.getElementById('demo2').innerHTML=add;
+        
+        }
+        //Displaying Dates
+        {
+            
+            
+            const add=new Date();
+            document.getElementById('demo3').innerHTML=add.toString();
+        
+        
+        }
+        //toDateString()
+        {
+          const b=new Date();
+          document.getElementById('demo4').innerHTML=b.toDateString();
+        }
+        //toUTCString()
+        {
+            const c=new Date();
+            document.getElementById('demo5').innerHTML=c.toUTCString();;
+        }
+        //toISOString
+        {
+            const c=new Date();
+            document.getElementById('demo6').innerHTML=c.toISOString();
+        }
+   
+   </script>
+
+</body>
+</html>
