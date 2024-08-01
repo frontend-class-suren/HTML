@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript While Loop</h1>
+    <h2>The While Loop</h2>
+    <h3>The while loop loops through a block of code as long as a specified condition is true.</h3>
+    <p id="demo"></p>
+    <h2>The Do While Loop</h2>
+    <h3>The do while loop is a variant of the while loop. This loop will execute the code block once, before 
+        checking if the condition is true, then it will repeat the loop as long as the condition is true.</h3>
+        <p id="demo1"></p>
+        <h2>Comparing For loop</h2>
+        <p id="demo2"></p>
+        <h2>Comparing While loop</h2>
+        <p id="demo3"></p>
+
+
+    <script>
+        {
+            text="";
+            let i=0;
+            while(i<10){
+               text+=i+"<br>";
+               i++
+            }
+            document.getElementById('demo').innerHTML=text;       
+         }
+         //The Do While Loop
+         {
+            let text="";
+            let i=0;
+          do{
+                  text+=i+"<br>";
+                  document.getElementById('demo1').innerHTML=text;
+                  i++;
+          }
+          while(i<10);
+         }
+         //Comparing For and While
+           {
+            let i=0;
+            let text="";
+            for(;i<10;){
+              text+=i+"<br>";
+              i++;
+            }
+            document.getElementById('demo2').innerHTML=text;
+           }
+           //while loop.
+           {
+                let i=0;
+                let text="";
+                while(i<10){
+                    text+=i+"<br>";
+                    i++;
+                }
+                document.getElementById('demo3').innerHTML=text;
+           }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript if, else, and else if</h1>
+    <h2>The if Statement</h2>
+    <h3>Use the if statement to specify a block of JavaScript code to be executed if a condition is true.</h3>
+    <p id="demo">good evening_demo</p>
+    <h2>if else statement</h2>
+    <h3>Use the if else statement to specify a block of code to be executed if the condition is false.</h3>
+    <p id="demo1">good evening</p>
+    <h2>The else if Statement</h2>
+     <h3>Use the else if statement to specify a new condition if the first condition is false.</h3>
+        <p id="demo2">good evening_demo</p>
+<script>
+         
+        {
+            if(new Date().getHours()<18){
+                document.getElementById('demo').innerHTML="good day!";
+            }
+            
+        }
+        //The if else Statement
+        {
+            if(new Date().getHours()<18)
+        {
+            document.getElementById('demo1').innerHTML="good day!";
+        }
+        else{
+            document.getElementById('demo1').innerHTML="good evening!";
+
+        }
+        //The else if Statement
+        if(new Date().getHours()<10)
+        {
+            document.getElementById('demo2').innerHTML="good evening_1!";
+
+        }
+        else if(new Date().getHours()<10)
+        {
+            document.getElementById('demo2').innerHTML="good evening_2!";
+
+        }
+        else
+        {
+            document.getElementById('demo2').innerHTML="good evening_3!";
+
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript For Of</h1>
+    <h2>The For Of Loop</h2>
+    <h3>The JavaScript for of statement loops through the values of an iterable object.</h3>
+    <p id="demo"></p>
+    <h2>The For Of Loop for string</h2>
+    <p id="demo1"></p>
+
+    <script>
+         let numbers=[34,56,12,90,56,78]
+        {
+            let text="";
+            for(let x of numbers){
+                text+=x+"<br>"
+            }
+             document.getElementById('demo').innerHTML=text;
+        }
+        //for of loop for string
+        {
+            let string="sunil";
+            let text="";
+            for(let x of string )
+        {
+            text+=x +"<br>";
+        }
+        document.getElementById('demo1').innerHTML=text;
+
+        } 
+    </script>
+</body>
+</html>

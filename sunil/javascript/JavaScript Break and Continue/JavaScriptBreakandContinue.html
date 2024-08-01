@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Break and Continue</h1>
+    <h2>The break statement "jumps out" of a loop.The continue statement "jumps over" one iteration in the loop.</h2>
+    <h3>The Break Statement</h3>
+    <h4>The break statement can be used to jump out of a loop:</h4>
+     <p id="demo"></p>
+     <h2>The Continue Statement</h2>
+     <h3>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</h3>
+     <h4>A loop which will skip the step where i = 3.</h4>
+     <p id="demo1"></p>
+     <h2>JavaScript Labels</h2>
+     <h3>To label JavaScript statements you precede the statements with a label name and a colon:</h3>
+     <h4>The break and the continue statements are the only JavaScript statements that can "jump out of" a code block.</h4>
+     <p id="demo2"></p>
+     <script>
+        {
+            let text="";
+            for(i=0;i<10;i++)
+        {
+            if(i===3)
+            {
+                break;
+                //the break statement ends the loop ("breaks" the loop) when the loop counter (i) is 3.
+            }
+            text+=i+"</br>";
+            
+        }
+        document.getElementById('demo').innerHTML=text;
+    
+        
+        }
+        //continue statement
+        {
+            {
+            let text="";
+            for(i=0;i<10;i++)
+        {
+            if(i===3)
+            {
+                continue;
+                //A loop which will skip the step where i = 3.
+            }
+            text+=i+"</br>";   
+        }
+        document.getElementById('demo1').innerHTML=text;
+        }
+        }
+        //JavaScript Labels
+        {
+            let fruits=["orange","apple","banana","kiwi"]
+            let text="";
+            list:{text+=fruits[0]+"<br>";
+            text+=fruits[1]+"<br>";
+            text+=fruits[2]+"<br>";
+            break list;
+            text+=fruits[3]+"<br>";
+                  
+            }
+            document.getElementById('demo2').innerHTML=text;
+        }
+     </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript For In</h1>
+    <h2>The For In Loop</h2>
+    <h3>The JavaScript for in statement loops through the properties of an Object:</h3>
+    <p id="demo"></p>
+    <h2>For In Over Arrays</h2>
+    <h3>The JavaScript for in statement can also loop over the properties of an Array:</h3>
+    <p id="demo1"></p>
+    <h2>Array.forEach()</h2>
+    <h3>The forEach() method calls a function (a callback function) once for each array element.</h3>
+    <p id="demo2"></p>
+
+    <script>
+        {
+            let friends={name:"sunil",last_name:"pangeni",address:"butwal"}
+            let text="";
+            for(let key in friends)//for in loop works only property even loop and array.
+        {
+            text+=friends[key]+"  ";
+        }
+        document.getElementById('demo').innerHTML=text;//we access value help of key.
+        }
+        //For In Over Arrays
+        let numbers=[34,56,12,90,56,78]
+        {
+            let numbers=[34,56,12,90,56,78]
+            let text="";
+            for(let keys in numbers)
+        {
+            text+=numbers[keys]+"<br>";
+        }
+        document.getElementById('demo1').innerHTML=text;
+        }
+        //Array.forEach()
+        {
+         let text="";
+         numbers.forEach(myFunction);
+         document.getElementById('demo2').innerHTML=text;
+
+         function myFunction(value)
+         {
+            text+=value-2+"<br>";
+         }
+
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript For Loop</h1>
+    <h2>JavaScript Loops</h2>
+    <h3>Loops are handy, if you want to run the same code over and over again, each time with a different value.</h3>
+    <h3>The For Loop</h3>
+    <p id="demo"></p>
+    <h2>Loop Scope</h2>
+    <h3>Using var in a loop:</h3>
+    <p id="demo1"></p>
+    <h3>Using let in a loop:</h3>
+    <p id="demo2"></p>
+
+    <script>
+        {
+            text="";
+           let fruits=["orange","banana","mango","apple","kiwi"];
+           for(let i=0;i<fruits.length;i++)
+           {
+                  text += fruits[i]+"<br>";
+           }
+           document.getElementById("demo").innerHTML=text;
+        }
+        //Loop Scope for var.
+        {
+           var i=5;
+           for(i=0;i<10;i++)
+           {
+           
+           }
+           
+           document.getElementById("demo1").innerHTML=i;
+
+        }
+        //Loop Scope for let.
+        {
+            let i=5;
+            for(i=0;i<10;i++)
+        {
+
+        }
+            document.getElementById("demo2").innerHTML=i;
+
+        }
+    </script>
+</body>
+</html>
