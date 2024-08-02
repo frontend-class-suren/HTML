@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Maps</h1>
+    <h2>A Map holds key-value pairs where the keys can be any datatype.</h2>
+    <h3>The new Map() Method</h3>
+    <h3>You can create a Map by passing an Array to the new Map() constructor:</h3>
+    <p id="demo"></p>
+    <h2>The set() Method</h2>
+    <h3>You can add elements to a Map with the set() method: </h3>
+    <p id="demo1"></p>
+   <h2>The get() Method</h2>
+   <h3>The get() method gets the value of a key in a Map:</h3>
+   <p id="demo2"></p>
+   <h2>Maps are Objects</h2>
+   <h3>typeof returns object:</h3>
+    <p id="demo3"></p>
+    <script>
+        //create map
+        const cars=new Map([["flat",3000000],["audi",5000000],["bmw",8000000]]);
+        {
+            let container=cars.get("audi");
+            document.getElementById('demo').innerHTML=container;
+        }
+        //The set() Method(add elements in map)
+        {
+            const fruits=new Map();
+            fruits.set("orange",400);
+            fruits.set("mango",500);
+            fruits.set("banana",700);
+            fruits.set("kiwi",800);
+            fruits.set("orange",600);//also update the value of orange.
+            let container=fruits.get("orange");
+            document.getElementById('demo1').innerHTML="size of fruits map is "+fruits.size+"<br>"+container;
+
+        }
+        //get method()
+        {
+           let container=cars.get("bmw");
+           document.getElementById('demo2').innerHTML="The value of bmw is = "+container;
+        }
+        //Maps are Objects
+        {
+            document.getElementById('demo3').innerHTML="Type of cars map is = "+typeof cars;
+        }
+    </script>
+</body>
+</html>

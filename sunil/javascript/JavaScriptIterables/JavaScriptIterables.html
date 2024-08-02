@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Iterables</h1>
+    <h2>Iterables are iterable objects (like Arrays).<br>Iterables can be accessed with simple and efficient code.<br>
+        Iterables can be iterated over with for..of loops</h2>
+        <h3>Iterating-:It simply means looping over a sequence of elements.<ul><li>Iterating over a String</li><li>Iterating over an Array</li></ul></h3>
+        <h3>Iterating Over a String</h3>
+        <p id="demo"></p>
+        <h3>Iterating Over an Array</h3>
+        <p id="demo1"></p>
+        <h3>Iterating Over a Set</h3>
+        <p id="demo2"></p>
+        <h3>Iterating Over a Map</h3>
+        <p id="demo3"></p>
+        <h2>JavaScript Iterators</h2>
+        <h3>An object becomes an iterator when it implements a next() method.</h3>
+        <h3>The next() method must return an object with two properties:
+        <ul><li>value (the next value)</li><li>done (true or false)</li></ul></h3>
+        <h3>next()method</h3>
+        <p id="demo4"></p>
+
+
+        <script>
+            {
+                const fruit="apple";
+                let text="";
+                for(let x of fruit)
+            {
+                text+=x+" ";
+            }
+            document.getElementById('demo').innerHTML=text;
+            }
+            //Iterating Over an Array
+            {
+            const cars=["audi","bmw","maruti","centro"];
+            let text="";
+            for(let x of cars){
+                text+=x+"<br>";
+            }
+            
+            document.getElementById('demo1').innerHTML=text;
+
+            }
+            //Iterating Over a Set
+            {
+                const fruits=new Set(["banana","apple","orange","kiwi"])
+                     let text="";
+                     for(let x of fruits){
+                        text+=x+"<br>";
+                     }
+                     document.getElementById('demo2').innerHTML=text;
+
+            }
+            //Iterating Over a Map
+            {
+                
+                 const fruits=new Map([["banana",200],["apple",300],["orange",500]]);
+                 let text="";
+                 for(let x of fruits)
+                 {
+                    text+=x+"<br>";
+                 }
+                 document.getElementById('demo3').innerHTML=text;
+ 
+            }
+            //JavaScript Iterators with next method.for statement.
+            {
+              function myNumbers(){
+                let n=0;
+                return{
+                    next: function()
+                    {
+                        n+=5;
+                        return{value:n,done:false};
+                    }
+                };
+              }
+             // create itrable
+              const n=myNumbers();
+              n.next();
+              n.next();
+              n.next();
+              n.next();
+              document.getElementById('demo4').innerHTML=n.next().value;
+
+            }
+            //JavaScript Iterators with next method for object.
+            {
+                //create object
+                const myNumbers={};
+                //make it iterable
+                myNumbers[Symbol.iterator]=function()
+                {
+                    let n=0;
+                    done=false;
+                    return {
+                        next(){
+                            n+=5;
+                            if(n==100){done=true;}
+                            return {value:n,done:done}
+                        }
+                    }
+                }
+                text="";
+                for(let num of myNumbers){
+                    text+=num+"<br>";
+                }
+                document.getElementById('demo4').innerHTML=text;
+            }
+        </script>
+        
+</body>
+</html>

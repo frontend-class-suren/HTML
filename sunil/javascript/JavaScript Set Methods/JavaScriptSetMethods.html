@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript Set Methods</h1>
+    <h1>The new Set() Method</h1>
+    <h2>Pass an array to the new Set() constructor:</h2>
+    <p id="demo"></p>
+    <h2>add elements in set</h2>
+    <p id="demo1"></p>
+    <h2>Listing Set Elements</h2>
+    <p id="demo2"></p>
+    <h2>The has() Method</h2>
+    <h3>The has() method returns true if a specified value exists in a set.</h3>
+    <p id="demo3"></p>
+    <h2>The forEach() Method</h2>
+    <h3>The forEach() method invokes a function for each Set element:</h3>
+    <p id="demo4"></p>
+    <h2>The values() Method</h2>
+     <h3>The values() method returns an Iterator object with the values in a Set:</h3>
+     <p id="demo5"></p>
+     <h2>The entries() Method</h2>
+      <h3>The entries() method returns an Iterator with [value,value] pairs from a Set.
+        <p id="demo6"></p>
+      </h3>
+    <script>
+         const fruits=new Set(["orange","banana","mango","kiwi"])
+         text="";
+        {
+           
+            document.getElementById('demo').innerHTML=fruits.size;
+        }
+        //ADD ELEMENT IN SETS.
+        {
+            fruits.add("kiwi");
+            fruits.add("mango");
+            document.getElementById('demo1').innerHTML=fruits.size;
+
+        }
+        //Listing Set Elements
+
+        {
+             let text="";
+             for(let x of fruits)
+             {
+                text+=x+"<br>";
+             }
+             document.getElementById('demo2').innerHTML="listing the elements is-:"+"<br>"+text+"<br>"+"size of set is ="+fruits.size;
+
+        }
+        //The has() Method(verify value exists in a set or not)
+        {
+            document.getElementById('demo3').innerHTML=fruits.has("orange");//output true becos fruits set has orange.
+        }
+        //The forEach() Method
+        {
+            let text="";
+            fruits.forEach(function(value)
+        {
+            text+=value+"<br>";
+        })
+            document.getElementById('demo4').innerHTML=text;
+        }
+        //The values() Method
+        {
+         //const get_value=fruits.values();
+         for(let elements of fruits.values())
+         {
+            text+=elements+"<br>";
+         }
+         document.getElementById('demo5').innerHTML=text;
+
+        }
+        //The entries() Method
+        {
+            let name=["sunil","vikas","rahul"]
+            text="";
+            for(let entry of name.entries())
+        {
+            text+=entry+"<br>";
+        }
+        document.getElementById('demo6').innerHTML=text;
+
+        }
+    </script>
+</body>
+</html>

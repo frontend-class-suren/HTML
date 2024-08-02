@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Map Methods</h1>
+    <h2>Map.delete()</h2>
+    <h3>The delete() method removes a map element:</h3>
+    <p id="demo"></p>
+    <h2>Map.clear()</h2>
+    <h3>The clear() method removes all the elements from a map:</h3>
+    <p id="demo1"></p>
+    <h2>set method() to add elements in map</h2>
+    <p id="demo2"></p>
+    <h2>Map.forEach()</h2>
+      <h3>The forEach() method invokes a callback for each key/value pair in a map:</h3>
+      <p id="demo3"></p>
+      <h2>Map.entries()</h2>
+      <h3>The entries() method returns an iterator object with the [key,values] in a map:</h3>
+      <p id="demo4"></p>
+      <h2>Map.values()</h2>
+       <h3>The values() method returns an iterator object with the values in a map:</h3>
+       <p id="demo5"></p>
+       <h2>Objects as Keys</h2>
+       <h3>Being able to use objects as keys is an important Map feature.</h3>
+        <p id="demo6"></p>
+        <h2>JavaScript Map.groupBy()</h2>
+        <h3>The Map.groupBy() method groups elements of an object according to string values returned from a callback function.</h3>
+        <p id="demo7"></p>
+        <h2>JavaScript typeof</h2>
+        <h3>The typeof operator returns the data type of a JavaScript variable.</h3>
+
+    <script>
+           const school=new Map([["math_dept",40],["science_dept",50],["art_dept",60]])
+        {
+            document.getElementById('demo').innerHTML="The orignal size of school map is = "+school.size+
+            "<br>"+"delete the element = "+school.delete("math_dept")+"<br>"+"now size is = "+school.size;
+            
+        }
+        //The clear() method removes all the elements from a map:
+        {
+            school.clear();
+            document.getElementById('demo1').innerHTML="size of updated school map is = "+school.size;
+        }
+        //add elements using set method.
+        {
+            school.set("math_dept",40);
+            school.set("science_dept",50);
+            school.set("art_dept",60);
+            document.getElementById('demo2').innerHTML=school.size;
+
+        }
+        //Map.forEach()
+        {
+            let text="";
+            school.forEach(function(value,key)
+        {
+            text+=key+"="+value+"<br>";
+        })
+        document.getElementById('demo3').innerHTML=text;
+        }
+        //Map.entries()
+    {
+        let text="";
+        for(let x of school.entries()){
+            text+=x+"<br>";
+        }
+        document.getElementById('demo4').innerHTML=text;
+
+    }
+    //Map.keys()
+    {
+        let text="";
+        for(let x of school.keys()){
+            text+=x+"<br>";
+        }
+        document.getElementById('demo4').innerHTML=text;
+
+    }
+    //Map.values()
+    {
+        let text="";
+        for(let x of school.values()){
+            text+=x+"<br>";
+        }
+        document.getElementById('demo5').innerHTML=text;
+    }
+    //Objects as Keys
+    {
+        const orange={name:"orange"};
+        const banana={name:"banana"};
+        const apple={name:"apple"};
+        //create map
+        const fruits=new Map();
+        fruits.set(orange,500);
+        fruits.set(banana,800);
+        fruits.set(apple,1000);
+        document.getElementById('demo6').innerHTML="banana value is = "+fruits.get(banana);
+    }
+    //JavaScript Map.groupBy()
+    {
+       //call back function
+       const fruits=[
+  {name:"apples", quantity:300},
+  {name:"bananas", quantity:500},
+  {name:"oranges", quantity:200},
+  {name:"kiwi", quantity:150}];
+       function mycallback({quantity})
+       {
+        return quantity>200?"ok":"low";
+       }
+       const result=Map.groupBy(fruits,mycallback);
+       //display result
+       let text="These fruits are ok:<br>";
+       for(let x of result.get("ok")){
+            text+=x.name+" "+x.quantity+"<br>";
+       }
+       text="<br>These fruits are low:<br>";
+       for(let x of result.get("low")){ 
+            text+=x.name+" "+x.quantity+"<br>";
+       }
+       document.getElementById('demo7').innerHTML=text;
+       console.log(result.get("ok"))
+    }
+    //JavaScript typeof
+    {
+
+    }
+
+    
+
+    </script>
+</body>
+</html>

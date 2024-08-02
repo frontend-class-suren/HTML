@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Sets</h1>
+    <h2>A JavaScript Set is a collection of unique values.The values can be of any type, primitive values or objects.</h2>
+    <h3>The new Set() Method</h3>
+    <h4>Pass an array to the new Set() constructor:</h4>
+    <p id="demo"></p>
+    <h3>add values in set</h3>
+    <p id="demo1"></p>
+    <h3>Create a Set and add variables:</h3>
+        <p id="demo2"></p>
+        <h3>The add() Method</h3>
+        <h2>If you add equal elements, only the first will be saved:</h2>
+        <p id="demo3"></p>
+        <h2>listing the elements</h2>
+        <p id="demo4"></p>
+        <h2>Set are Objects?</h2>
+        <p id="demo5"></p>
+        <h2>type of Set.</h2>
+        <p id="demo6"></p>
+
+    
+    <script>
+         let fruits=new Set(["orange","banana","mango","kiwi"]);
+        {
+            document.getElementById('demo').innerHTML=fruits.size;
+        }
+        //add values in set
+        {
+            const fruits=new Set();
+            fruits.add("orange");
+            fruits.add("banana");
+            fruits.add("mango");
+            fruits.add("kiwi");
+            text="";
+           for(let x of fruits){
+            text+=x+"<br>";
+           }
+            //document.getElementById('demo1').innerHTML=fruits.size;
+            document.getElementById('demo1').innerHTML=text+"<br>"+"size of set = "+fruits.size;
+
+            
+        }
+        //Create a Set and add variables:
+        {
+            let fruits=new Set();
+           //create the variable.
+           let a="orange";
+           let b="banana";
+           let c="mango";
+           let d="kiwi";
+           //add values as variables to the set.
+           fruits.add(a);
+           fruits.add(b);
+           fruits.add(c);
+           fruits.add(d);
+           //document.getElementById('demo2').innerHTML=fruits.size;
+           text="";
+           for(let x of fruits){
+            text+=x+"<br>";
+           }
+           document.getElementById('demo2').innerHTML=text;
+
+        }
+        //If you add equal elements, only the first will be saved:
+        {
+            const fruits=new Set();
+            fruits.add("orange");
+            fruits.add("banana");
+            fruits.add("banana");
+            fruits.add("kiwi");
+            text="";
+           for(let x of fruits){
+            text+=x+"<br>";
+           }
+            document.getElementById('demo3').innerHTML=text+"<br>"+"size of set = "+fruits.size;
+        }
+       
+        //listing the elements.
+        {
+            text="";
+           for(let x of fruits){
+            text+=x+"<br>";
+           }
+            document.getElementById('demo4').innerHTML=text+"<br>"+"size of set = "+fruits.size;
+        }
+        //we check sets type of and sets objects or not.
+{
+    document.getElementById('demo5').innerHTML=fruits instanceof Set;
+    document.getElementById('demo6').innerHTML=typeof fruits;
+
+}
+    </script>
+</body>
+</html>
