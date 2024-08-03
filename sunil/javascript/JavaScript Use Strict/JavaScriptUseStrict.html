@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript Use Strict</h1>
+    <h2>"use strict"; Defines that JavaScript code should be executed in "strict mode".</h2>
+    <h2>Declaring Strict Mode</h2>
+    <h3>Strict mode is declared by adding "use strict"; to the beginning of a script or a function.</h3>
+    <p id="demo"></p>
+    <h3>if we use begining of a program so it is affected all variable and functions.</h3>
+    <p id="demo1"></p>
+    <h3>Using an object without declaring it, is not allowed.</h3>
+    <p id="demo2"></p>
+    <h3>deleting variable and object not allowed.</h3>
+    <p id="demo3"></p>
+    <script>
+       "use strict";
+        {  
+            try{
+            x=3.14;//use strict mode so this error accured.
+            }catch(err){
+            document.getElementById('demo').innerHTML=err;//output-:x is not defined.
+            
+        }
+        }
+        //strict mode top of the program then it is use everywhere even variables and function.
+        {
+            myFunction();
+          
+            function myFunction()
+            {    try{
+                  x=3.14//we declare this first and then use otherwise give us error.x not declare.
+                }
+                catch(err)    
+                {
+                document.getElementById('demo1').innerHTML=err;//output-:x is not declare.
+             }}
+        }
+        //object must be declare first.
+        {
+            try{
+            fruits={type:"orange",type:"apple",type:"mango"};
+              }
+              catch(err){
+            document.getElementById('demo2').innerHTML=err;//output-:error-fruits not declare.
+        }
+        }
+        //deleting variable and object not allowed.
+        {
+            let x=8;
+           
+          let fruits={type:"orange",type:"apple",type:"mango"};
+      let y= delete fruits.type;
+          document.getElementById('demo3').innerHTML=y.valueOf();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Regular Expressions</h1>
+    <h2>The search pattern can be used for text search and text replace operations.</h2>
+    <h3>Using String search() with a String</h3>
+    <p id="demo"></p>
+    <h3>Using String search() With a Regular Expression</h3>
+    <p id="demo1"></p>
+    <h3>Using String replace() With a String</h3>
+    <p id="demo2"></p>
+    <h3>Using String replace() With a Regular Expression</h3>
+    <p id="demo3"></p>
+    <h3>Using test()</h3>
+    <p id="demo4"></p>
+    <h3>Using exec()</h3>
+    <p id="demo5"></p>
+        <script>
+         let text="VISIT W3school";
+        {
+            let search=text.search("visit");
+            document.getElementById('demo').innerHTML=search;//output=-1 mean regular exp are case-sensitive.
+           let search1=text.search(/visit/i);
+            document.getElementById('demo1').innerHTML=search1;
+        }   
+        //Using String replace() With a String
+        {
+            let replace=text.replace("visit","welcome");//replace also case-sensitive.
+            document.getElementById('demo2').innerHTML=replace;
+            let replace1=text.replace(/visit/i,"welcome");//using regexp now it is case-insensitive.
+            document.getElementById('demo3').innerHTML=replace1;
+
+        }
+        //Using test()
+        {
+            let pattern=/o/;
+            document.getElementById('demo4').innerHTML=text+"<br>"+"find out /o/ pattern = "+pattern.test(text);
+
+        }
+        //Using exec()
+        {
+            let object=/o/.exec("VISIT W3school");
+            document.getElementById('demo5').innerHTML="position of /o/ character = "+object.index+"<br>"+"main input given by object = "+object.input;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript Operator Precedence</h1>
+    <h2>Multiplication (*) and division (/) have higher precedence than addition (+) and subtraction (-).</h2>
+    <h3>As in traditional mathematics, multiplication is done first:</h3>
+    <p id="demo"></p>
+    <h3>When using parentheses, operations inside the parentheses are computed first:</h3>
+    <p id="demo1"></p>
+    <h3>Operations with the same precedence (like * and /) are computed from left to right:</h3>
+    <p id="demo2"></p>
+
+    <script>
+        {
+            let mul=8+9*7;//multiplication first.
+            document.getElementById('demo').innerHTML=mul;
+            let paren=(8+9)*7//parentheses first.
+            document.getElementById('demo1').innerHTML=paren;
+            let left_to_right=30/5*9;//same precedence then calculate left to right.
+            document.getElementById('demo2').innerHTML=left_to_right;
+
+        }
+    </script>
+</body>
+</html>

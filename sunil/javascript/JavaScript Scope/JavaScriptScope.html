@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript Scope</h1>
+    <h2>JavaScript variables have 3 types of scope-:</h2><ul><li>Block scope</li><li>Function scope</li><li>Global scope</li></ul>
+     <h3>Block Scope</h3>
+    <p id="demo"></p>
+    <h3>var access inside and outside the block.</h3>
+    <p id="demo1"></p>
+    <h3>Local Scope</h3>
+    <h4>Variables declared within a JavaScript function, are LOCAL to the function:</h4>
+    <p id="demo2"></p>
+    <h3>outside the local block or fucntion block.</h3>
+    <p id="demo3"></p>
+    <h3>global scope</h3>
+    <p id="demo4"></p>
+    <h3>Strict Mode</h3>
+    <h4>In "Strict Mode", undeclared variables are not automatically global.</h4>
+    <p id="demo5"></p>
+
+
+<script>
+      let x=20; 
+    {
+        let x;//it is access x value only inside the block not the outside the block.
+        document.getElementById('demo').innerHTML="value of x is = "+x;//output-:undefined.
+        
+    }
+    //var variable is globally access inside the program.
+    y=20;
+    {
+        var y;
+        document.getElementById('demo1').innerHTML="value of y is = "+y;//output-:20.
+    }
+    //Local Scope
+    {
+        myFunction();
+        function myFunction()
+        {
+          
+            let fruit="orange";
+            document.getElementById('demo2').innerHTML="type of fruit is = "+typeof fruit+"<br>"+"value of fruit is ="+fruit;
+        }
+        document.getElementById('demo3').innerHTML="type of fruit is = "+typeof fruit;
+
+
+    }
+    //global scope.
+    {
+        
+        let fruit="orange";
+        myFunction();
+        function myFunction()
+        {
+            document.getElementById('demo4').innerHTML=fruit;
+        }
+    
+    }
+    //Strict Mode
+    {
+
+    }
+</script>
+</body>
+</html>

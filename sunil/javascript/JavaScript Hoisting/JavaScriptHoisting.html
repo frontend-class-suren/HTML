@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Hoisting</h1>
+    <h2>Hoisting is JavaScript's default behavior of moving declarations to the top.<br>
+    a variable can be used before it has been declared.</h2>
+    <h3>JavaScript Declarations are Hoisted</h3>
+    <p id="demo"></p>
+    <h3>The let and const Keywords</h3>
+    <p id="demo1"></p>
+    <h3>Because of hoisting, variable has been declared before it is used it is called hoisted.</h3>
+    <p id="demo2"></p>
+
+    <script>
+        {
+            x=5;
+            y=document.getElementById('demo');
+            y.innerHTML=x;
+            var x;//x is hoisted elements becos it is used befor and declare now.
+        }
+        //The let and const Keywords
+        {
+            try
+            {
+            fruit="orange";
+            let fruit;
+            }catch(err)
+        {
+            document.getElementById('demo1').innerHTML=err;//output-:can't access fruit before initialization.
+        }
+        }
+        //hoisted program
+        {
+            try
+            {
+             let fruit; //it is called hoisted becos variable declare top of the block.
+             fruit="orange";// it is called hoisted becos variable initialization after declared.
+            }
+            catch(err)
+            {
+             document.getElementById('demo2').innerHTML=err;
+            }
+        }
+    </script>
+</body>
+</html>

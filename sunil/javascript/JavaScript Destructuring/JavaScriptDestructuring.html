@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Destructuring</h2>
+    <h3>The destructuring assignment unpack object and arrays properties into variables:</h3>
+    <h4>Object Destructuring</h4>
+    <p id="demo"></p>
+    <h2>Object Default Values</h2>
+    <h3>For potentially missing properties we can set default values:</h3>
+    <p id="demo1"></p>
+    <h2>Object Property Alias</h2>
+    <p id="demo2"></p>
+    <h2>String Destructuring</h2>
+    <p id="demo3"></p>
+    <h2>Array Destructuring</h2>
+      <h3>We can pick up array variables into our own variables:</h3>
+      <p id="demo4"></p>
+      <h2>Skipping Array Values</h2>
+       <h3>We can skip array values using two or more commas:</h3>
+       <p id="demo5"></p>
+       <h2>Array Position Values</h2>
+       <h3>We can pick up values from specific index locations of an array:</h3>
+       <p id="demo6"></p>
+       <h2>The Rest Property</h2>
+       <h3>You can end a destructuring syntax with a rest property.</h3>
+       <p id="demo7"></p>
+        <h2>Destructuring Maps</h2>
+        <p id="demo8"></p>
+        <h2>Swapping JavaScript Variables</h2>
+        <p id="demo9"></p>
+
+    <script>
+        let person={first_name:"vikas",last_name:"sharma",age:40};//create a object.
+        let array=["orange","banana","mango","kiwi"]
+        let two_wheeler="";
+        {
+            //Destructuring
+            let{first_name,last_name}=person;
+            //display primitive values.
+            document.getElementById('demo').innerHTML=first_name+" "+last_name;
+        }
+        //Object Default Values
+        {
+          let{first_name,last_name,country="US"}=person;
+          document.getElementById('demo1').innerHTML=first_name+"<br>"+last_name+"<br>"+country;
+
+        }
+        //Object Property Alias
+        {
+            let{first_name:name,last_name:last}=person;
+            document.getElementById('demo2').innerHTML=name+"<br>"+last;
+        }
+        //String Destructuring
+        {
+            let name="sunil";
+            let[a1,a2,a3]=name;
+            document.getElementById('demo3').innerHTML=a1+" "+a2+" "+a3;
+
+        }
+        //Array Destructuring
+        {
+             let[arr1,arr2,arr3]=array;
+             document.getElementById('demo4').innerHTML=arr1+" "+arr2+" "+arr3;
+
+        }
+        //Skipping Array Values
+        {
+            let array=["orange","banana","mango","kiwi"]
+            let[arr1,,,arr2]=array;
+            document.getElementById('demo5').innerHTML=arr1+",,,"+arr2;
+        }
+        //Array Position Values
+        {
+            let {[1]:arr,[3]:arr2}=array;
+            document.getElementById('demo6').innerHTML=arr+" "+arr2;
+
+        }
+        //The Rest Property
+
+        {
+             let [a,b, ...rest]=array;
+             document.getElementById('demo7').innerHTML=a+"<br>"+b+"<br>"+"The rest value is = "+rest;
+
+
+        }
+        //Destructuring Maps
+        {
+            let map=new Map([["apples",400],["banana",600],["mango",800]]);
+            let text="";
+            for(let [key,value] of map){
+                text+="<p>"+key + " is " + value;
+            }
+            document.getElementById('demo8').innerHTML=text;
+
+        }
+        //Swapping JavaScript Variables
+{
+    first_name="sunil";
+    last_name="pangeni";
+    [first_name,last_name]=[last_name,first_name];
+    document.getElementById('demo9').innerHTML=first_name+" "+last_name;
+
+}
+    </script>
+</body>
+</html>

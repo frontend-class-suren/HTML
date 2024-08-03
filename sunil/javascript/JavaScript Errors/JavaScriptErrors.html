@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Errors</h1>
+    <h2>Throw, and Try...Catch...Finally</h2>
+    <h3>Errors Will Happen!</h3>
+    <p id="demo"></p>
+    <h3>The finally Statement</h3>
+    <h3>The finally statement lets you execute code, after try and catch</h3>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        {
+            try{
+                let text=window.allert("welcome butwal");
+            }catch(err)
+                      {
+                document.getElementById('demo').innerHTML=err;
+                      }
+        }
+        //The finally Statement
+        {
+            try{
+            let text="nepal is a beutifull country".toUupperCase();
+            }catch(err)
+            {
+                document.getElementById('demo1').innerHTML=err;
+            }
+            finally{
+                let add=6+8;
+                document.getElementById('demo2').innerHTML="add two digit is = "+add;//finally block must be run code even exception occur.
+            }
+        }
+    </script>
+     <h2>Input Validation Example</h2>
+     <input id="demo3" type="text">
+     <button type="button" onclick="myFunction()">Test Input</button>
+     <p id="demo4"></p>
+     
+     <script>
+        {
+     function myFunction() {
+       const message = document.getElementById("demo4");
+       message.innerHTML = "";
+       let x = document.getElementById("demo3").value;
+       try { 
+         if(x.trim() == "")  throw "empty";
+         if(isNaN(x)) throw "not a number";
+         x = Number(x);
+         if(x < 5)  throw "too low";
+         if(x > 10)   throw "too high";
+       }
+       catch(err) {
+         message.innerHTML = "Input is " + err;
+       }
+     }
+    }
+     </script>
+     
+</body>
+</html>
