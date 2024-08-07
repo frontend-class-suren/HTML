@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asynchronous JavaScript</h1>
+    <h2>Functions running in parallel with other functions are called asynchronous</h2>
+    <p id="demo"></p>
+    <h2>Waiting for a Timeout</h2>
+    <p id="demo1"></p>
+    <h2>Instead of passing the name of a function as an argument to another function, you can always pass a whole function instead:</h2>
+    <p id="demo2"></p>
+    <h2>Waiting for Intervals:</h2>
+    <p id="demo3"></p>
+
+    <script>
+        {
+            function display(some)
+            {
+                document.getElementById('demo').innerHTML=some;
+            }
+        
+        function myCalculator(num1,num2,display)
+        {
+            let sum=num1+num2;
+            display(sum);
+        }
+        myCalculator(10,40,display);
+        }
+        //Waiting for a Timeout
+
+        {
+            setTimeout(myDisplay,3000);
+
+            function myDisplay()
+            {
+                document.getElementById('demo1').innerHTML="i love my country";
+            }
+
+        }
+       // Instead of passing the name of a function as an argument to another function, 
+       //you can always pass a whole function instead:
+       {
+        setTimeout(function(){display("i love nepal");},4000);
+        function display(value){
+            document.getElementById('demo2').innerHTML=value;
+
+        }
+       }
+       //Waiting for Intervals:
+       {
+          setInterval(dateFunction,1000);
+          function dateFunction(){
+            let d=new Date();
+            document.getElementById('demo3').innerHTML=d.getHours()+":"+d.getMinutes()+
+            ":"+d.getSeconds();
+          }
+       }
+       
+
+
+
+
+    </script>
+</body>
+</html>

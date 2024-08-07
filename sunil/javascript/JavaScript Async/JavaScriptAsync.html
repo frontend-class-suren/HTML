@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Async</h1>
+    <h2>The keyword async before a function makes the function return a promise:</h2>
+    <p id="demo"></p>
+    <p>Or simpler, since you expect a normal value (a normal response, not an error):</p>
+    <p id="demo1"></p>
+    <h2>Await Syntax</h2>
+    <h3>The await keyword makes the function pause the execution and wait for a resolved promise before it continues:</h3>
+    <h3>The await keyword can only be used inside an async function.</h3>
+    <p id="demo2"></p>
+    <h2>Example without reject</h2>
+    <p id="demo3"></p>
+    <h2>Waiting for a Timeout</h2>
+    <p id="demo4"></p>
+    <h2>Waiting for a File</h2>
+    <p id="demo5"></p>
+
+
+
+    <script>
+        {
+            function display(some)
+            {
+                document.getElementById('demo').innerHTML=some;
+            }
+            async function myFunction()
+            {
+                return "hello nepal";
+            }
+            myFunction().then(
+                function(value)
+                {
+                    display(value);
+                },
+                function(error)
+                {
+                    display(error);
+                }
+            );
+        }
+        //since you expect a normal value (a normal response, not an error)
+{
+    function display(some)
+            {
+                document.getElementById('demo1').innerHTML=some;
+            }
+            async function myFunction()
+            {
+                return "hello nepal";
+            }
+            myFunction().then(
+                function(value)
+                {
+                    display(value);//no need error section in this program.
+                }   
+            );
+                    }
+                     //Await Syntax
+                     {
+                        async function display(some)
+                        {
+                            let promise=new Promise(function(resolve,reject)
+                            {
+                                resolve("i love conuntry");
+                                
+                            });   
+                            document.getElementById('demo2').innerHTML=await promise;
+                        }
+                             display();
+                          }
+                          //Example without reject
+                          {
+                            async function display(some)
+                        {
+                            let promise=new Promise(function(resolve,reject)
+                            {
+                                resolve("i love conuntry");
+                                
+                            });   
+                            document.getElementById('demo3').innerHTML=await promise;
+                        }
+                             display();
+                          }
+                          //Waiting for a Timeout
+                         {
+                            async function display(some)
+                        {
+                            let promise=new Promise(function(resolve)
+                            {
+                            setTimeout(function() 
+                            {
+                                resolve("i love conuntry");},3000);  
+                            });   
+                            document.getElementById('demo4').innerHTML=await promise;
+                        }
+                             display();
+                         }
+                         //Waiting for a File
+                         {
+                            //  async function getFile()
+                            //  {                                    
+
+                            //     let promise=new Promise(function (resolve)
+                            //     {
+                                    
+                            //         let req=new XMLHttpRequest();
+                            //         //document.write("i m here");
+                            //         req.open("GET","D:\html_classes\HTML\images\download (5).jpeg");
+                            //         req.onload=function()
+                            //          {                                    
+
+                            //             if(req.status==200){
+                            //                 resolve(req.response);}
+                            //                 else{
+                            //                     resolve("file not found");
+                            //                 }
+                                            
+
+                            //         };
+                            //         req.send();
+                                    
+
+                            //     });
+                            //     document.getElementById('demo5').innerHTML=await promise;
+                            //  }
+
+                            //  getFile();
+
+                         }
+    </script>
+</body>
+</html>

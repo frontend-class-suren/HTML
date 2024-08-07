@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript Callbacks</h1>
+    <h2>Function Sequence</h2>
+    <h3>JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.</h3>
+    <p id="demo"></p>
+    <h2>Sequence Control</h2>
+    <h3>You could call a calculator function (myCalculator), save the result, and then call another function (myDisplayer) to display the result:</h3>
+    <p id="demo1"></p>
+    <h2>let the calculator function call the display function()</h2>
+    <p id="demo2"></p>
+    <h2>JavaScript Callbacks</h2>
+    <h3>A callback is a function passed as an argument to another function.</h3>
+      <p id="demo3"></p>
+      <h2>Remove negative number from array</h2>
+      <p id="demo4"></p>
+
+    <script>
+        {
+            function display(text)
+            {
+             return document.getElementById('demo').innerHTML=text;
+            }
+            function first_function()
+            {
+                return display("my name is sunil");
+            }
+            function second_function()
+            {
+                return display("my name is rahul");
+            }
+            second_function();//what function call first then run another function
+            first_function();//we defined function doesnot matter matter we call which function first.
+            
+        }
+        //Sequence Control
+         {
+           function display(show)
+           {
+            return document.getElementById('demo1').innerHTML=show;
+           }
+           function myCalculator(num1,num2)
+           {
+            let sum=num1+num2
+            return sum;
+           }
+           
+           let result=myCalculator(7,9);
+           display(result);
+           }
+           //let the calculator function call the display function();
+           {
+            function display(show)
+           {
+            return document.getElementById('demo2').innerHTML=show;
+           }
+           function myCalculator(num1,num2)
+           {
+            let sum=num1+num2
+            return display(sum);
+           }
+           
+           myCalculator(7,20);
+           }
+           //JavaScript Callbacks
+           {
+            function display(show)
+           {
+            return document.getElementById('demo3').innerHTML=show;
+           }
+           function myCalculator(num1,num2,display)
+           {
+            let sum=num1+num2
+            display(sum);
+           }
+           myCalculator(10,10,display)
+           }
+            //remove nagetive number from array.
+            {
+             let array=[34,78,-89,56,-76,-90,45]
+             let positive_num=remove_neg_num(array,(x) => x >= 0);
+             document.getElementById('demo4').innerHTML=positive_num;
+             function remove_neg_num(numbers,callback)
+             {
+                let myArray=[];
+                for(let x of numbers){
+                    if (callback(x))
+                {
+                    myArray.push(x);
+                }
+                }
+            return myArray;
+
+             }
+            }
+           
+           
+    </script>
+</body>
+</html>

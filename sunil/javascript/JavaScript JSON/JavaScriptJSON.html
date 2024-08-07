@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript JSON</h1>
+    <h2>use json parse</h2>
+    <p id="demo"></p>
+    <h2>use json stringify</h2>
+    <p id="demo1"></p>
+
+    <script>
+        {
+            
+            let text='{"employees":['  +
+                                '{"first_name":"sunil","last_name":"pangeni"},'+
+                                '{"first_name":"anil","last_name":"verma"},'+
+                                '{"first_name":"rahul","last_name":"sharma"}]}';
+           
+                                const obj=JSON.parse(text);
+             document.getElementById('demo').innerHTML=obj.employees[0].first_name+" "+obj.employees[0].last_name;
+            }
+            //use json stringify
+            {
+                let text={name:"sunil",last:"pangeni",adress:"butwal"};
+                const obj=JSON.stringify(text);
+                document.getElementById('demo1').innerHTML=obj;
+
+
+            }
+    </script>
+</body>
+</html>

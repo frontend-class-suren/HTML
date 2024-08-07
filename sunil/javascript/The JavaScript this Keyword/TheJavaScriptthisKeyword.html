@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">The JavaScript this Keyword</h1>
+    <p id="demo"></p>
+    <h2>window object</h2>
+    <p id="demo1"></p>
+    <h2>this in a Function(Default) with strict keyword</h2>
+    <p id="demo2"></p>
+    <h2>this in a Function(Default) without strict keyword</h2>
+    <p id="demo3"></p>
+    <h2>Object Method Binding</h2>
+    <p id="demo4"></p>
+    <h2>Explicit Function Binding</h2>
+    <p id="demo5"></p>
+    <h2>Function Borrowing</h2>
+    <p id="demo6"></p>
+
+    <script>
+           
+        {
+            const person = {
+            first_name:"sunil",
+            last_name:"pangeni",
+            age:50,
+            full_name:function(first_name,last_name)//it is Anonymous Function mean without function name mean function name not declare.
+            {
+               //return first_name+" "+last_name;//if we use this keyword then it gives us person values only.
+               return this.first_name+" "+this.last_name;
+            }
+            }
+            document.getElementById('demo').innerHTML=person.full_name("mukesh","sharma");
+        }
+        //window object or global object.
+        {
+            "use strict";//we use it even "this" is a global object.
+            let x = this;
+            document.getElementById('demo1').innerHTML=x;//output-:[object window]
+        }
+        //this in a Function (Default)
+       
+        {    
+            
+             
+             function myFunction() {
+                "use strict";//if we use it then output undefined becos strict not allowed as window object.
+                return this;
+             }
+             document.getElementById('demo2').innerHTML=myFunction();//output-:[object window].  
+        }
+        //this in a Function (Default) without strict keyword.
+
+        {
+            function myFunction() {
+               return this;
+            }
+            document.getElementById('demo3').innerHTML=myFunction();//output-:[object window].  
+       }
+        //Object Method Binding
+        {
+           const fruits = {
+               fruit_name:"orange",
+               fruit_color:"dark_orange",
+                  myFunction:function() {
+                       return this;
+                  }
+           };
+           document.getElementById('demo4').innerHTML=fruits.myFunction();//output-:[object,Object]
+        } 
+        //Explicit Function Binding
+        {
+            const fruits = {
+                  fruits_detail:function() {
+                       return this.fruit_name+" "+this.fruit_color;
+                  }
+                 };
+                 const fruits_requirement={
+                    fruit_name:"apple",
+                     fruit_color:"red"
+                 }
+                 let container=fruits.fruits_detail.apply(fruits_requirement);
+                 document.getElementById('demo5').innerHTML=container;
+        }
+        //Function Borrowing
+          {
+            const fruits = {
+                fruit_name:"banana",
+                fruit_color:"yellow",
+                  fruits_detail:function() {
+                       return this.fruit_name+" "+this.fruit_color;
+                  }
+                 };
+                 const fruits_requirement= {
+                    fruit_name:"apple",
+                     fruit_color:"red",
+                 };
+
+                 let fruits_detail=fruits.fruits_detail.bind(fruits_requirement);
+                 document.getElementById('demo6').innerHTML=fruits_detail();
+                 
+          }
+    </script>
+     <h2>this in Event Handlers</h2>
+    <button onclick="this.style.display='none'">click to remove me</button>
+</body>
+</html>

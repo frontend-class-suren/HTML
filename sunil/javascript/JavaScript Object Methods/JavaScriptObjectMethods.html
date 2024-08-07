@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript Object Methods</h1>
+    <h2>JavaScript Object.assign()</h2>
+    <h3>The Object.assign() method copies properties from one or more source objects to a target object.</h3>
+    <p id="demo"></p>
+    <h2>JavaScript Object.fromEntries()</h2>
+    <h3>The fromEntries() method creates an object from a list of key/value pairs.</h3>
+    <p id="demo1"></p>
+    <h2>JavaScript Object.values()</h2>
+    <h3>Object.values() is similar to Object.entries(), but returns a single dimension array of the object values:</h3>
+    <p id="demo2"></p>
+    <h2>JavaScript Object.groupBy()</h2>
+    <p id="demo3"></p>
+    <h2>JavaScript Object.keys()</h2>
+    <h3>The Object.keys() method returns an array with the keys of an object.</h3>
+    <p id="demo4"></p>
+    <h2>JavaScript for...in Loop</h2>
+    <h3>The JavaScript for...in statement loops through the properties of an object.</h3>
+    <p id="demo5"></p>
+    <script>
+        {
+            let fruits={name:"appple",color:"red",vitamin:"all_vitamin"}
+            let fruits1={wight:"3k.g",from:"nepal"};
+            Object.assign(fruits,fruits1)//assign() method copy property fruits1 to fruits object.
+            let display=Object.entries(fruits);//entries() method retrun array with key and value pair.
+            document.getElementById('demo').innerHTML=display;
+
+        }
+        //The fromEntries() method creates an object from a list of key/value pairs.
+        {
+            let car=[["name","alto"],["model",600],["color","black"]];
+            let store=Object.fromEntries(car);
+            document.getElementById('demo1').innerHTML=store.color;
+        }
+        //JavaScript Object.values()
+        {
+            let car=[["name","alto"],["model",600],["color","black"]];
+            let text=Object.values(car);
+            document.getElementById('demo2').innerHTML=text;
+        }
+        //JavaScript Object.groupBy()
+        {
+            let fruits=[{name:"apple",quantity:300},{name:"banana",quantity:400},{name:"mango",quantity:700}];
+              function callback({quantity}) {
+                return quantity>400?"ok":"low";
+              }
+              const result= Object.groupBy(fruits,callback);
+              let text="There fruits are ok:<br>";
+              for(let[x,y] of result.ok.entries())
+              {
+                text+=y.name+" "+y.quantity+"<br>";
+              }
+               text+="<br>There fruits are low:<br>";
+              for(let[x,y] of result.low.entries())
+              {
+                text+=y.name+" "+y.quantity+"<br>";
+              }
+
+              document.getElementById('demo3').innerHTML=text;
+
+        }
+        //JavaScript Object.keys()
+
+        {
+            let person={first_name:"sunil",last_name:"pangeni",address:"butwal"};
+            let store=Object.keys(person);
+            document.getElementById('demo4').innerHTML=store;
+        }
+        //JavaScript for...in Loop
+        {
+            let person={first_name:"sunil",last_name:"pangeni",address:"butwal"};
+            let text="";
+            for(let x in person) {
+                text+=person[x]+"<br>";
+            }
+            document.getElementById('demo5').innerHTML=text;
+
+        }
+
+    </script>
+</body>
+</html>

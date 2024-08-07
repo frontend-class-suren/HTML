@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Object Definition</h1>
+    <h2>JavaScript Object Literal</h2>
+    <p id="demo"></p>
+    <h2>Create an empty JavaScript object using new Object(), and add 4 properties:</h2>
+    <p id="demo1"></p>
+    <h2>Sometimes we need to create many objects of the same type. so we use object constructor function.</h2>
+    <p id="demo2"></p>
+    <h2>create second object for other car</h2>
+    <p id="demo3"></p>
+    <h2>using assign object method.</h2>
+    <p id="demo4"></p>
+    <h2>The Object.fromEntries() Method</h2>
+    <p id="demo5"></p>
+
+
+
+    <script>
+        {
+            let fruits={};
+            fruits.fruits_name="mango.";
+            fruits.fruits_color="yellow.";
+            fruits.fruits_number=20;
+            fruits.fruits_location="nepal.";
+            document.getElementById('demo').innerHTML="my fruit name " +fruits.fruits_name+
+            "<br>"+"it's color is "+fruits.fruits_color +"<br>"+"I have "+fruits.fruits_number+" apples. "+
+            "<br>"+"I bought apple from " +fruits.fruits_location;
+
+        }
+        //Create an empty JavaScript object using new Object(), and add 4 properties:
+          {
+            let fruits=new Object();
+            fruits.fruits_name="mango.";
+            fruits.fruits_color="yellow.";
+            fruits.fruits_number=20;
+            fruits.fruits_location="nepal.";
+            document.getElementById('demo1').innerHTML="my fruit name " +fruits.fruits_name+
+            "<br>"+"it's color is "+fruits.fruits_color +"<br>"+"I have "+fruits.fruits_number+" apples. "+
+            "<br>"+"I bought apple from " +fruits.fruits_location;
+          }
+          //Object Constructor Functions.
+          {
+            
+             function Car(name,model,color,mileage) {
+             this.car_name = name;
+             this.car_model = model;
+             this.car_color = color;
+             this.car_mileage = mileage;
+             this.car_country="nepal";//default value if we need this we access it directly.
+             }
+             let bmw_details = new Car("bmw",600,"red","200km/h");//we create more than one object.
+             let honda_details = new Car("honda",700,"black","150km/h");//we created second object for second car.
+             document.getElementById('demo2').innerHTML = "my car name is " + bmw_details.car_name +
+             "<br>"+"my car model is " + bmw_details.car_model + 
+             "<br>" + "my car color is" + bmw_details.car_color +
+             "<br>" + "my car milage is " + bmw_details.car_mileage +
+             "<br>"+"country of car is "+honda_details.car_country;
+             document.getElementById('demo3').innerHTML = "my car name is " + honda_details.car_name +
+             "<br>"+"my car model is " + honda_details.car_model + 
+             "<br>" + "my car color is" + honda_details.car_color +
+             "<br>" + "my car milage is " + honda_details.car_mileage +
+             "<br>"+"country of car is "+honda_details.car_country;
+          }
+           //using assign object method.
+           {
+            let person1={first_name:"sunil",last_name:"pangeni",address:"butwal"};
+            let person2={phone_number:987979878,street:"charpata"};
+            Object.assign(person1,person2)
+            let store=Object.entries(person1);
+            document.getElementById('demo4').innerHTML=store;
+           }
+           //The Object.fromEntries() Method
+              {
+                let person=[["math_marks",100],["science_marks",60],["english_marks",80]];
+                let myObject=Object.fromEntries(person)
+                document.getElementById('demo5').innerHTML=myObject.science_marks;
+
+              }
+              //Using Object.create()
+              {
+                
+              }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript Object Prototypes</h1>
+    <h2>All JavaScript objects inherit properties and methods from a prototype.</h2>
+    <h3>Prototype Inheritance</h3>
+    <h3>All JavaScript objects inherit properties and methods from a prototype:</h3>
+    <h4><ul><li>Date objects inherit from Date.prototype</li>
+        <li>Array objects inherit from Array.prototype</li>
+        <li>Person objects inherit from Person.prototype</li></ul></h4>
+        <h3 style="color: red;">The Object.prototype is on the top of the prototype inheritance chain:</h3>
+        <h3 style="color: red;">Date objects, Array objects, and Person objects inherit from Object.prototype.</h3>
+        <h2>Adding Properties and Methods to Objects Using the prototype Property</h2>
+        <h3>we cant add property and method in constructor so we use prototype to solve this problem.</h3>
+    <p id="demo"></p>
+    <h3>add property using prototype</h3>
+    <p id="demo1"></p>
+    <h3>add method using prototype</h3>
+    <p id="demo2"></p>
+
+
+    <script>
+        {
+            function Person(first,last,address,country)
+            {
+                this.first_name=first;
+                this.last_name=last;
+                this.address=address;
+                Person.prototype.nationality=country;    
+            }
+            Person.prototype.full_name=function()
+                {
+                    return this.first_name+" "+this.last_name;
+                }
+           
+            let person_details = new Person("sunil","pangeni","butwal","nepal")
+            document.getElementById('demo').innerHTML = "my name is "+person_details.first_name+
+            "<br>" +"my address is " +person_details.address+"<br>"+"my country is "+
+            person_details.nationality+"<br>"+"my fullName is "+person_details.full_name();  
+            //add property using prototype
+            document.getElementById('demo1').innerHTML=person_details.nationality;  
+            //add method using prototype
+            document.getElementById('demo2').innerHTML=person_details.full_name();  
+
+        }
+
+    </script>
+</body>
+</html>

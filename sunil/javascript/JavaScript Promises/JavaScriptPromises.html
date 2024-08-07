@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Promises</h1>
+    <h3><ul>
+    <li>"Producing code" is code that can take some time.</li>
+    <li>"Consuming code" is code that must wait for the result.</li>
+    <li>A Promise is an Object that links Producing code and Consuming code</li>
+    </ul></h3>
+    <h2>JavaScript Promise Object</h2>
+    <h3>A Promise contains both the producing code and calls to the consuming code:</h3>
+    <p id="demo"></p>
+    <h2>JavaScript Promise Examples</h2>
+    <h3>Waiting for a Timeout Using Callback</h3>
+    <p id="demo1"></p>
+    <h2>Waiting for a Timeout using promise</h2>
+    <p id="demo2"></p>
+    <h2>Waiting for a file using callback.</h2>
+    <p id="demo3"></p>
+    <script>
+        {
+            function display(some)
+            {
+              document.getElementById('demo').innerHTML = some;
+            }
+            let promise_obj = new Promise(function(resolve,reject) {
+                let x = 0;
+                if(x == 0){
+                    resolve("ok")
+                }
+                else{
+                    reject("Error")
+                }
+            } 
+        );
+        promise_obj.then(
+            function(value){
+                display(value);
+            },
+            function(error){
+                display(error);
+            }
+        );
+        }
+        //Waiting for a Timeout using callback.
+        {
+            setTimeout(function(){myFunction("my name is sunil pangeni");},3000);
+
+        function myFunction(value)
+        {
+            document.getElementById('demo1').innerHTML=value;
+        }
+        }
+        //Waiting for a Timeout using promise.
+        {
+            let promise=new Promise(function(resolve,reject)
+        {
+            setTimeout(function()
+        {
+        resolve("i love my nepal");},3000);
+        });
+        promise.then(function(value)
+        {
+    document.getElementById("demo2").innerHTML=value;
+        })
+    }
+    //Waiting for a file using callback.
+    {
+      function display(some)
+      {
+        document.getElementById("demo2").innerHTML=some;
+      } 
+      function getFile(mycallback)
+      {
+        let req=new XMLHttpRequest();
+        req.onload=function()
+        {
+            if(req.status==200)
+        {
+            mycallback(this.responseText);
+        }
+        else{
+            mycallback("Errow: "+req.status);
+        }
+        }
+    req.open('GET',"//https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?cs=srgb&dl=pexels-pixabay-210019.jpg&fm=jpg");
+    req.send();
+    
+      }
+      getFile(display);
+    }
+    </script>
+</body>
+</html>

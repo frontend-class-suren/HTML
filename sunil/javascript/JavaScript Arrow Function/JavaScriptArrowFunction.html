@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript Arrow Function</h1>
+    <h2>Arrow functions allow us to write shorter function syntax:</h2>
+    <p id="demo"></p>
+    <h2>before arrow function.</h2>
+    <p id="demo1"></p>
+    <h2>after arrow function</h2>
+     <p id="demo2"></p>
+     <h3>Arrow Function With Parameters:</h3>
+     <p id="demo3"></p>
+
+    <script>
+        {
+           let myFunction=(a,b)=>a*b;
+           document.getElementById('demo').innerHTML=myFunction(4,8);
+        }
+        //before and after use arrow function.
+        {      //before arrow function
+             myFunction=function()
+             {
+                return "hello world";
+             }
+             document.getElementById('demo1').innerHTML=myFunction();
+            }
+             //after arrow function.
+             {
+             let my_arrow_Function = () => "hello world";
+             document.getElementById('demo2').innerHTML=my_arrow_Function();
+
+
+            }
+            //Arrow Function With Parameters:
+            {
+                let my_arrow=(a,b)=>"hello"+a+b;
+                document.getElementById('demo3').innerHTML=my_arrow("sunil","sharma");
+
+            }
+
+    </script>
+</body>
+</html>

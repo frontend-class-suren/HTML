@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Modules</h1>
+    <p id="demo"></p>
+    <h2>Export</h2>
+    <h3>Two type of export-:<ul><li>named export</li><li>default export</li></ul></h3>
+    <h3>named export</h3>
+    <p id="demo1"></p>
+
+    <script type="module">
+         import {myFunction} from "./message.js";
+        {
+       document.getElementById('demo').innerHTML=myFunction(2,5,8);//came from another files called import function.
+        }
+        //named export
+        {
+           //export name="sunil";
+           //export last="pangeni";
+           //called in-line export mean export one by one.
+           
+           //name="sunil";
+           //last="pangeni"
+          // export(name,last)it is called all at once bottom.
+
+        }
+        //default export
+        {
+           //default export mean we send function and variable all include in a single default.
+        }
+        
+           
+        
+    </script>
+    <script type="module">
+              import {name,last} from "./message1.js";//all at once at the bottom
+              import {address} from "./message2.js";//In-line individually
+
+        {
+           let text="my name is="+ name +"<br>"+ "my last name is = "+ last+"<br>"+
+           "my address is = "+address;//all at once at the bottom.
+           document.getElementById('demo1').innerHTML=text;
+        }
+    </script>
+</body>
+</html>
