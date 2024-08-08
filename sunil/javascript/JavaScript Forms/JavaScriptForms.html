@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">JavaScript Forms</h1>
+    <h2>JavaScript Form Validation</h2>
+    <h3>If a form field (fname) is empty, this function alerts a message, and returns false, to prevent the form from being submitted:</h3>
+    <h2>JavaScript Can Validate Numeric Input</h2>
+    <h3>JavaScript is often used to validate numeric input:</h3>
+
+
+    
+    <script>
+        {
+            function validateForm()
+            {
+                let x=document.forms["myForm"]["first_name"].value;
+                if(x== "")
+            {
+                alert("Name must be filled out.");
+                return false;
+            }
+            }  
+        }
+    </script>
+    <form name="myForm" onsubmit="return validateForm()">
+        FirstName: <input type="text" name="first_name">
+        <input type="submit" value="Submit">
+    </form> 
+    <p>please enter between 1 to 10</p>
+    Number: <input id="numeric">
+    <button type="button" onclick="myfunction()">submit</button>
+    <p id="demo"></p>
+    <h2>Automatic HTML Form Validation</h2>
+    <h3>HTML form validation can be performed automatically by the browser:</h3>
+    <p id="demo1"></p>
+    <script>
+        //JavaScript Can Validate Numeric Input
+        {
+            function myfunction()
+            {
+                let x=document.getElementById('numeric').value;
+                let text;
+                if(isNaN(x)||x<1||x>10)
+                {
+                    text="input is invalid";
+                }
+                else
+                {
+                    text="input ok";
+                }
+                document.getElementById('demo').innerHTML=text;
+            }
+        }
+        //Automatic HTML Form Validation
+        </script>
+            <form name="myForm" onsubmit="return validateForm()">
+        FirstName: <input type="text" name="first_name" required>
+        <input type="submit" value="Submit">
+    </form>     
+</body>
+</html>

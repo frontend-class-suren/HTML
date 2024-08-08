@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="checkCookies()">
+    <h1>JavaScript HTML DOM Events</h1>
+    <h2>Reacting to Events</h2>
+    <h3>A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.</h3>
+    <h4>The onclick Attribute</h4>
+    <h2 onclick="this.innerHTML='made by sunil'">click on this.</h2>
+    <h2>function is called from the event handler:</h2>
+    <h2 onclick="changetext(this)">click on this text.</h2>
+    <h2>HTML Event Attributes</h2>
+    <h3>To assign events to HTML elements you can use event attributes.</h3>
+    <p id="demo"></p>
+    <button  onclick="displayDate()">click and display time</button>
+    <h2>Assign Events Using the HTML DOM</h2>
+    <h3>The HTML DOM allows you to assign events to HTML elements using JavaScript:</h3>
+    <p id="demo1"></p>
+    <button id="btn">click on me</button>
+    <h2>The onload and onunload Events</h2>
+    <h3>The onload and onunload events are triggered when the user enters or leaves the page.</h3>
+    <h3>The onload Events</h3>
+    <p id="demo2"></p>
+    <h2>The oninput Event</h2>
+    <h3>The oninput event is often to some action while the user input data.</h3>
+   Enter FirstName:<input type="text" id="first_name" oninput="upperCase()">
+    <p id="demo3"></p>
+    <h2>The onchange Event</h2>
+    <p id="demo4"></p>
+    Enter FirstName:<input type="text" id="first_name1" onchange="upperCase()">
+    <h2>The onmouseover and onmouseout Events</h2>
+    <p id="demo5"></p>
+    
+
+
+
+<script>
+        {
+             function changetext(id)
+             {
+                id.innerHTML="made by sunil!";
+             }
+        }
+        //HTML Event Attributes
+        {
+                function displayDate()
+                {
+                    document.getElementById('demo').innerHTML=Date();
+                }
+                        
+        }
+        //Assign Events Using the HTML DOM
+
+        {
+           document.getElementById('btn').onclick=displayDate1;
+           function displayDate1()
+           {
+            document.getElementById('demo1').innerHTML=Date();
+           }
+        }
+        //The onload and onunload Events
+        {
+           function checkCookies()
+           {
+                let text="";
+                if (navigator.cookieEnabled==true)
+                {
+                    text="cookie is enabled";
+                }
+                else{
+                    text="cookie is not enabled";
+                }
+                document.getElementById('demo2').innerHTML=text;
+           }
+        }
+        //The oninput Event
+        {
+            function upperCase()
+            {
+                let x=document.getElementById('first_name');
+                x.value=x.value.toUpperCase();
+            }
+        }
+        //The onchange Event
+        {
+            function upperCase()
+            {
+                let x=document.getElementById('first_name1');
+                x.value=x.value.toUpperCase();
+            }
+        }
+       
+
+    </script>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+    style="background: blue; width: 200px; height:50px; padding: 40px; font-size: xx-large; text-align: center;">mouse over me</div>
+    <script>
+         //The onmouseover and onmouseout Events
+         {
+            function mOver(obj)
+            {
+                   obj.innerHTML="Thank you so much";
+            }
+            function mOut(obj)
+            {
+                obj.innerHTML="mouse over me";
+            }
+        }
+    </script>
+    <h2>The onmousedown, onmouseup and onclick Events</h2>
+    <!-- The onmousedown, onmouseup and onclick Events -->
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"  onmouseover="mOver1(this)"
+    style="background:red; width: 200px; height:50px; padding: 40px; font-size: xx-large; text-align: center;">mouse over me</div>
+    <script>
+{
+            
+            function mDown(obj)
+            {
+                   obj.innerHTML="leave me";
+            }
+            function mUp(obj)
+            {
+                obj.innerHTML="click on me";
+            }
+           
+}
+    </script>
+    
+</body>
+</html>

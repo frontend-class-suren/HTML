@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">JavaScript HTML DOM - Changing HTML</h1>
+    <h2>Changing HTML Content</h2>
+    <h3>The easiest way to modify the content of an HTML element is by using the innerHTML property.</h3>
+    <p id="demo">my name is sunil.</p>
+    <h2>Changing the Value of an Attribute</h2>
+    <h3>To change the value of an HTML attribute</h3>
+    <img id="image" src="/images/download (5).jpeg" width="100" height="100">
+    <h2>Dynamic HTML content</h2>
+    <h3>JavaScript can create dynamic HTML content:</h3>
+    <p id="demo1"></p>
+    <h2>document.write()</h2>
+    <h3>In JavaScript, document.write() can be used to write directly to the HTML output stream:</h3>
+    <p id="demo2"></p>
+    <script>
+        {
+            //changing my name is sunil into my name is vikas.
+        document.getElementById('demo').innerHTML="my name is vikas."
+    }
+    //Changing the Value of an Attribute  
+{
+       document.getElementById('image').src="https://media.istockphoto.com/id/1737181835/photo/portrait-of-mongolian-couple-standing-on-pasture-carrying-milk-bucket-stool.jpg?s=2048x2048&w=is&k=20&c=1K_6UQpB9r02EgfZWEkRUcB1FdeNx2D50HPe1diGwK8=";
+}
+//Dynamic HTML content
+{
+    document.getElementById('demo1').innerHTML="dynamic date and update time to time."+"<br>"+Date();
+}
+//document.write()
+{
+document.write(Date());    //we write date dicrectly in html page.
+}
+
+
+
+    </script>
+</body>
+</html>
