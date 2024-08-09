@@ -26,7 +26,7 @@
     input[type="text"]
     {
     font-size: xx-large;
-    border:2px solid blue; */
+    border:2px solid blue; 
     /* width: 100%; */
     /* margin-left: 8px; */
     }
@@ -41,18 +41,31 @@
             document.getElementById('screen').value= " ";
         }
         function remove() {
-            let x=document.getElementById('screen').value;
-            let y=x.slice(0,-1);
+             let x=document.getElementById('screen').value;
+            y=x.slice(0,-1);
             document.getElementById('screen').value=y;
+
             
         }
 
         function arthmatic_opration() {
-            let store=document.getElementById('screen').value;
+           let store=document.getElementById('screen').value;
             let store1=eval(store);
             document.getElementById('screen').value=store1;
+            //let x=document.getElementById('screen').value=x.value(eval)
             
         }
+        // function press_equal()
+        // {
+        //     //document.getElementById('screen').value;
+        //     if(document.getElementById('screen').value==0) {
+        //         document.getElementById('screen').value="=";
+        //     }
+        //     else{
+        //         return value="=";
+        //     }
+           
+        //}
     </script>
     <table>
         <tr>

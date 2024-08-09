@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+      #clock{
+        font-size:100px;
+        background-color: gray;
+        color: black;
+        width: 35%;
+        text-align:justify;
+        border-radius: 20px;
+        /* margin-left:475px; */
+        margin-left: 32%;
+        border: 3px solid blue;
+        padding-right:10px;
+        padding-left:14px ;
+      }
+    </style>
+</head>
+<body onload="show_watch()">
+    <h1 style="color: blue;text-align: center;">First Digital Watch</h1>
+    <div id="clock"></div>
+    
+    <script>
+        {
+            setInterval(show_watch,1000);
+            function show_watch(){
+            let watch=new Date();
+            let hour=watch.getHours();
+            let minute=watch.getMinutes();
+            let second=watch.getSeconds();
+            let session="AM";
+            hour=checkTime(hour);
+            minute=checkTime(minute);
+            second=checkTime(second);
+            
+            //document.getElementById('demo').innerHTML=watch.getHours()+":"+watch.getMinutes()+":"+watch.getSeconds()+":"+am_pm;
+            
+            //set 12 hors format
+            if(hour>=12)
+            {
+                
+                session.innerHTML="PM"
+                document.body.style.background="red";
+            }else
+            {
+                session.innerHTML="AM";
+                document.body.style.background="green";
+            }
+            if(hour>12) 
+            {
+            hour=hour-12;
+            }
+            let current_time=hour+":"+minute+":"+second + session;
+            document.getElementById('clock').innerHTML=current_time;
+        }
+        //show_watch();
+        //check time if value less then 10 so zero write front of time dd
+        function checkTime(i)
+        {
+            if(i<10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+    
+        }
+    </script>
+</body>
+</html>
