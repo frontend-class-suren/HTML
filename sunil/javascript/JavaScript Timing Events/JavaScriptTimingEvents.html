@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Timing Events</h1>
+    <h2>JavaScript can be executed in time-intervals.This is called timing events.</h2>
+    <h3>Timing Events</h3>
+    <h3>The setTimeout() Method<ul><li>The first parameter is a function to be executed.</li>
+    <li>The second parameter indicates the number of milliseconds before execution.</li></ul></h3>
+    <button onclick="setTimeout(timeout_function,3000);">click it</button>
+    <p id="demo"></p>
+    
+    <script>
+        {
+              function timeout_function()
+              {
+                let x=alert("my name is sunil.");
+                let text;
+                if(x==null)
+              {
+                text="suceffully know about you.";
+
+              }
+              else{
+                text="we dont know know.";
+              }
+              document.getElementById('demo').innerHTML=text;
+              }
+        }
+    </script>
+    <!-- The clearTimeout() method stops the execution of the function specified in setTimeout(). -->
+    <p id="demo1"></p>
+     <button onclick="myvar=setTimeout(timeout_function,3000)">click it</button>
+     <button onclick="clearTimeout(myvar)">stop it</button>
+    <script>
+        {
+            function timeout_function_clear()
+              {
+                let x=alert("my name is sunil.");
+                let text;
+                if(x==null)
+              {
+                text="suceffully know about you.";
+
+              }
+              else{
+                text="we dont know know.";
+              }
+              document.getElementById('demo1').innerHTML=text;
+              }
+        }
+    </script>
+    <!-- The setInterval() Method -->
+     <h2>The setInterval() Method</h2>
+     <h3>The setInterval() method repeats a given function at every given time-interval.</h3>
+     <p id="demo2"></p>
+    <script>
+        {
+            setInterval(time_interwal,1000)
+           function time_interwal()
+           {
+            let interwal=new Date();
+            document.getElementById('demo2').innerHTML=interwal.toLocaleTimeString();
+           }
+        }
+    </script>
+    <!-- How to Stop the  setInterval Execution?-->
+      <h2>How to Stop the  setInterval Execution?</h2>
+     <p id="demo3"></p>
+     <button onclick="clearInterval(myVar1)">stop it</button>
+<script>
+
+    
+        let myVar1= setInterval(time_interwal,1000);
+
+
+           function time_interwal()
+           {
+            let interwal=new Date();
+            document.getElementById("demo3").innerHTML=interwal.toLocaleTimeString();
+           }
+        
+    
+</script>
+</body>
+</html>

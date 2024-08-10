@@ -53,19 +53,23 @@
             let store1=eval(store);
             document.getElementById('screen').value=store1;
             //let x=document.getElementById('screen').value=x.value(eval)
+            if (store1 == undefined)
+                {
+                    document.getElementById("screen").value="";
+                }
             
         }
-        // function press_equal()
-        // {
-        //     //document.getElementById('screen').value;
-        //     if(document.getElementById('screen').value==0) {
-        //         document.getElementById('screen').value="=";
-        //     }
-        //     else{
-        //         return value="=";
-        //     }
+        function press_equal()
+        {
+            //document.getElementById('screen').value;
+            if(document.getElementById('screen').value==0) {
+                document.getElementById('screen').value="=";
+            }
+            else{
+                return value="=";
+            }
            
-        //}
+        }
     </script>
     <table>
         <tr>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    {
+        function goback()
+        {
+            document.getElementById('demo').innerHTML=window.history.back();
+
+        }
+        function goforward()
+        {
+            document.getElementById('demo1').innerHTML=window.history.forward();
+
+        }
+    }
+</script>
+
+<body>
+    <h1>JavaScript Window History</h1>
+    <h2>The window.history object contains the browsers history.</h2>
+    <h3>Some methods:-<ul><li>history.back() - same as clicking back in the browser</li><li>history.forward() - same as clicking forward in the browser</li></ul></h3>
+     <h3>Window History Back</h3>
+     <h4>The history.back() method loads the previous URL in the history list.</h4>
+     <p id="demo"></p>
+    <input type="button" value="back history" onclick="goback()">
+    <h2>Window History Forward</h2>
+    <h3>The history.forward() method loads the next URL in the history list.</h3>
+    <p id="demo1"></p>
+    <input type="button" value="forward history" onclick="goforward()">
+
+
+    
+        
+</body>
+</html>

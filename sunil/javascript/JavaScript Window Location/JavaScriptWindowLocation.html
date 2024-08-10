@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Window Location</h1>
+    <h2>The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.</h2>
+    <h3>Window Location Href</h3>
+    <h4>The window.location.href property returns the URL of the current page.</h4>
+    <p id="demo"></p>
+    <input type="button" value="load new document" onclick="new_document()">
+    <p id="demo1"></p>
+    <script>
+        {
+            document.getElementById('demo').innerHTML="page url(location) show"+window.location.href+
+            "<br>"+"Window Location Hostname show = "+window.location.hostname+
+            "<br>"+"Window Location Pathname show = "+window.location.pathname+
+            "<br>"+"Window Location Protocol show = "+window.location.protocol+//show page is http or https.
+            "<br>"+"Window Location Port show = "+window.location.port;
+        
+        }
+        //Window Location Assign
+        {
+            function new_document()
+            {
+                document.getElementById('demo1').innerHTML=window.location.assign("https://www.youtube.com");
+            }
+        }
+    </script>
+</body>
+</html>

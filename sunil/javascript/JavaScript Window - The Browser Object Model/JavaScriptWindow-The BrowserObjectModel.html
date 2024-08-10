@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Window - The Browser Object Model</h1>
+    <h2>The Browser Object Model (BOM) allows JavaScript to "talk to" the browser.</h2>
+    <h3>The Window Object</h3>
+    <h4>The window object is supported by all browsers. It represents the browser's window.</h4>
+    <h3>Window Size</h3>
+    <h4>Two properties can be used to determine the size of the browser window.</h4>
+    <h3>Both properties return the sizes in pixels:
+        <ul><li>window.innerHeight - the inner height of the browser window (in pixels)</li>
+        <li></li>window.innerWidth - the inner width of the browser window (in pixels)</ul></h3>
+        <p id="demo"></p>
+        <script>
+            {
+                document.getElementById('demo').innerHTML="inner height of window is " +
+                window.innerHeight+"px<br>"+"inner width of window is "+window.innerWidth+"px" +
+                "<br>"+"open a new window using window.open()"+window.open+"<br>" +
+                "close the current window using window.close"+window.close+"<br>" +"move the current window using window.moveTo"+
+                window.moveTo()+"<br>"+"resize the current window using window.resizeto()"+window.resizeTo;
+            }
+            {
+
+            }
+        </script>
+</body>
+</html>

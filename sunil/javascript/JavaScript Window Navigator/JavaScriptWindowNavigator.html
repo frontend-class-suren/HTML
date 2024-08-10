@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Window Navigator</h1>
+    <h2>The window.navigator object contains information about the visitor's browser.</h2>
+    <h3>The window.navigator object can be written without the window prefix.</h3>
+    <h3>Some examples:-<ul><li>navigator.cookieEnabled</li><li>navigator.appCodeName</li>
+    <li>navigator.platform</li></ul></h3>
+    <h3>Browser Cookies</h3>
+    <h4>The cookieEnabled property returns true if cookies are enabled, otherwise false:</h4>
+    <p id="demo"></p>
+    <script>
+        {
+            document.getElementById('demo').innerHTML="cookies enabled status is = "+navigator.cookieEnabled +
+            "<br>"+"Browser Application Name show = "+navigator.appName+
+            "<br>"+"Browser Application Code Name show = "+navigator.appCodeName+
+            "<br>"+"The Browser Engine product show = "+navigator.product+
+            "<br>"+"The Browser Version show = "+navigator.appVersion+
+            "<br>"+"The Browser Agent show = "+navigator.userAgent+
+            "<br>"+"The Browser Platform show = "+navigator.platform+
+            "<br>"+"The Browser Language show = "+navigator.language+
+            "<br>"+"Is The Browser Online? = "+navigator.onLine+
+            "<br>"+"Is Java Enabled? = "+navigator.javaEnabled();
+        }
+    </script>
+     
+        
+</body>
+</html>

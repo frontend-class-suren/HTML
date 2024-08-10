@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Window Screen</h1>
+    <h2>The window.screen object contains information about the user's screen.</h2>
+    <h3>Window Screen</h3>
+    <h4>The window.screen object can be written without the window prefix.</h4>
+    <h3>Window Screen Width</h3>
+    <h4>The screen.width property returns the width of the visitor's screen in pixels.</h4>
+    <p id="demo"></p>
+    <script>
+        {
+            document.getElementById('demo').innerHTML="window screen width is "+screen.width+"px"+"<br>"+
+            "window screen height is "+screen.height+"px"+"<br>"+"Window Screen Available Width " + screen.availWidth+"px<br>"+
+            "Window Screen Available height " + screen.availHeight + "px<br>"+"Window Screen pixel depth is "+screen.pixelDepth+
+            "px<br>"+"Window Screen color depth is "+screen.colorDepth+"px"+"<p>All modern computers use 24 bit or 32 bit hardware for color resolution:-<br>"+
+                "1. 24 bits =16,777,216 different True Colors.<br>2.    32 bits = 4,294,967,296 different Deep Colors";
+
+            
+        }
+    </script>
+</body>
+</html>

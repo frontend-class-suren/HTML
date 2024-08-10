@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Popup Boxes</h1>
+    <h2>JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.</h2>
+    <h3>Alert Box</h3>
+    <h3>An alert box is often used if you want to make sure information comes through to the user.</h3>
+    <button onclick="alertfunction()">press it</button>
+    <p id="demo"></p>
+    <h2>Confirm Box</h2>
+    <h3>A confirm box is often used if you want the user to verify or accept something.</h3>
+    <p id="demo1"></p>
+    <button onclick="confirmfunction()">press it</button>
+    <h2>Prompt Box</h2>
+    <h3>A prompt box is often used if you want the user to input a value before entering a page.</h3>
+    <p id="demo2"></p>
+    <button onclick="promptfunction()">press it</button>
+    <script>
+        function alertfunction()
+        {
+            let text;
+            let student=alert("please\n submit ur form!!!!");
+            if(student==null){
+            text="succefully submit form.";
+            }else{
+              text="not submit form";
+             }
+            document.getElementById('demo').innerHTML=text;
+        }
+        function confirmfunction(){
+            let text;
+            if(confirm("you pressed something"))
+        {
+            text="you pressed ok!";
+        }else
+        {
+             text="you pressed cancel!";
+        }
+        document.getElementById('demo1').innerHTML=text;
+
+        }
+        //Prompt Box
+        {
+            function promptfunction(){
+                   let text;
+                   let person=prompt("plese enter your name","sunil sharma");
+                   if(person==null||person=="")
+                   {
+                    text="user canciled the promt"
+                   }else
+                   {
+                          text="hello " +person +" how are you today?";
+                   }
+                 document.getElementById('demo2').innerHTML=text;
+            }
+        }
+
+    </script>
+</body>
+</html>
