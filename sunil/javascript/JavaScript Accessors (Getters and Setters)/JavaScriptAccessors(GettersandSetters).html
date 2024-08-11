@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Accessors (Getters and Setters)</h1>
+    <h2>JavaScript Getter (The get Keyword)</h2>
+    <p id="demo"></p>
+    <h2>JavaScript Function or Getter?</h2>
+    <h2>JavaScript Getter?</h2>
+    <h2>javascript Getter keyword better for use.</h2>
+    <p id="demo1"></p>
+    <h2>JavaScript Function?</h2>
+    <p id="demo2"></p>
+    <h2>Data Quality</h2>
+    <h3>JavaScript can secure better data quality when using getters.</h3>
+    <p id="demo3"></p>
+    <h2>JavaScript can secure better data quality when using setters.</h2>
+    <p id="demo4"></p>
+
+    <script>
+        {
+            let person={
+                first_name:"sunil",
+                last_name:"pangeni",
+                address:"butwal",
+                 get add_ress(){ //it is a get keyword from getter accessors.
+                    return this.first_name;
+                 },
+                 set last(value){//it is a set keyword from setter accessors.
+                    return this.last_name=value;
+                 } };
+                 //set property value.
+                 person.last="sharma";
+              document.getElementById('demo').innerHTML="use getter accessors using get keyword = "+person.add_ress+
+              "<br>"+"use setter accessors using set keyword = "+person.last_name;
+        }
+        //JavaScript Getter good?
+
+        {
+            let person={
+                first_name:"sunil",
+                last_name:"pangeni",
+                address:"butwal",
+                 get full_name(){ //it is a get keyword from getter accessors.
+                    return this.first_name+" "+this.last_name;
+                 }};
+                 document.getElementById('demo1').innerHTML=person.full_name;
+        }
+        //JavaScript Function good?
+        {
+            let person={
+                first_name:"sunil",
+                last_name:"pangeni",
+                address:"butwal",
+                full_name:
+                function (){ //it is a simple function to fetch full name.
+                    return this.first_name+" "+this.last_name;
+                 }};
+                 document.getElementById('demo2').innerHTML=person.full_name(); 
+        }
+        //Data Quality
+        {
+            let person={
+                first_name:"sunil",
+                last_name:"pangeni",
+                address:"butwal",
+                 get add_ress(){ //it is a get keyword from getter accessors.
+                    return this.address.toUpperCase();
+                 } };
+                 document.getElementById('demo3').innerHTML=person.add_ress;
+            }
+                 
+             {
+                let person={
+                first_name:"sunil",
+                last_name:"pangeni",
+                address:"butwal",
+                 set last(value){//it is a set keyword from setter accessors.
+                    return this.last_name=value.toUpperCase();
+                 }};
+                 //set property value.
+                 person.last="sharma";
+                 document.getElementById('demo4').innerHTML=person.last_name;
+                }
+                 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Object Protection</h1>
+    <h2>JavaScript Object.preventExtensions()</h2>
+    <h3>The Object.preventExtensions() method prevents adding properties to an object.</h3>
+    <p id="demo"></p>
+    <h2>JavaScript Object.seal()</h2>
+    <h3>The Object.seal() method prevents additions or deletions of new properties.</h3>
+    <p id="demo1"></p>
+    <h2>JavaScript Object.freeze()</h2>
+    <h3>The Object.freeze() method prevents any changes to an object.</h3>
+    <p id="demo2"></p>
+       <script>
+        
+            "use strict"
+            const person={first_name:"sunil",last_name:"pangeni"};
+            Object.preventExtensions(person);
+            let text="";
+            try{
+           person.address="butwal";
+            }catch(err)
+            {
+                text=err;
+            
+            }
+            document.getElementById('demo').innerHTML=text;
+            
+        
+        //JavaScript Object.seal()
+         
+            const person1={first_name:"sunil",last_name:"pangeni"};
+            Object.seal(person1);
+            let text1="";
+            try{
+            person1.nationalty="nepal";
+            }catch(err)
+            {
+                text1=err;   
+        }
+        document.getElementById('demo1').innerHTML=text1;
+        //JavaScript Object.freeze()
+        const person2={first_name:"sunil",last_name:"pangeni"};
+            Object.freeze(person2);
+            let text2="";
+            try{
+            //person1.age=50;
+            person.age=60;
+            }catch(err)
+            {
+                text2=err;   
+        }
+        document.getElementById('demo2').innerHTML=text2;
+         
+    </script>
+</body>
+</html>

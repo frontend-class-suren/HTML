@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>JavaScript Object Properties</h1>
+    <h2>Adding a new Property</h2>
+    <h3>adds a new property to an object:</h3>
+    <p id="demo"></p>
+    <script>
+        {
+            //object list display
+    let fruits={f_name:"banana",f_location:"nepal",f_color:"yellow"};
+    let x=Object.entries(fruits);
+    //adding a property.
+    fruits["f_year"]=2024;
+    //Object.defineProperty(fruits, "f_year",{value:"2008"});
+    //Changing a Property Value
+    Object.defineProperty(fruits,"f_location",{value:"india"});
+    //updated object list 
+    let y=Object.entries(fruits);
+    //List all Object Properties
+    //JavaScript Object.keys()
+    document.getElementById('demo').innerHTML="object list is = "+x+"<br>"+"adding a property is = "+fruits.f_year+
+    "<br>"+"changing a property value of f_location is = "+fruits.f_location+"<br>"+
+    "updated object list is = "+y+"<br>"+"list all object properties is = "+
+    Object.getOwnPropertyNames(fruits)+"<br>"+"object keys is = "+Object.keys(fruits);
+   }
+</script>
+</body>
+</html>
