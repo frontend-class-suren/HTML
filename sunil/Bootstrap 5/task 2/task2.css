@@ -1,0 +1,36 @@
+.col-sm-3 a{
+    font-size: xx-large;
+    color:blue
+}
+.col-sm-4 a{
+    font-size: xx-large;
+}
+.second{
+font-size: medium;
+}
+.input-text{
+    font-size: xx-large;
+}
+.footer a{
+    font-size:larger;
+    
+    
+}
+.container-fluid{
+    --bs-gutter-x: 0rem;
+}
+@media screen and (max-width=567px)
+{
+    .nav-items{
+        display: inline;
+        flex-direction:column;
+
+    }
+    .card-img-overlay{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+    
+

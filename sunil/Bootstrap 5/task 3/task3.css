@@ -1,0 +1,7 @@
+.container-fluid{
+    --bs-gutter-x: 0rem;
+}
+.nav-link{
+    text-decoration: none;
+    
+}

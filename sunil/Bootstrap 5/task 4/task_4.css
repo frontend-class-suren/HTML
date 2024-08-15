@@ -1,0 +1,50 @@
+.logged-in{
+    color: green;
+    font-size:xx-large;
+}
+.icon{
+    color: green;
+    font-size:xx-large;
+}
+.icon1{
+    font-size: 5rem;
+    font-weight:normal;
+}
+.icon2{
+    font-size:x-large;
+    font: bold;
+    text-align: center;
+}
+.container{
+    position: relative;
+    text-align: center;
+    color: rgb(6, 6, 6);
+}
+/* .container1{
+    position: relative;
+    text-align: center;
+    color: white;
+} */
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  .bottom{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  .bottom-left{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  

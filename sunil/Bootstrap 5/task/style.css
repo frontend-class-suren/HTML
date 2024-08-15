@@ -1,0 +1,31 @@
+.image-card{
+    display: flex;
+    flex-direction: row;
+}
+.image-card div {
+    width: 19.99%;
+    /* margin: 10px; */
+    column-gap: 10px;
+}
+.image-card div img{
+    width: 100%;
+}
+.column1 div{
+    font-size:80px;
+}
+.container-fluid{
+    --bs-gutter-x:0rem;
+}
+@media screen and (max-width: 567px) {
+    .image-card{
+        flex-direction: column;
+        margin: 5px;
+    }
+    .image-card div {
+        width: 100%;
+        /* margin: 10px; */
+        column-gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+}
