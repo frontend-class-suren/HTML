@@ -1,0 +1,47 @@
+.navbar-brand{
+    font-size:xx-large;
+   float:inline-start ;
+    padding: 10px;
+    text-align: justify;
+    border-style: none;
+
+}
+.rounded{
+    float: inline-end;
+    font-size:large;
+    text-align:justify;
+    margin: 2PX;
+    padding: 5px;
+    border: 2px solid white
+    
+
+}
+.btn{
+    font-size:large;
+    border: 2px solid green;
+    margin: 2px;
+    color: white
+    
+}
+.navbar-toggler-icon{
+    border: 2px solid white;
+    color: white;
+    background-color: blue;
+}
+.container-fluid{
+    position: relative;
+    text-align: center;
+    color: white;
+
+}
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.container-fluid{
+    --bs-gutter-x: 0rem;
+}
+

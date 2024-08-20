@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand text-white btn btn-white" href="">Carousal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav text-white">
+                    <li class="nav-items ">
+                        <a class="nav-link text-white" href="">Home</a>
+                    </li>
+                    <li class="nav-items">
+                        <a class="nav-link  text-white" href="">About us</a>
+                    </li>
+                    <li class="nav-items">
+                        <a class="nav-link text-white disabled opacity-50 " href="">Contact</a> 
+                    </li>
+              </ul>
+            </div>
+             <input class="rounded" type="search" value="Search"><button class="btn btn-warning " type="button">Search</button> 
+    </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container-fluid text-white ">
+            <img src="https://img.freepik.com/free-photo/vibrant-autumn-maple-leaves-nature-beauty-showcased-generated-by-ai_188544-15039.jpg" height="600" width="100%" alt="pic">
+            <div class="centered">
+            <h1>first slide</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel aut<br>
+                iusto asperiores velit id mollitia nostrum, quaerat ab officiis labore?</p>
+                <button class="rounded text-white  mt-2 " style="font-size:x-large;background-color: blue;float:none;border: none;" type="button," value="Learn more">Learn more</button>
+            </div>
+        </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container-fluid float-right">
+            <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_640.jpg" width="100%" height="600" alt="pic">
+            <div class="centered">
+            <h1 >Second slide</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel aut<br>
+                iusto asperiores velit id mollitia nostrum, quaerat ab officiis labore?</p>
+                <button class="rounded text-white mt-2 " style="font-size:x-large;background-color: blue;border: none;text-align: right;" type="button," value="Learn more">Browse gallary</button>
+          </div>
+        </div>
+        </div>
+          <div class="carousel-item">
+            <div class="container-fluid">
+            <img src="https://i.pinimg.com/736x/d0/d5/93/d0d593eeddaae41d7cd37b0b8c3c6be2.jpg" height="600" width="100%" alt="pic">
+            <div class="centered">
+            <h1>Third slide</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel aut<br>
+                iusto asperiores velit id mollitia nostrum, quaerat ab officiis labore?</p>
+                <button class="rounded text-white mt-2 " style="font-size:x-large;background-color: blue;float:left;border: none;" type="button," value="Learn more">Sign Up today</button>
+
+          </div>
+        </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+    <div class="container p-5 text-center">
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="rounded-circle" src="https://media.istockphoto.com/id/521982322/photo/pretty-young-teenage-girl-relaxing-on-a-grass.jpg?s=612x612&w=0&k=20&c=gz4WO1CHehuZbIuuUYAJ-SXq0bcsN979pS4fqujhHes=" height="200" width="200" alt="pic">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint voluptas quod, ipsam unde distinctio reiciendis soluta
+                     repellendus ut!Magnam odio reiciendis id, voluptate provident
+                      dolor distinctio illo cupiditate similique fugiat.</p>
+                      <button class="rounded text-white text-center mt-1 " style=" float: none  ;font-size:large;background-color: blue;" type="button," value="Learn more">View details
+                        <a href=""><i class="bi bi-chevron-double-right"></i></a>
+                      </button>
+
+            </div>
+            <div class="col-sm-4">
+                <img class="rounded-circle" src="https://st4.depositphotos.com/32426966/38793/i/450/depositphotos_387935448-stock-photo-teenager-girl-long-hair-white.jpg" height="200" width="200" alt="pic">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint voluptas quod, ipsam unde distinctio reiciendis soluta
+                     repellendus ut!Magnam odio reiciendis id, voluptate provident
+                      dolor distinctio illo cupiditate similique fugiat.</p>
+                      <button class="rounded text-white text-center mt-1 " style=" float: none  ;font-size:large;background-color: blue;" type="button," value="Learn more">View details
+                        <a href=""><i class="bi bi-chevron-double-right"></i></a>
+                      </button>
+            </div>
+            <div class="col-sm-4">
+                <img class="rounded-circle" src="https://static6.depositphotos.com/1008929/596/i/450/depositphotos_5969157-stock-photo-attractive-young-woman-read-book.jpg" height="200" width="200" alt="pic">
+                <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint voluptas quod, ipsam unde distinctio reiciendis soluta
+                     repellendus ut!Magnam odio reiciendis id, voluptate provident
+                      dolor distinctio illo cupiditate similique fugiat.</p>
+                      <button class="rounded text-white text-center mt-1 " style=" float: none  ;font-size:large;background-color: blue;" type="button," value="Learn more">View details
+                        <a href=""><i class="bi bi-chevron-double-right"></i></a>
+                      </button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 p-5">
+                <h1>Lorem ipsum dolor sit amet, consectetur 
+                  . Veritatis, qui?</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Soluta est asperiores cumque vitae distinctio. Qui doloribus 
+                    in, illum quo voluptatibus autem labore excepturi,laudantium ex 
+                    odit non assumenda, alias dolor.</p>
+            </div>
+            <div class="col-sm-6">
+                <img src="https://img.freepik.com/free-photo/beautiful-natural-view-landscape_23-2150787996.jpg" height="500" width="70%" alt="pic">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="https://i.pinimg.com/originals/99/32/79/993279aa2ff3e3a31d7e6e7e5719851c.jpg" height="500" width="70%" alt="pic">
+            </div>
+            <div class="col-sm-6 p-5">
+                <h1>Lorem ipsum dolor sit amet, consectetur 
+                  . Veritatis, qui?</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Soluta est asperiores cumque vitae distinctio. Qui doloribus 
+                    in, illum quo voluptatibus autem labore excepturi,laudantium ex 
+                    odit non assumenda, alias dolor.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 p-5 my-5">
+                <h1>Lorem ipsum dolor sit amet, consectetur 
+                  . Veritatis, qui?</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Soluta est asperiores cumque vitae distinctio. Qui doloribus 
+                    in, illum quo voluptatibus autem labore excepturi,laudantium ex 
+                    odit non assumenda, alias dolor.</p>
+            </div>
+            <div class="col-sm-6 p-5">
+                <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" height="500" width="70%" alt="pic">
+            </div>
+        </div>
+    </div>
+    <div class="container border-top p-5">
+
+     <div class="row">
+        <div class="col-sm-6 ">
+            <h5><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+              <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+            </svg></a>2017-2018 Company,lnc.<a class="text-decoration-none" href="">Privacy.Terms</a></h5>
+        </div>
+        <div class="col-sm-6 float:left">
+            <h5><a class="text-decoration-none float-end" href="">Back to top</a></h5>
+        </div>
+     </div>
+    </div>
+</body>
+</html>
